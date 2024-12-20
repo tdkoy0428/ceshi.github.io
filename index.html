@@ -3,88 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>亚马逊产品展示</title>
+    <title>亚马逊商品展示</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1>精选亚马逊产品</h1>
-    </header>
-    
-    <main class="container">
-        <section class="product-section search">
-            <h2>搜索型产品</h2>
-            <div class="product-grid">
-                <a href="products/phone.html" class="product-card">
-                    <div class="product-image">
-                        <img src="https://tdkoy0428.github.io/手机.png" alt="手机">
-                    </div>
-                    <div class="product-info">
-                        <h3>手机</h3>
-                        <p>智能科技，品质生活</p>
-                    </div>
-                </a>
-
-                <a href="products/computer.html" class="product-card">
-                    <div class="product-image">
-                        <img src="https://tdkoy0428.github.io/笔记本.png" alt="电脑">
-                    </div>
-                    <div class="product-info">
-                        <h3>电脑</h3>
-                        <p>高效办公，娱乐体验</p>
-                    </div>
-                </a>
-
-                <a href="products/camera.html" class="product-card">
-                    <div class="product-image">
-                        <img src="https://tdkoy0428.github.io/相机.png" alt="相机">
-                    </div>
-                    <div class="product-info">
-                        <h3>相机</h3>
-                        <p>记录精彩瞬间</p>
-                    </div>
-                </a>
+    <div id="app">
+        <header>
+            <h1>亚马逊商品展示</h1>
+            <div id="visitor-id"></div>
+        </header>
+        <main>
+            <div class="products-container">
+                <h2>功能型商品</h2>
+                <div id="functional-products" class="product-grid"></div>
+                
+                <h2>情感型商品</h2>
+                <div id="emotional-products" class="product-grid"></div>
             </div>
-        </section>
-
-        <section class="product-section experience">
-            <h2>体验型产品</h2>
-            <div class="product-grid">
-                <a href="products/lipstick.html" class="product-card">
-                    <div class="product-image">
-                        <img src="https://tdkoy0428.github.io/口红.png" alt="口红">
-                    </div>
-                    <div class="product-info">
-                        <h3>口红</h3>
-                        <p>绽放迷人魅力</p>
-                    </div>
-                </a>
-
-                <a href="products/hand-cream.html" class="product-card">
-                    <div class="product-image">
-                        <img src="https://tdkoy0428.github.io/护手霜.png" alt="护手霜">
-                    </div>
-                    <div class="product-info">
-                        <h3>护手霜</h3>
-                        <p>呵护柔嫩双手</p>
-                    </div>
-                </a>
-
-                <a href="products/face-cream.html" class="product-card">
-                    <div class="product-image">
-                        <img src="https://tdkoy0428.github.io/面霜.png" alt="面霜">
-                    </div>
-                    <div class="product-info">
-                        <h3>面霜</h3>
-                        <p>滋润呵护肌肤</p>
-                    </div>
-                </a>
+            <div class="timing-table">
+                <h2>访问时间统计</h2>
+                <div id="timing-stats"></div>
+                <button class="copy-button" onclick="copyData()">复制数据</button>
             </div>
-        </section>
-    </main>
-
-    <footer>
-        <p>&copy; 2024 亚马逊产品展示. All rights reserved.</p>
-    </footer>
+        </main>
+    </div>
+    <script src="script.js"></script>
 </body>
-</html> 
+</html>
