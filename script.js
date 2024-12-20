@@ -1,6 +1,15 @@
 // 生成唯一访客ID
 function generateVisitorId() {
-    return 'visitor_' + Math.random().toString(36).substr(2, 9);
+    // 检查localStorage中是否已存在访客ID
+    let storedId = localStorage.getItem('visitorId');
+    if (storedId) {
+        return storedId;
+    }
+    
+    // 如果不存在，则生成新的ID并存储
+    const newId = 'visitor_' + Math.random().toString(36).substr(2, 9);
+    localStorage.setItem('visitorId', newId);
+    return newId;
 }
 
 // 商品数据
