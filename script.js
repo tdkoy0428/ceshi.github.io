@@ -89,18 +89,26 @@ function copyData() {
 
 // 添加新的函数
 function showNotification(message) {
+    // 移除已存在的通知
+    const existingNotification = document.querySelector('.notification');
+    if (existingNotification) {
+        document.body.removeChild(existingNotification);
+    }
+
     const notification = document.createElement('div');
     notification.className = 'notification';
     notification.innerHTML = `
         <div class="notification-title">✅ 复制成功</div>
-        <div class="notification-message">请将数据粘贴到问卷相应位置</div>
+        <div class="notification-message">数据已复制到剪贴板，现在可以安全地关闭页面了</div>
     `;
     document.body.appendChild(notification);
 
     setTimeout(() => {
         notification.classList.add('fade-out');
         setTimeout(() => {
-            document.body.removeChild(notification);
+            if (document.body.contains(notification)) {
+                document.body.removeChild(notification);
+            }
         }, 500);
     }, 3000);
 }
@@ -108,8 +116,9 @@ function showNotification(message) {
 // 修改 window.onbeforeunload 事件
 window.onbeforeunload = function(e) {
     if (!hasUserCopiedData.status) {
-        e.preventDefault();
-        return '请点击"复制数据"按钮，以便将访问数据粘贴到问卷中！';
+        const message = '⚠️ 警告：您还没有复制访问数据！\n请先点击"复制数据"按钮，再关闭页面。';
+        e.returnValue = message;
+        return message;
     }
 };
 
