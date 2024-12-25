@@ -226,7 +226,7 @@ document.addEventListener('DOMContentLoaded', () => {
         <div class="visitor-info">
             <span>访客ID: ${visitorId}</span>
             <div class="important-notice">
-                ⚠️ 重要提示：请在浏览完商品后，在页面最下方点击"复制总计数据"按钮保存您的浏览记录！
+                ⚠️ 重要提示：请在浏览完商品后，在页面最下方点击"复制总计数据"按钮保存的浏览记录！
                 <button onclick="scrollToSummary()" class="scroll-button">点击跳转到底部</button>
             </div>
         </div>
@@ -346,7 +346,7 @@ function generateSessionRows(visitTimes) {
     return rows;
 }
 
-// 添加导出数据功���
+// 添加导出数据功能
 function exportData() {
     const data = {
         visitorId: visitorId,
@@ -416,7 +416,7 @@ function generateSummaryRows() {
                 .find(p => p.id === baseId);
             
             if (product) {
-                // 确定商品类别
+                // 确定商品���别
                 const category = products.functional.includes(product) ? 'functional' : 'emotional';
                 
                 // 初始化商品的数据结构
@@ -456,7 +456,7 @@ function generateSummaryRows() {
         });
 
     // 情感型商品汇总
-    rows += `<tr><th colspan="3" class="summary-header">情感型商品总计</th></tr>`;
+    rows += `<tr><th colspan="3" class="summary-header">情感型商品总��</th></tr>`;
     Object.entries(summary)
         .filter(([_, data]) => data.category === 'emotional')
         .forEach(([name, data]) => {
@@ -535,7 +535,7 @@ function copySummaryData() {
         });
     });
 
-    // 按照格式生成数据
+    // 按照格式生成数��
     Object.entries(summary).forEach(([name, times]) => {
         if (times.ai > 0) {
             data.push(`商品: ${name}`);
@@ -545,7 +545,7 @@ function copySummaryData() {
         }
         if (times.no > 0) {
             data.push(`商品: ${name}`);
-            data.push(`版���: 无评论版本`);
+            data.push(`版本: 无评论版本`);
             data.push(`访问时间: ${formatTime(times.no)}`);
             data.push('');
         }
@@ -566,23 +566,21 @@ function scrollToSummary() {
 
 document.addEventListener('DOMContentLoaded', function() {
     // 检查是否已经显示过欢迎弹窗
-    if (!localStorage.getItem('welcomeShown')) {
-        const modal = document.getElementById('welcome-modal');
-        modal.style.display = 'flex';
+    const modal = document.getElementById('welcome-modal');
+    
+    // 每次进入页面都显示弹窗，移除 localStorage 检查
+    modal.classList.add('show');
 
-        // 点击关闭按钮
-        const closeBtn = modal.querySelector('.modal-close-btn');
-        closeBtn.addEventListener('click', function() {
-            modal.style.display = 'none';
-            localStorage.setItem('welcomeShown', 'true');
-        });
+    // 点击关闭按钮
+    const closeBtn = modal.querySelector('.modal-close-btn');
+    closeBtn.addEventListener('click', function() {
+        modal.classList.remove('show');
+    });
 
-        // 点击模态框外部也可以关闭
-        modal.addEventListener('click', function(e) {
-            if (e.target === modal) {
-                modal.style.display = 'none';
-                localStorage.setItem('welcomeShown', 'true');
-            }
-        });
-    }
+    // 点击模态框外部也可以关闭
+    modal.addEventListener('click', function(e) {
+        if (e.target === modal) {
+            modal.classList.remove('show');
+        }
+    });
 });
