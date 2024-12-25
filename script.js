@@ -226,7 +226,7 @@ document.addEventListener('DOMContentLoaded', () => {
         <div class="visitor-info">
             <span>访客ID: ${visitorId}</span>
             <div class="important-notice">
-                ⚠️ 重要提示：请在浏览完商品后，在页面最下方点击"复制总计数据"按钮保存的浏览记录！
+                ⚠️ 重要提示：请在浏览完商品后，在页面最下方点击"复制总计数据"按钮保存您的浏览记录！
                 <button onclick="scrollToSummary()" class="scroll-button">点击跳转到底部</button>
             </div>
         </div>
@@ -416,7 +416,7 @@ function generateSummaryRows() {
                 .find(p => p.id === baseId);
             
             if (product) {
-                // 确定商品���别
+                // 确定商品类别
                 const category = products.functional.includes(product) ? 'functional' : 'emotional';
                 
                 // 初始化商品的数据结构
@@ -456,7 +456,7 @@ function generateSummaryRows() {
         });
 
     // 情感型商品汇总
-    rows += `<tr><th colspan="3" class="summary-header">情感型商品总��</th></tr>`;
+    rows += `<tr><th colspan="3" class="summary-header">情感型商品总计</th></tr>`;
     Object.entries(summary)
         .filter(([_, data]) => data.category === 'emotional')
         .forEach(([name, data]) => {
@@ -495,7 +495,7 @@ function copySessionData(sessionIndex) {
         if (product) {
             data.push(`商品: ${product.name}`);
             data.push(`版本: ${version === 'ai' ? 'AI评论版本' : '无评论版本'}`);
-            data.push(`访问时间: ${formatTime(duration)}`);
+            data.push(`访问���间: ${formatTime(duration)}`);
             data.push('');
         }
     });
@@ -535,7 +535,7 @@ function copySummaryData() {
         });
     });
 
-    // 按照格式生成数��
+    // 按照格式生成数据
     Object.entries(summary).forEach(([name, times]) => {
         if (times.ai > 0) {
             data.push(`商品: ${name}`);
@@ -564,11 +564,17 @@ function scrollToSummary() {
     }
 }
 
+// 添加显示欢迎弹窗的函数
+function showWelcomeModal() {
+    const modal = document.getElementById('welcome-modal');
+    modal.classList.add('show');
+}
+
 document.addEventListener('DOMContentLoaded', function() {
     // 检查是否已经显示过欢迎弹窗
     const modal = document.getElementById('welcome-modal');
     
-    // 每次进入页面都显示弹窗，移除 localStorage 检查
+    // 每次进入页面都显示弹窗
     modal.classList.add('show');
 
     // 点击关闭按钮
@@ -583,4 +589,8 @@ document.addEventListener('DOMContentLoaded', function() {
             modal.classList.remove('show');
         }
     });
+
+    // 添加帮助按钮点击事件
+    const helpButton = document.getElementById('help-button');
+    helpButton.addEventListener('click', showWelcomeModal);
 });
