@@ -533,3 +533,47 @@ h2 {
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(230, 126, 34, 0.2);
 } 
+
+/* 添加浮动按钮样式 */
+.floating-button {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.floating-button button {
+    background: #e67e22;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 15px 25px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(230, 126, 34, 0.3);
+    transition: all 0.3s ease;
+    width: 100%;
+}
+
+.floating-button button:hover {
+    background: #d35400;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(230, 126, 34, 0.4);
+}
+
+/* 移动端优化 */
+@media (max-width: 768px) {
+    .floating-button {
+        bottom: 30px;
+    }
+
+    .floating-button button {
+        padding: 12px 20px;
+        font-size: 14px;
+    }
+} 

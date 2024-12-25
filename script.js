@@ -19,22 +19,8 @@ const products = {
             id: 'f1',
             name: '飞利浦电动牙刷 Sonicare 3100',
             image: 'https://m.media-amazon.com/images/I/61L6oSYkO5L._SL1500_.jpg',
-            aiReviewLink: 'https://www.douyin.com/',
-            noReviewLink: 'https://www.amazon.com/dp/B08CDPW6XC/ref=nosim'
-        },
-        {
-            id: 'f2',
-            name: 'Instant Pot Pro 10合1多功能电压力锅',
-            image: 'https://m.media-amazon.com/images/I/71oS6P+1qwL._AC_SL1500_.jpg',
-            aiReviewLink: 'https://www.amazon.com/dp/B08PQ2KWHS',
-            noReviewLink: 'https://www.amazon.com/dp/B08PQ2KWHS/ref=nosim'
-        },
-        {
-            id: 'f3',
-            name: 'Dyson V15 Detect 无绳吸尘器',
-            image: 'https://m.media-amazon.com/images/I/61OorFhm+TL._AC_SL1500_.jpg',
-            aiReviewLink: 'https://www.amazon.com/dp/B08PHTW8YF',
-            noReviewLink: 'https://www.amazon.com/dp/B08PHTW8YF/ref=nosim'
+            aiReviewLink: 'https://tdkoy0428.github.io/相机(搜索型).html',
+            noReviewLink: 'https://tdkoy0428.github.io/相机(搜索型-no ai).html'
         }
     ],
     emotional: [
@@ -42,27 +28,13 @@ const products = {
             id: 'e1',
             name: 'Swarovski 施华洛世奇天鹅项链',
             image: 'https://m.media-amazon.com/images/I/61RR8ICiUvL._AC_UL1500_.jpg',
-            aiReviewLink: 'https://www.amazon.com/dp/B08H24V79K',
-            noReviewLink: 'https://www.amazon.com/dp/B08H24V79K/ref=nosim'
-        },
-        {
-            id: 'e2',
-            name: 'Le Labo Santal 33 香水',
-            image: 'https://m.media-amazon.com/images/I/61af+qm+syL._SL1500_.jpg',
-            aiReviewLink: 'https://www.amazon.com/dp/B008B9JT1I',
-            noReviewLink: 'https://www.amazon.com/dp/B008B9JT1I/ref=nosim'
-        },
-        {
-            id: 'e3',
-            name: 'UGG 经典迷你靴',
-            image: 'https://m.media-amazon.com/images/I/71L--6JvVNL._AC_UY695_.jpg',
-            aiReviewLink: 'https://www.amazon.com/dp/B01AIHY1RW',
-            noReviewLink: 'https://www.amazon.com/dp/B01AIHY1RW/ref=nosim'
+            aiReviewLink: 'https://tdkoy0428.github.io/相机(搜索型).html',
+            noReviewLink: 'https://tdkoy0428.github.io/相机(搜索型-no ai).html'
         }
     ]
 };
 
-// 访问时间记录
+// 访客时间记录
 const visitHistory = {
     currentSession: {
         startTime: new Date().toISOString(),
@@ -147,7 +119,7 @@ function copyData() {
 
     navigator.clipboard.writeText(data.join('\n'));
     hasUserCopiedData.status = true;
-    showNotification('数据已复制成功！请粘贴到问卷中');
+    showNotification('数据复制成功！请粘贴到问卷中');
 }
 
 // 添加新的函数
@@ -185,62 +157,43 @@ function handleLinkClick(productId, url) {
         visitHistory.currentSession.visitTimes[productId] = 0;
     }
 
-    // 记录当前活动的商品ID和开始时间
     activeProductId = productId;
     startTimes[productId] = Date.now();
 
-    // 添加页面可见性变化的监听
-    const visibilityHandler = () => {
-        if (document.hidden) {
-            // 用户切换到商品页面，记录开始时间
-            if (activeProductId === productId) {
-                startTimes[productId] = Date.now();
-            }
-        } else {
-            // 用户返回到我们的页面，计算时间差
-            if (activeProductId === productId && startTimes[productId]) {
-                const duration = (Date.now() - startTimes[productId]) / 1000;
-                visitHistory.currentSession.visitTimes[productId] += duration;
-                delete startTimes[productId];
-                activeProductId = null;
-                saveVisitHistory();
-                updateTimingDisplay();
-            }
-        }
-    };
-
-    // 添加页面可见性监听器
-    document.addEventListener('visibilitychange', visibilityHandler);
-
-    // 添加页面焦点变化监听器（针对移动设备）
-    const focusHandler = () => {
-        if (document.hasFocus()) {
-            // 用户返回到我们的页面
-            if (activeProductId === productId && startTimes[productId]) {
-                const duration = (Date.now() - startTimes[productId]) / 1000;
-                visitHistory.currentSession.visitTimes[productId] += duration;
-                delete startTimes[productId];
-                activeProductId = null;
-                saveVisitHistory();
-                updateTimingDisplay();
-            }
-        }
-    };
-
-    window.addEventListener('focus', focusHandler);
-
-    // 清理函数
-    const cleanup = () => {
-        document.removeEventListener('visibilitychange', visibilityHandler);
-        window.removeEventListener('focus', focusHandler);
-    };
-
-    // 30秒后清理事件监听器
-    setTimeout(cleanup, 30000);
+    // 添加商品ID参数到URL
+    const urlWithParams = new URL(url);
+    urlWithParams.searchParams.set('productId', productId);
 
     // 在新标签页中打开链接
-    window.open(url, '_blank');
+    window.open(urlWithParams.toString(), '_blank');
     return false;
+}
+
+// 修改复制当前商品时间的函数
+function copyCurrentProductTime(productId, shouldCloseAll = false) {
+    const [baseId, version] = productId.split('_');
+    const product = [...products.functional, ...products.emotional]
+        .find(p => p.id === baseId);
+    
+    if (product && visitHistory.currentSession.visitTimes[productId]) {
+        const data = [];
+        data.push(`访客ID: ${visitorId}`);
+        data.push(`访问时间: ${new Date().toLocaleString()}`);
+        data.push('');
+        data.push(`商品: ${product.name}`);
+        data.push(`版本: ${version === 'ai' ? 'AI评论版本' : '无评论版本'}`);
+        data.push(`访问时间: ${formatTime(visitHistory.currentSession.visitTimes[productId])}`);
+        
+        navigator.clipboard.writeText(data.join('\n'));
+        showNotification('已复制此商品访问时间！');
+        
+        if (shouldCloseAll) {
+            // 关闭主页面
+            window.opener.close();
+            // 关闭当前商品页面
+            window.close();
+        }
+    }
 }
 
 // 修改 window.onbeforeunload 事件
@@ -286,7 +239,7 @@ document.addEventListener('DOMContentLoaded', () => {
         <div class="visitor-info">
             <span>访客ID: ${visitorId}</span>
             <div class="important-notice">
-                ⚠️ 重要提示：请在浏览完商品后，在页面最下方点击"复制总计数据"按钮保存您的浏览记录！
+                ⚠️ 要提示：请在浏览完商品后，在页面最下方点击"复制总计数据"按钮保存您的浏览记录！
                 <button onclick="scrollToSummary()" class="scroll-button">点击跳转到底部</button>
             </div>
         </div>
