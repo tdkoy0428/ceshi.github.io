@@ -277,22 +277,86 @@ h2 {
 /* 响应式设计 */
 @media (max-width: 768px) {
     body {
-        padding: 15px;
+        padding: 10px;
     }
     
     .product-grid {
         grid-template-columns: 1fr;
+        gap: 20px;
     }
     
     header {
-        padding: 30px 20px;
+        padding: 20px;
     }
     
     .important-notice {
         font-size: 13px;
-        padding: 10px 15px;
+        padding: 10px;
+        flex-direction: column;
     }
-} 
+
+    .version-links {
+        flex-direction: column;
+        padding: 15px;
+    }
+
+    .version-links a {
+        width: 100%;
+        min-width: unset;
+    }
+
+    .session-header {
+        flex-direction: column;
+        gap: 10px;
+        align-items: stretch;
+    }
+
+    .copy-session-btn {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .modal-content {
+        width: 95%;
+        padding: 20px;
+        margin: 10px;
+    }
+
+    .product-card img {
+        height: 250px;
+    }
+
+    .timing-stats {
+        font-size: 13px;
+    }
+
+    .timing-stats th,
+    .timing-stats td {
+        padding: 8px;
+    }
+}
+
+/* 添加触摸设备的优化 */
+@media (hover: none) {
+    .version-links a,
+    .copy-session-btn,
+    .scroll-button,
+    .help-button {
+        -webkit-tap-highlight-color: transparent;
+        touch-action: manipulation;
+    }
+
+    .product-card:hover {
+        transform: none;
+    }
+
+    .version-links a:active,
+    .copy-session-btn:active,
+    .scroll-button:active,
+    .help-button:active {
+        opacity: 0.7;
+    }
+}
 
 /* 修改清除历史数据按钮样式 */
 .session-controls {

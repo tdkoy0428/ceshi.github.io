@@ -166,23 +166,36 @@ function handleLinkClick(productId, url) {
         visitHistory.currentSession.visitTimes[productId] = 0;
     }
     
-    const newWindow = window.open(url, '_blank');
-    if (!newWindow) return true;
-
     let startTime = Date.now();
-    let isTracking = true;
-
-    // 当新窗口关闭时停止计时
-    const checkWindow = setInterval(() => {
-        if (newWindow.closed && isTracking) {
+    
+    // 添加页面可见性变化的监听
+    const visibilityHandler = () => {
+        if (document.hidden) {
+            // 用户切换到其他页面，记录开始时间
+            startTime = Date.now();
+        } else {
+            // 用户返回到我们的页面，计算时间差
             const duration = (Date.now() - startTime) / 1000;
             visitHistory.currentSession.visitTimes[productId] += duration;
-            isTracking = false;
-            clearInterval(checkWindow);
             saveVisitHistory();
             updateTimingDisplay();
         }
-    }, 500);
+    };
+
+    // 添加页面可见性监听器
+    document.addEventListener('visibilitychange', visibilityHandler);
+
+    // 5秒后开始检查用户是否返回
+    setTimeout(() => {
+        const checkInterval = setInterval(() => {
+            if (!document.hidden) {
+                document.removeEventListener('visibilitychange', visibilityHandler);
+                clearInterval(checkInterval);
+                saveVisitHistory();
+                updateTimingDisplay();
+            }
+        }, 1000);
+    }, 5000);
 
     return true;
 }
@@ -195,7 +208,7 @@ window.onbeforeunload = function(e) {
         visitHistory.currentSession.visitTimes[activeProductId] += duration;
     }
     
-    // 如果当��会话有数据，保存到历史记录中
+    // 如果当前会话有数据，保存到历史记录中
     if (Object.keys(visitHistory.currentSession.visitTimes).length > 0) {
         if (!visitHistory.sessions) {
             visitHistory.sessions = [];
@@ -495,7 +508,7 @@ function copySessionData(sessionIndex) {
         if (product) {
             data.push(`商品: ${product.name}`);
             data.push(`版本: ${version === 'ai' ? 'AI评论版本' : '无评论版本'}`);
-            data.push(`访问���间: ${formatTime(duration)}`);
+            data.push(`访问时间: ${formatTime(duration)}`);
             data.push('');
         }
     });
