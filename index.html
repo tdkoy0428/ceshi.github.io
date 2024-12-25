@@ -7,6 +7,20 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <div id="welcome-modal" class="modal">
+        <div class="modal-content">
+            <h2>欢迎使用</h2>
+            <div class="modal-body">
+                <p>请注意：</p>
+                <ol>
+                    <li>请查看所有商品的两个版本链接</li>
+                    <li>查看完成后请记得复制您的浏览数据</li>
+                    <li>如果您是多次进入，请复制您的总浏览数据</li>
+                </ol>
+            </div>
+            <button class="modal-close-btn">我知道了</button>
+        </div>
+    </div>
     <div id="app">
         <header>
             <h1>亚马逊商品展示</h1>
@@ -23,8 +37,7 @@
             <div class="timing-table">
                 <h2>访问时间统计</h2>
                 <div id="timing-stats"></div>
-                <!-- 复制数据按钮 -->
-                <button class="copy-button" onclick="copyData()">复制数据</button>
+                
             </div>
         </main>
     </div>
