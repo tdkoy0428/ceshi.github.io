@@ -72,20 +72,35 @@ const visitHistory = {
 
 // 在文件开头添加加载历史数据的函数
 function loadVisitHistory() {
-    const savedHistory = localStorage.getItem('visitHistory');
-    if (savedHistory) {
-        const history = JSON.parse(savedHistory);
-        // 确保有 sessions 数组
-        if (!history.sessions) {
-            history.sessions = [];
+    try {
+        const savedHistory = localStorage.getItem('visitHistory');
+        if (savedHistory) {
+            const history = JSON.parse(savedHistory);
+            
+            // 确保有 sessions 数组并且保留现有的会话数据
+            if (!history.sessions) {
+                history.sessions = [];
+            }
+            
+            // 如果有当前会话数据，将其添加到历史记录中
+            if (history.currentSession && 
+                Object.keys(history.currentSession.visitTimes).length > 0) {
+                history.sessions.push({...history.currentSession});
+            }
+            
+            // 创建新的当前会话
+            history.currentSession = {
+                startTime: new Date().toISOString(),
+                visitTimes: {}
+            };
+            
+            return history;
         }
-        // 创建新的当前会话
-        history.currentSession = {
-            startTime: new Date().toISOString(),
-            visitTimes: {}
-        };
-        return history;
+    } catch (error) {
+        console.error('Error loading visit history:', error);
     }
+    
+    // 如果没有保存的数据或出错，返回初始状态
     return {
         sessions: [],
         currentSession: {
@@ -97,7 +112,12 @@ function loadVisitHistory() {
 
 // 保存访问历史
 function saveVisitHistory() {
-    localStorage.setItem('visitHistory', JSON.stringify(visitHistory));
+    try {
+        localStorage.setItem('visitHistory', JSON.stringify(visitHistory));
+    } catch (error) {
+        console.error('Error saving visit history:', error);
+        showNotification('保存数据时出错，请确保浏览器支持本地存储', 'error');
+    }
 }
 
 // 在文件开头添加新的变量
@@ -131,18 +151,17 @@ function copyData() {
 }
 
 // 添加新的函数
-function showNotification(message) {
-    // 移除已存在的通知
+function showNotification(message, type = 'success') {
     const existingNotification = document.querySelector('.notification');
     if (existingNotification) {
         document.body.removeChild(existingNotification);
     }
 
     const notification = document.createElement('div');
-    notification.className = 'notification';
+    notification.className = `notification ${type}`;
     notification.innerHTML = `
-        <div class="notification-title">✅ 复制成功</div>
-        <div class="notification-message">数据已复制到剪贴板，现在可以安全地关闭页面了</div>
+        <div class="notification-title">${type === 'success' ? '✅ 成功' : '⚠️ 提示'}</div>
+        <div class="notification-message">${message}</div>
     `;
     document.body.appendChild(notification);
 
@@ -226,32 +245,34 @@ function handleLinkClick(productId, url) {
 
 // 修改 window.onbeforeunload 事件
 window.onbeforeunload = function(e) {
-    // 确保正在进行的计时被保存
-    if (activeProductId && startTimes[activeProductId]) {
-        const duration = (Date.now() - startTimes[activeProductId]) / 1000;
-        visitHistory.currentSession.visitTimes[activeProductId] += duration;
-        delete startTimes[activeProductId];
-        activeProductId = null;
-        saveVisitHistory();
-    }
-    
-    // 如果当前会话有数据，保存到历史记录中
-    if (Object.keys(visitHistory.currentSession.visitTimes).length > 0) {
-        if (!visitHistory.sessions) {
-            visitHistory.sessions = [];
+    try {
+        // 确保正在进行的计时被保存
+        if (activeProductId && startTimes[activeProductId]) {
+            const duration = (Date.now() - startTimes[activeProductId]) / 1000;
+            visitHistory.currentSession.visitTimes[activeProductId] += duration;
+            delete startTimes[activeProductId];
+            activeProductId = null;
         }
-        visitHistory.sessions.push({...visitHistory.currentSession});
-        visitHistory.currentSession = {
-            startTime: new Date().toISOString(),
-            visitTimes: {}
-        };
+        
+        // 如果当前会话有数据，保存到历史记录中
+        if (Object.keys(visitHistory.currentSession.visitTimes).length > 0) {
+            if (!visitHistory.sessions) {
+                visitHistory.sessions = [];
+            }
+            // 保存当前会话到历史记录
+            visitHistory.sessions.push({...visitHistory.currentSession});
+        }
+        
+        // 保存更新后的历史记录
         saveVisitHistory();
-    }
-    
-    if (!hasUserCopiedData.status) {
-        const message = '⚠️ 警告：您还没有复制访问数据！\n请先点击"复制数据"按钮，再关闭页面。';
-        e.returnValue = message;
-        return message;
+        
+        if (!hasUserCopiedData.status) {
+            const message = '⚠️ 警告：您还没有复制访问数据！\n请先点击"复制数据"按钮，再关闭页面。';
+            e.returnValue = message;
+            return message;
+        }
+    } catch (error) {
+        console.error('Error in onbeforeunload:', error);
     }
 };
 
