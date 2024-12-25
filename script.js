@@ -165,39 +165,63 @@ function handleLinkClick(productId, url) {
     if (!visitHistory.currentSession.visitTimes[productId]) {
         visitHistory.currentSession.visitTimes[productId] = 0;
     }
-    
-    let startTime = Date.now();
-    
+
+    // 记录当前活动的商品ID和开始时间
+    activeProductId = productId;
+    startTimes[productId] = Date.now();
+
     // 添加页面可见性变化的监听
     const visibilityHandler = () => {
         if (document.hidden) {
-            // 用户切换到其他页面，记录开始时间
-            startTime = Date.now();
+            // 用户切换到商品页面，记录开始时间
+            if (activeProductId === productId) {
+                startTimes[productId] = Date.now();
+            }
         } else {
             // 用户返回到我们的页面，计算时间差
-            const duration = (Date.now() - startTime) / 1000;
-            visitHistory.currentSession.visitTimes[productId] += duration;
-            saveVisitHistory();
-            updateTimingDisplay();
+            if (activeProductId === productId && startTimes[productId]) {
+                const duration = (Date.now() - startTimes[productId]) / 1000;
+                visitHistory.currentSession.visitTimes[productId] += duration;
+                delete startTimes[productId];
+                activeProductId = null;
+                saveVisitHistory();
+                updateTimingDisplay();
+            }
         }
     };
 
     // 添加页面可见性监听器
     document.addEventListener('visibilitychange', visibilityHandler);
 
-    // 5秒后开始检查用户是否返回
-    setTimeout(() => {
-        const checkInterval = setInterval(() => {
-            if (!document.hidden) {
-                document.removeEventListener('visibilitychange', visibilityHandler);
-                clearInterval(checkInterval);
+    // 添加页面焦点变化监听器（针对移动设备）
+    const focusHandler = () => {
+        if (document.hasFocus()) {
+            // 用户返回到我们的页面
+            if (activeProductId === productId && startTimes[productId]) {
+                const duration = (Date.now() - startTimes[productId]) / 1000;
+                visitHistory.currentSession.visitTimes[productId] += duration;
+                delete startTimes[productId];
+                activeProductId = null;
                 saveVisitHistory();
                 updateTimingDisplay();
             }
-        }, 1000);
-    }, 5000);
+        }
+    };
 
-    return true;
+    window.addEventListener('focus', focusHandler);
+
+    // 清理函数
+    const cleanup = () => {
+        document.removeEventListener('visibilitychange', visibilityHandler);
+        window.removeEventListener('focus', focusHandler);
+    };
+
+    // 30秒后清理事件监听器
+    setTimeout(cleanup, 30000);
+
+    // 在新标签页中打开链接
+    window.open(url, '_blank');
+    return false;
 }
 
 // 修改 window.onbeforeunload 事件
@@ -206,6 +230,9 @@ window.onbeforeunload = function(e) {
     if (activeProductId && startTimes[activeProductId]) {
         const duration = (Date.now() - startTimes[activeProductId]) / 1000;
         visitHistory.currentSession.visitTimes[activeProductId] += duration;
+        delete startTimes[activeProductId];
+        activeProductId = null;
+        saveVisitHistory();
     }
     
     // 如果当前会话有数据，保存到历史记录中
@@ -214,7 +241,6 @@ window.onbeforeunload = function(e) {
             visitHistory.sessions = [];
         }
         visitHistory.sessions.push({...visitHistory.currentSession});
-        // 创建新的当前会话
         visitHistory.currentSession = {
             startTime: new Date().toISOString(),
             visitTimes: {}
