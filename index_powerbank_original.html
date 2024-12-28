@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>云购商城</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="app">
+        <header>
+            <div class="logo">
+                <img src="https://tdkoy0428.github.io/%E4%BA%91%E8%B4%AD.png" alt="云购" class="logo-image">
+            </div>
+        </header>
+        <div class="content">
+            <div class="notice">
+                你将在云购商城中购买一款充电宝，接下来，请认真浏览商品页面。
+            </div>
+            <div class="notice">
+                提示：<br>
+                1、商品评论由购买过该商品的消费者撰写而成。<br>
+                2、可自主结束浏览，返回问卷继续作答。
+            </div>
+        </div>
+        <div class="next-page">
+            <button onclick="goToProduct()">下一页</button>
+        </div>
+    </div>
+
+    <script>
+        // Function to close all windows
+        function closeAllWindows() {
+            // Try to close any opener windows
+            if (window.opener && !window.opener.closed) {
+                window.opener.close();
+            }
+            // Close the current window
+            window.close();
+        }
+
+        // Function to add return button
+        function addReturnButton(win) {
+            // Create the button element
+            var button = document.createElement('button');
+        
+            button.onclick = closeAllWindows;
+            
+            // Style the button
+            button.style.position = 'fixed';
+            button.style.bottom = '20px';
+            button.style.right = '20px';
+            button.style.padding = '10px 20px';
+            button.style.backgroundColor = '#4CAF50';
+            button.style.color = 'white';
+            button.style.border = 'none';
+            button.style.borderRadius = '5px';
+            button.style.cursor = 'pointer';
+            button.style.zIndex = '9999';
+            
+            // Add hover effect
+            button.onmouseover = function() {
+                this.style.backgroundColor = '#45a049';
+            };
+            button.onmouseout = function() {
+                this.style.backgroundColor = '#4CAF50';
+            };
+            
+            // Add the button to the page
+            win.document.body.appendChild(button);
+        }
+
+        function goToProduct() {
+            var productWindow = window.open('充电宝-原始评论-无AI评论.html', '_blank');
+            
+            // Add return button to the product window
+            productWindow.onload = function() {
+                addReturnButton(productWindow);
+            };
+
+            // Close the current window
+            window.close();
+        }
+    </script>
+</body>
+</html> 

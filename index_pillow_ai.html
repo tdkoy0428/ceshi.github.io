@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>云购商城</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="close_windows.js"></script>
+</head>
+<body>
+    <div id="app">
+        <header>
+            <div class="logo">
+                <img src="https://tdkoy0428.github.io/%E4%BA%91%E8%B4%AD.png" alt="云购" class="logo-image">
+            </div>
+        </header>
+        <div class="content">
+            <div class="notice">
+                你将在云购商城中购买一款枕头，接下来，请认真浏览商品页面。
+            </div>
+            <div class="notice">
+                提示：<br>
+                1、商品评论由AI基于海量用户原始评论生成，已过滤被监测到的虚假评论等，是根据购买过该商品的消费者所撰写的真实评论而生成的总结评论。此外，由AI总结生成的若干产品关键词也可点击查看。<br>
+                2、可自主结束浏览，返回问卷继续作答。
+            </div>
+        </div>
+        <div class="next-page">
+            <button onclick="goToProduct()">下一页</button>
+        </div>
+    </div>
+
+    <script>
+        function goToProduct() {
+            var productWindow = window.open('枕头_有AI评论.html', '_blank');
+            
+            // Add return button to the product window
+            productWindow.onload = function() {
+                var button = document.createElement('button');
+               
+                button.onclick = closeAllWindows;
+                button.className = 'return-button';
+                productWindow.document.body.appendChild(button);
+            };
+
+            window.close();
+        }
+    </script>
+</body>
+</html> 

@@ -17,19 +17,19 @@ const products = {
     functional: [
         {
             id: 'f1',
-            name: '飞利浦电动牙刷 Sonicare 3100',
-            image: 'https://m.media-amazon.com/images/I/61L6oSYkO5L._SL1500_.jpg',
-            aiReviewLink: 'https://tdkoy0428.github.io/相机(搜索型).html',
-            noReviewLink: 'https://tdkoy0428.github.io/相机(搜索型-no ai).html'
+            name: '云购充电宝 10000mAh',
+            image: 'https://via.placeholder.com/300x300?text=充电宝',
+            aiReviewLink: '../0/充电宝(搜索型-AI评论).html',
+            noReviewLink: '../0/充电宝(搜索型-原始评论).html'
         }
     ],
     emotional: [
         {
             id: 'e1',
-            name: 'Swarovski 施华洛世奇天鹅项链',
-            image: 'https://m.media-amazon.com/images/I/61RR8ICiUvL._AC_UL1500_.jpg',
-            aiReviewLink: 'https://tdkoy0428.github.io/相机(搜索型).html',
-            noReviewLink: 'https://tdkoy0428.github.io/相机(搜索型-no ai).html'
+            name: '云购记忆棉枕头',
+            image: 'https://via.placeholder.com/300x300?text=枕头',
+            aiReviewLink: '../0/枕头(体验型-AI评论).html',
+            noReviewLink: '../0/枕头(体验型-原始评论).html'
         }
     ]
 };
@@ -42,114 +42,58 @@ const visitHistory = {
     }
 };
 
-// 在文件开头添加加载历史数据的函数
-function loadVisitHistory() {
-    try {
-        const savedHistory = localStorage.getItem('visitHistory');
-        if (savedHistory) {
-            const history = JSON.parse(savedHistory);
-            
-            // 确保有 sessions 数组并且保留现有的会话数据
-            if (!history.sessions) {
-                history.sessions = [];
-            }
-            
-            // 如果有当前会话数据，将其添加到历史记录中
-            if (history.currentSession && 
-                Object.keys(history.currentSession.visitTimes).length > 0) {
-                history.sessions.push({...history.currentSession});
-            }
-            
-            // 创建新的当前会话
-            history.currentSession = {
-                startTime: new Date().toISOString(),
-                visitTimes: {}
-            };
-            
-            return history;
-        }
-    } catch (error) {
-        console.error('Error loading visit history:', error);
-    }
-    
-    // 如果没有保存的数据或出错，返回初始状态
-    return {
-        sessions: [],
-        currentSession: {
-            startTime: new Date().toISOString(),
-            visitTimes: {}
-        }
-    };
-}
-
-// 保存访问历史
-function saveVisitHistory() {
-    try {
-        localStorage.setItem('visitHistory', JSON.stringify(visitHistory));
-    } catch (error) {
-        console.error('Error saving visit history:', error);
-        showNotification('保存数据时出错，请确保浏览器支持本地存储', 'error');
-    }
-}
-
-// 在文件开头添加新的变量
-const hasUserCopiedData = {
-    status: false
-};
-
-// 复制数据
-function copyData() {
-    const data = [];
-    data.push(`访客ID: ${visitorId}`);
-    data.push('');  // 空行
-
-    // 收集所有访问数据
-    for (const [productId, duration] of Object.entries(visitHistory.currentSession.visitTimes)) {
-        const [baseId, version] = productId.split('_');
-        const product = [...products.functional, ...products.emotional]
-            .find(p => p.id === baseId);
-        
-        if (product) {
-            data.push(`商品: ${product.name}`);
-            data.push(`版本: ${version === 'ai' ? 'AI评论版本' : '无评论版本'}`);
-            data.push(`访问时间: ${formatTime(duration)}`);
-            data.push('');  // 空行
-        }
-    }
-
-    navigator.clipboard.writeText(data.join('\n'));
-    hasUserCopiedData.status = true;
-    showNotification('数据复制成功！请粘贴到问卷中');
-}
-
-// 添加新的函数
-function showNotification(message, type = 'success') {
-    const existingNotification = document.querySelector('.notification');
-    if (existingNotification) {
-        document.body.removeChild(existingNotification);
-    }
-
-    const notification = document.createElement('div');
-    notification.className = `notification ${type}`;
-    notification.innerHTML = `
-        <div class="notification-title">${type === 'success' ? '✅ 成功' : '⚠️ 提示'}</div>
-        <div class="notification-message">${message}</div>
-    `;
-    document.body.appendChild(notification);
-
-    setTimeout(() => {
-        notification.classList.add('fade-out');
-        setTimeout(() => {
-            if (document.body.contains(notification)) {
-                document.body.removeChild(notification);
-            }
-        }, 500);
-    }, 3000);
-}
-
 // 添加新的全局变量来跟踪时间
 const startTimes = {};
 let activeProductId = null;
+
+// 添加随机分配商品的函数
+function getRandomProduct() {
+    // 合并所有商品
+    const allProducts = [...products.functional, ...products.emotional];
+    // 随机选择一个商品
+    const randomProduct = allProducts[Math.floor(Math.random() * allProducts.length)];
+    // 随机决定是否显示AI评论版本
+    const showAiVersion = Math.random() < 0.5;
+    
+    return {
+        product: randomProduct,
+        version: showAiVersion ? 'ai' : 'no'
+    };
+}
+
+// 修改渲染商品的函数
+function renderProducts() {
+    const functionalContainer = document.getElementById('functional-products');
+    const emotionalContainer = document.getElementById('emotional-products');
+
+    functionalContainer.innerHTML = '';
+    emotionalContainer.innerHTML = '';
+
+    // 获取随机分配的商品
+    const { product, version } = getRandomProduct();
+    
+    // 创建商品卡片
+    const card = document.createElement('div');
+    card.className = 'product-card';
+    card.innerHTML = `
+        <img src="${product.image}" alt="${product.name}">
+        <h3>${product.name}</h3>
+        <div class="version-links">
+            <a href="${version === 'ai' ? product.aiReviewLink : product.noReviewLink}" 
+               target="_blank"
+               onclick="return handleLinkClick('${product.id}_${version}', '${version === 'ai' ? product.aiReviewLink : product.noReviewLink}')">
+               ${version === 'ai' ? 'AI评论版本' : '无评论版本'}
+            </a>
+        </div>
+    `;
+
+    // 根据商品类型放入对应容器
+    if (products.functional.includes(product)) {
+        functionalContainer.appendChild(card);
+    } else {
+        emotionalContainer.appendChild(card);
+    }
+}
 
 // 修改 handleLinkClick 函数
 function handleLinkClick(productId, url) {
@@ -161,233 +105,50 @@ function handleLinkClick(productId, url) {
     startTimes[productId] = Date.now();
 
     // 添加商品ID参数到URL
-    const urlWithParams = new URL(url);
-    urlWithParams.searchParams.set('productId', productId);
-
+    const urlWithParams = url + '?productId=' + encodeURIComponent(productId);
     // 在新标签页中打开链接
-    window.open(urlWithParams.toString(), '_blank');
+    window.open(urlWithParams, '_blank');
     return false;
 }
 
 // 修改复制当前商品时间的函数
-function copyCurrentProductTime(productId, shouldCloseAll = false) {
+function copyCurrentProductTime(productId) {
     const [baseId, version] = productId.split('_');
     const product = [...products.functional, ...products.emotional]
         .find(p => p.id === baseId);
     
-    if (product && visitHistory.currentSession.visitTimes[productId]) {
+    if (product) {
+        // 确保当前时间被记录
+        if (activeProductId && startTimes[activeProductId]) {
+            const duration = (Date.now() - startTimes[activeProductId]) / 1000;
+            visitHistory.currentSession.visitTimes[activeProductId] = (visitHistory.currentSession.visitTimes[activeProductId] || 0) + duration;
+            delete startTimes[activeProductId];
+            activeProductId = null;
+        }
+
         const data = [];
         data.push(`访客ID: ${visitorId}`);
         data.push(`访问时间: ${new Date().toLocaleString()}`);
         data.push('');
         data.push(`商品: ${product.name}`);
         data.push(`版本: ${version === 'ai' ? 'AI评论版本' : '无评论版本'}`);
-        data.push(`访问时间: ${formatTime(visitHistory.currentSession.visitTimes[productId])}`);
+        data.push(`访问时间: ${formatTime(visitHistory.currentSession.visitTimes[productId] || 0)}`);
         
-        navigator.clipboard.writeText(data.join('\n'));
-        showNotification('已复制此商品访问时间！');
+        // 使用同步的方式复制数据
+        const textArea = document.createElement('textarea');
+        textArea.value = data.join('\n');
+        document.body.appendChild(textArea);
+        textArea.select();
         
-        if (shouldCloseAll) {
-            // 关闭主页面
-            window.opener.close();
+        try {
+            document.execCommand('copy');
             // 关闭当前商品页面
             window.close();
+        } catch (error) {
+            console.error('Error copying to clipboard:', error);
+        } finally {
+            document.body.removeChild(textArea);
         }
-    }
-}
-
-// 修改 window.onbeforeunload 事件
-window.onbeforeunload = function(e) {
-    try {
-        // 确保正在进行的计时被保存
-        if (activeProductId && startTimes[activeProductId]) {
-            const duration = (Date.now() - startTimes[activeProductId]) / 1000;
-            visitHistory.currentSession.visitTimes[activeProductId] += duration;
-            delete startTimes[activeProductId];
-            activeProductId = null;
-        }
-        
-        // 如果当前会话有数据，保存到历史记录中
-        if (Object.keys(visitHistory.currentSession.visitTimes).length > 0) {
-            if (!visitHistory.sessions) {
-                visitHistory.sessions = [];
-            }
-            // 保存当前会话到历史记录
-            visitHistory.sessions.push({...visitHistory.currentSession});
-        }
-        
-        // 保存更新后的历史记录
-        saveVisitHistory();
-        
-        if (!hasUserCopiedData.status) {
-            const message = '⚠️ 警告：您还没有复制访问数据！\n请先点击"复制数据"按钮，再关闭页面。';
-            e.returnValue = message;
-            return message;
-        }
-    } catch (error) {
-        console.error('Error in onbeforeunload:', error);
-    }
-};
-
-// 初始化访客ID和渲染商品
-const visitorId = generateVisitorId();
-document.addEventListener('DOMContentLoaded', () => {
-    Object.assign(visitHistory, loadVisitHistory());
-    renderProducts();
-    const visitorIdElement = document.getElementById('visitor-id');
-    visitorIdElement.innerHTML = `
-        <div class="visitor-info">
-            <span>访客ID: ${visitorId}</span>
-            <div class="important-notice">
-                ⚠️ 要提示：请在浏览完商品后，在页面最下方点击"复制总计数据"按钮保存您的浏览记录！
-                <button onclick="scrollToSummary()" class="scroll-button">点击跳转到底部</button>
-            </div>
-        </div>
-    `;
-    updateTimingDisplay();
-});
-
-// 创建商品卡片
-function createProductCard(product) {
-    const card = document.createElement('div');
-    card.className = 'product-card';
-    card.innerHTML = `
-        <img src="${product.image}" alt="${product.name}">
-        <h3>${product.name}</h3>
-        <div class="version-links">
-            <a href="${product.aiReviewLink}" 
-               target="_blank"
-               onclick="return handleLinkClick('${product.id}_ai', '${product.aiReviewLink}')">AI评论版本</a>
-            <a href="${product.noReviewLink}"
-               target="_blank"
-               onclick="return handleLinkClick('${product.id}_no', '${product.noReviewLink}')">无评论版本</a>
-        </div>
-    `;
-    return card;
-}
-
-// 更新计时显示
-function updateTimingDisplay() {
-    const timingStats = document.getElementById('timing-stats');
-    let html = `
-        <div class="session-controls">
-            <button onclick="clearHistory()" class="danger">清除历史数据</button>
-        </div>
-    `;
-
-    // 显示历史会话数据
-    if (visitHistory.sessions && visitHistory.sessions.length > 0) {
-        visitHistory.sessions.forEach((session, index) => {
-            html += `
-                <div class="session-block">
-                    <div class="session-header">
-                        <h3>第 ${index + 1} 次访问 (${new Date(session.startTime).toLocaleString()})</h3>
-                        <button onclick="copySessionData(${index})" class="copy-session-btn">复制此次记录</button>
-                    </div>
-                    <table class="timing-stats">
-                        <tr>
-                            <th>商品</th>
-                            <th>版本</th>
-                            <th>访问时间</th>
-                        </tr>
-                        ${generateSessionRows(session.visitTimes)}
-                    </table>
-                </div>
-            `;
-        });
-    }
-
-    // 显示当前会话数据
-    if (Object.keys(visitHistory.currentSession.visitTimes).length > 0) {
-        html += `
-            <div class="session-block current">
-                <div class="session-header">
-                    <h3>第 ${visitHistory.sessions.length + 1} 次访问 (${new Date(visitHistory.currentSession.startTime).toLocaleString()})</h3>
-                    <button onclick="copySessionData('current')" class="copy-session-btn">复制此次记录</button>
-                </div>
-                <table class="timing-stats">
-                    <tr>
-                        <th>商品</th>
-                        <th>版本</th>
-                        <th>访问时间</th>
-                    </tr>
-                    ${generateSessionRows(visitHistory.currentSession.visitTimes)}
-                </table>
-            </div>
-        `;
-    }
-
-    // 添加总计数据
-    html += `
-        <div class="session-block summary">
-            <div class="session-header">
-                <h3>总计访问时间</h3>
-                <button onclick="copySummaryData()" class="copy-session-btn">复制总计数据</button>
-            </div>
-            <table class="timing-stats">
-                <tr>
-                    <th>商品</th>
-                    <th>版本</th>
-                    <th>访问时间</th>
-                </tr>
-                ${generateSummaryRows()}
-            </table>
-        </div>
-    `;
-
-    timingStats.innerHTML = html;
-}
-
-// 生成会话数据行
-function generateSessionRows(visitTimes) {
-    let rows = '';
-    for (const productId in visitTimes) {
-        const [baseId, version] = productId.split('_');
-        const product = [...products.functional, ...products.emotional]
-            .find(p => p.id === baseId);
-        
-        if (product) {
-            rows += `
-                <tr>
-                    <td>${product.name}</td>
-                    <td>${version === 'ai' ? 'AI评论版本' : '无评论版本'}</td>
-                    <td>${formatTime(visitTimes[productId])}</td>
-                </tr>
-            `;
-        }
-    }
-    return rows;
-}
-
-// 添加导出数据功能
-function exportData() {
-    const data = {
-        visitorId: visitorId,
-        sessions: visitHistory.sessions,
-        currentSession: visitHistory.currentSession
-    };
-    
-    const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement('a');
-    a.href = url;
-    a.download = `visit-history-${visitorId}.json`;
-    document.body.appendChild(a);
-    a.click();
-    document.body.removeChild(a);
-    URL.revokeObjectURL(url);
-}
-
-// 添加清除历史数据功能
-function clearHistory() {
-    if (confirm('确定要清除所有历史访问数据吗？此操作不可撤销。')) {
-        visitHistory.sessions = [];
-        visitHistory.currentSession = {
-            startTime: new Date().toISOString(),
-            visitTimes: {}
-        };
-        saveVisitHistory();
-        updateTimingDisplay();
     }
 }
 
@@ -398,212 +159,68 @@ function formatTime(seconds) {
     return `${minutes}分${remainingSeconds}秒`;
 }
 
-// 渲染商品
-function renderProducts() {
-    const functionalContainer = document.getElementById('functional-products');
-    const emotionalContainer = document.getElementById('emotional-products');
+// 初始化访客ID和渲染商品
+const visitorId = generateVisitorId();
+document.addEventListener('DOMContentLoaded', () => {
+    renderProducts();
+    const visitorIdElement = document.getElementById('visitor-id');
+    visitorIdElement.innerHTML = `
+        <div class="visitor-info">
+            <span>访客ID: ${visitorId}</span>
+        </div>
+    `;
+});
 
-    functionalContainer.innerHTML = '';
-    emotionalContainer.innerHTML = '';
+// 添加移动端优化相关的函数
+function initMobileOptimizations() {
+    // 添加返回顶部按钮
+    const backToTopButton = document.createElement('div');
+    backToTopButton.className = 'back-to-top';
+    backToTopButton.innerHTML = '↑';
+    backToTopButton.style.display = 'none';
+    document.body.appendChild(backToTopButton);
 
-    products.functional.forEach(product => {
-        functionalContainer.appendChild(createProductCard(product));
+    // 监听滚动事件
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 300) {
+            backToTopButton.style.display = 'flex';
+        } else {
+            backToTopButton.style.display = 'none';
+        }
     });
 
-    products.emotional.forEach(product => {
-        emotionalContainer.appendChild(createProductCard(product));
-    });
-}
-
-// 修改 generateSummaryRows 函数
-function generateSummaryRows() {
-    // 按商品和版本分类的汇总数据
-    const summary = {};
-    
-    // 汇总所有会话的数据
-    const allSessions = [...visitHistory.sessions, visitHistory.currentSession];
-    allSessions.forEach(session => {
-        Object.entries(session.visitTimes).forEach(([productId, duration]) => {
-            const [baseId, version] = productId.split('_');
-            const product = [...products.functional, ...products.emotional]
-                .find(p => p.id === baseId);
-            
-            if (product) {
-                // 确定商品类别
-                const category = products.functional.includes(product) ? 'functional' : 'emotional';
-                
-                // 初始化商品的数据结构
-                if (!summary[product.name]) {
-                    summary[product.name] = {
-                        category: category,
-                        ai: 0,
-                        no: 0
-                    };
-                }
-                
-                // 累加时间
-                summary[product.name][version] += duration;
-            }
+    // 返回顶部点击事件
+    backToTopButton.addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
         });
     });
 
-    // 生成HTML
-    let rows = '';
-    
-    // 功能型商品汇总
-    rows += `<tr><th colspan="3" class="summary-header">功能型商品总计</th></tr>`;
-    Object.entries(summary)
-        .filter(([_, data]) => data.category === 'functional')
-        .forEach(([name, data]) => {
-            rows += `
-                <tr>
-                    <td rowspan="2">${name}</td>
-                    <td>AI评论版本</td>
-                    <td>${formatTime(data.ai)}</td>
-                </tr>
-                <tr>
-                    <td>无评论版本</td>
-                    <td>${formatTime(data.no)}</td>
-                </tr>
-            `;
-        });
-
-    // 情感型商品汇总
-    rows += `<tr><th colspan="3" class="summary-header">情感型商品总计</th></tr>`;
-    Object.entries(summary)
-        .filter(([_, data]) => data.category === 'emotional')
-        .forEach(([name, data]) => {
-            rows += `
-                <tr>
-                    <td rowspan="2">${name}</td>
-                    <td>AI评论版本</td>
-                    <td>${formatTime(data.ai)}</td>
-                </tr>
-                <tr>
-                    <td>无评论版本</td>
-                    <td>${formatTime(data.no)}</td>
-                </tr>
-            `;
-        });
-
-    return rows;
-}
-
-// 添加复制单个会话数据的函数
-function copySessionData(sessionIndex) {
-    const session = sessionIndex === 'current' 
-        ? visitHistory.currentSession 
-        : visitHistory.sessions[sessionIndex];
-    
-    const data = [];
-    data.push(`访客ID: ${visitorId}`);
-    data.push(`访问时间: ${new Date(session.startTime).toLocaleString()}`);
-    data.push('');
-
-    Object.entries(session.visitTimes).forEach(([productId, duration]) => {
-        const [baseId, version] = productId.split('_');
-        const product = [...products.functional, ...products.emotional]
-            .find(p => p.id === baseId);
+    // 优化图片加载
+    const images = document.querySelectorAll('img');
+    images.forEach(img => {
+        img.loading = 'lazy'; // 启用懒加载
         
-        if (product) {
-            data.push(`商品: ${product.name}`);
-            data.push(`版本: ${version === 'ai' ? 'AI评论版本' : '无评论版本'}`);
-            data.push(`访问时间: ${formatTime(duration)}`);
-            data.push('');
-        }
+        // 添加加载失败处理
+        img.onerror = function() {
+            this.src = 'placeholder.jpg'; // 设置默认图片
+        };
     });
 
-    navigator.clipboard.writeText(data.join('\n'));
-    showNotification('此次访问记录已复制成功！');
-}
-
-// 修改 copySummaryData 函数
-function copySummaryData() {
-    const data = [];
-    data.push(`访客ID: ${visitorId}`);
-    data.push(`访问时间: ${new Date().toLocaleString()}`);
-    data.push('');
-
-    // 按商品和版本分类的汇总数据
-    const summary = {};
-    const allSessions = [...visitHistory.sessions, visitHistory.currentSession];
-    
-    allSessions.forEach(session => {
-        Object.entries(session.visitTimes).forEach(([productId, duration]) => {
-            const [baseId, version] = productId.split('_');
-            const product = [...products.functional, ...products.emotional]
-                .find(p => p.id === baseId);
-            
-            if (product) {
-                // 初始化商品的数据结构
-                if (!summary[product.name]) {
-                    summary[product.name] = {
-                        ai: 0,
-                        no: 0
-                    };
-                }
-                // 累加时间
-                summary[product.name][version] += duration;
-            }
+    // 添加触摸反馈
+    document.querySelectorAll('button, .review-item').forEach(element => {
+        element.addEventListener('touchstart', function() {
+            this.style.opacity = '0.7';
+        });
+        
+        element.addEventListener('touchend', function() {
+            this.style.opacity = '1';
         });
     });
-
-    // 按照格式生成数据
-    Object.entries(summary).forEach(([name, times]) => {
-        if (times.ai > 0) {
-            data.push(`商品: ${name}`);
-            data.push(`版本: AI评论版本`);
-            data.push(`访问时间: ${formatTime(times.ai)}`);
-            data.push('');
-        }
-        if (times.no > 0) {
-            data.push(`商品: ${name}`);
-            data.push(`版本: 无评论版本`);
-            data.push(`访问时间: ${formatTime(times.no)}`);
-            data.push('');
-        }
-    });
-
-    navigator.clipboard.writeText(data.join('\n'));
-    showNotification('总计数据已复制成功！');
-    hasUserCopiedData.status = true;
 }
 
-// 添加跳转到底部的函数
-function scrollToSummary() {
-    const summaryElement = document.querySelector('.session-block.summary');
-    if (summaryElement) {
-        summaryElement.scrollIntoView({ behavior: 'smooth' });
-    }
-}
-
-// 添加显示欢迎弹窗的函数
-function showWelcomeModal() {
-    const modal = document.getElementById('welcome-modal');
-    modal.classList.add('show');
-}
-
-document.addEventListener('DOMContentLoaded', function() {
-    // 检查是否已经显示过欢迎弹窗
-    const modal = document.getElementById('welcome-modal');
-    
-    // 每次进入页面都显示弹窗
-    modal.classList.add('show');
-
-    // 点击关闭按钮
-    const closeBtn = modal.querySelector('.modal-close-btn');
-    closeBtn.addEventListener('click', function() {
-        modal.classList.remove('show');
-    });
-
-    // 点击模态框外部也可以关闭
-    modal.addEventListener('click', function(e) {
-        if (e.target === modal) {
-            modal.classList.remove('show');
-        }
-    });
-
-    // 添加帮助按钮点击事件
-    const helpButton = document.getElementById('help-button');
-    helpButton.addEventListener('click', showWelcomeModal);
+// 在页面加载完成后初始化移动端优化
+document.addEventListener('DOMContentLoaded', () => {
+    initMobileOptimizations();
 });
