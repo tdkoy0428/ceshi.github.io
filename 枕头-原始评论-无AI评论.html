@@ -1,7 +1,59 @@
 <!DOCTYPE html>
 
 <html class="a-no-js" data-19ax5a9jf="dingo" lang="en-us"><!-- sp:feature:head-start -->
-<head><script>var aPageStart = (new Date()).getTime();</script><meta charset="utf-8"/>
+<head>
+  <style>
+    /* 图片默认样式 */
+    .a-dynamic-image:not(.a-profile-avatar img),
+    .imgTagWrapper img:not(.a-profile-avatar img),
+    .a-image-wrapper img:not(.a-profile-avatar img),
+    .product-image:not(.a-profile-avatar img),
+    [data-a-image-name]:not(.a-profile-avatar img) {
+        max-width: 60% !important; /* 限制图片默认大小为父容器的 80% */
+        height: auto !important;
+        object-fit: contain !important;
+        display: block !important;
+        margin: 0 auto !important;
+        transition: transform 0.3s ease; /* 添加缩放过渡效果 */
+    }
+    
+    /* 容器样式，消除多余间距 */
+    .imgTagWrapper:not(.a-profile-avatar),
+    .a-image-wrapper:not(.a-profile-avatar),
+    .image-wrapper:not(.a-profile-avatar) {
+        max-width: 100% !important;
+        max-height: 100% !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+    
+    /* 父级容器调整 */
+    .parent-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+    }
+    
+    /* 图片缩放 */
+    .image-zoom-in {
+        transform: scale(1.2); /* 放大图片 1.2 倍 */
+    }
+    
+    .image-zoom-out {
+        transform: scale(0.8); /* 缩小图片 0.8 倍 */
+    }
+    
+    
+      </style>
+  <script>var aPageStart = (new Date()).getTime();</script><meta charset="utf-8"/>
 <!-- sp:end-feature:head-start -->
 <!-- sp:feature:csm:head-open-part1 -->
 <script type="text/javascript">var ue_t0=ue_t0||+new Date();</script>
@@ -339,27 +391,27 @@ if (typeof ues === 'function') {
 }
 </script>
 </link></link></link>
-    <style>
-    .return-survey-btn {
-        position: fixed;
-        bottom: 20px;
-        right: 20px;
-        padding: 10px 20px;
-        background-color: #888888;
-        color: white;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        z-index: 9999;
-        font-family: "Amazon Ember", Arial, sans-serif;
-        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-        transition: background-color 0.3s;
-    }
-    
-    .return-survey-btn:hover {
-        background-color: #666666;
-    }
-    </style>
+<style>
+  .return-survey-btn {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      padding: 10px 20px;
+      background-color: #c41a1a;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      z-index: 9999;
+      font-family: "Amazon Ember", Arial, sans-serif;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+      transition: background-color 0.3s;
+  }
+  
+  .return-survey-btn:hover {
+      background-color: #ea0e0e;
+  }
+  </style>
     </head><!-- sp:end-feature:head-close -->
 <!-- sp:feature:start-body -->
 <body class="a-m-us a-aui_72554-c a-aui_a11y_6_837773-t2 a-aui_killswitch_csa_logger_372963-t1 a-aui_pci_risk_banner_210084-c a-aui_template_weblab_cache_333406-c a-aui_tnr_v2_180836-c a-bw_aui_cxc_alert_measurement_1074111-c"><div id="a-page"><script data-a-state='{"key":"a-wlab-states"}' type="a-state">{"AUI_A11Y_6_837773":"T2","AUI_TNR_V2_180836":"C","AUI_TEMPLATE_WEBLAB_CACHE_333406":"C","BW_AUI_CXC_ALERT_MEASUREMENT_1074111":"C","AUI_72554":"C","AUI_KILLSWITCH_CSA_LOGGER_372963":"T1","AUI_PCI_RISK_BANNER_210084":"C"}</script><script>typeof uex === 'function' && uex('ld', 'portal-bb', {wb: 1})</script><!-- sp:end-feature:start-body -->
@@ -1857,9 +1909,7 @@ P.when('mix:@amzn/mix.client-runtime', 'mix:buffet-high-priority-disclaimers-car
     }
 </style>
 <div class="a-section a-spacing-none" id="titleSection"> <h1 class="a-size-large a-spacing-none" id="title"> <span class="a-size-large product-title-word-break" id="productTitle">        DOWNCOOL 大号身体枕芯 - 侧卧透气全身枕头 - 成人柔软长床枕头 - 20 x 54 英寸       </span> </h1> <div class="a-section a-spacing-none expand aok-hidden" id="expandTitleToggle"></div> </div> </div>
-<div class="celwidget" data-csa-c-asin="B07YS5DX7Y" data-csa-c-content-id="bylineInfo" data-csa-c-is-in-initial-active-row="false" data-csa-c-slot-id="bylineInfo_feature_div" data-csa-c-type="widget" data-feature-name="bylineInfo" id="bylineInfo_feature_div">
-<!--This check is an indicator on whether to show the Premium Fashion brand logo byline regardless of weblab treatment-->
-<div class="a-section a-spacing-none"> <a class="a-link-normal" href="/stores/DOWNCOOL/page/1619FECE-2879-45EE-AC4F-94F1D4C92DDF?ref_=ast_bln&amp;store_ref=bl_ast_dp_brandLogo_sto" id="bylineInfo">访问 DOWNCOOL 商店</a> </div> </div>
+
 <div class="celwidget" data-csa-c-asin="B07YS5DX7Y" data-csa-c-content-id="averageCustomerReviews" data-csa-c-is-in-initial-active-row="false" data-csa-c-slot-id="averageCustomerReviews_feature_div" data-csa-c-type="widget" data-feature-name="averageCustomerReviews" id="averageCustomerReviews_feature_div">
 <div data-asin="B07YS5DX7Y" data-ref="dpx_acr_pop_" id="averageCustomerReviews">
 <span class="a-declarative" data-acrstarslink-click-metrics="{}" data-action="acrStarsLink-click-metrics"> <span class="reviewCountTextLinkedHistogram noUnderline" id="acrPopover" title="4.4 out of 5 stars">
@@ -1895,17 +1945,8 @@ P.when('mix:@amzn/mix.client-runtime', 'mix:buffet-high-priority-disclaimers-car
 </div>
 <div class="celwidget" data-csa-c-asin="B07YS5DX7Y" data-csa-c-content-id="amazonExclusiveBadge" data-csa-c-is-in-initial-active-row="false" data-csa-c-slot-id="amazonExclusiveBadge_feature_div" data-csa-c-type="widget" data-feature-name="amazonExclusiveBadge" id="amazonExclusiveBadge_feature_div">
 </div>
-<div class="celwidget" data-csa-c-asin="B07YS5DX7Y" data-csa-c-content-id="climatePledgeFriendlyATF" data-csa-c-is-in-initial-active-row="false" data-csa-c-slot-id="climatePledgeFriendlyATF_feature_div" data-csa-c-type="widget" data-feature-name="climatePledgeFriendlyATF" id="climatePledgeFriendlyATF_feature_div">
-<div class="a-section a-spacing-small a-spacing-top-micro" id="climatePledgeFriendlyBadge"> <span class="a-declarative" data-action="cpf-dpx-sidesheet-open" data-cpf-dpx-sidesheet-open='{"padding":"none","ctMetric":"cpf_dp_dsk_dppb_bgck","closeButtonLabel":"Close popup","dwellMetric":"cpf_dp_dsk_t","name":"CPFBottomSheet-ATF","width":"800","header":" ","preloadDomId":"a-popover-CPFBottomSheet-ATF","popoverLabel":"Sustainability features","delayMetric":"cpf_dp_dsk_dppb_nr"}' id="CPF-ATF-Card"> <a class="a-link-normal a-popover-trigger climatePledgeFriendlyATF" href="javascript:void(0)"> <img alt="Sustainability features" height="20" src="https://m.media-amazon.com/images/I/01GK70BG4uL.svg" width="20"/> <span class="climatePledgeFriendlyProgramName" dir="auto"> 1 可持续性特征 </span> <i class="a-icon a-icon-popover" role="presentation"></i> </a> </span> </div> <div class="a-popover-preload" id="a-popover-CPFBottomSheet-ATF"> <div class="a-section cpf-dpx-container-side-sheet"> <div class="a-section a-spacing-small aok-align-center cpf-dpx-certification"> <div alt="" class="a-image-wrapper a-manually-loaded aok-inline-block" data-a-image-source="https://m.media-amazon.com/images/I/019h+CPo68L.svg" style="height:24px;width:24px;"></div> <h2 class="a-size-medium-plus a-spacing-none a-color-base a-text-bold"> 可持续性特点 </h2> </div> <div class="a-section a-spacing-medium"> <span class="a-size-base a-color-base"> 该产品具有受可信认证认可的可持续性特征。 </span> </div> <div class="a-section a-spacing-base"> <div class="a-row a-expander-container a-spacing-none a-expander-section-container a-section-expander-container" data-a-expander-name="cpf-dpx-sidesheet-expander" data-eometric="cpf_dp_dsk_eo"> <a aria-expanded="true" class="a-expander-header a-declarative a-expander-section-header a-link-section-expander a-size-medium" data-a-expander-toggle='{"allowLinkDefault":true, "expand_prompt":"", "collapse_prompt":""}' data-action="a-expander-toggle" href="javascript:void(0)" role="button"><i class="a-icon a-icon-section-collapse"></i><span class="a-expander-prompt"> <span class="a-text-bold cpf-dpx-expander-title">更安全的化学品</span>
-</span></a> <div class="a-expander-content a-spacing-medium a-expander-inline-content a-expander-inner" data-expanded="true"> <div class="a-section a-spacing-mini cpf-dpx-expander-inner"> <div class="a-section a-spacing-small"> <span class="a-size-base a-color-base"> 采用对人类健康和环境更安全的化学品制成。 </span> </div> <div class="a-section a-spacing-mini"> <span class="a-size-small a-color-secondary"> 经认证 </span> </div> <div class="a-section cpf-dpx-expander-certs cpf-dpx-attribute"> <span class="a-declarative" data-action="cpf-dpx-sidesheet-secondary" data-cpf-dpx-sidesheet-secondary='{"ctMetric":"cpf_dp_dsk_cf","ctDwellMetric":"cpf_dp_dsk_st","preloadDomId":"a-popover-CPFBottomSheet-ATF-0-0","previousPreloadDomId":"a-popover-CPFBottomSheet-ATF","delayMetric":"cpf_dp_dsk_dppb_snr"}'> <a aria-label="Learn more about OEKO-TEX STANDARD 100" class="a-link-normal" href="javascript:void(0)" role="button"> <div class="a-section a-spacing-none aok-inline-block cpf-dpx-attribute-pill cpf-dpx-certification"> <div alt="OEKO-TEX STANDARD 100" class="a-image-wrapper a-manually-loaded" data-a-image-source="https://m.media-amazon.com/images/I/51YvKwF01yL._SS144_.jpg" style="height:24px;width:24px;"></div>
-<div class="a-section a-spacing-none aok-inline-block aok-align-center cpf-dpx-attribute-pill-text"> <span class="a-size-base"> OEKO-TEX 标准 100 </span> </div> </div> </a> </span> <div class="a-section aok-hidden" id="a-popover-CPFBottomSheet-ATF-0-0"> <div class="cpf-dpx-container-side-sheet">
-<div class="a-section a-spacing-base cpf-dpx-certification"> <span class="a-declarative" data-action="cpf-dpx-sidesheet-secondary-back" data-cpf-dpx-sidesheet-secondary-back="{}"> <button aria-label="Back to Sustainability Features for this product" class="cpf-dpx-detail-view-secondary-back" type="button">
-<span class="cpf-dpx-detail-view-back-icon aok-block"></span>
-</button>
-</span> <div class="a-section a-spacing-none cpf-dpx-certification"> <div alt="" class="a-image-wrapper a-manually-loaded" data-a-image-source="https://m.media-amazon.com/images/I/51YvKwF01yL._SS144_.jpg" style="height:36px;width:36px;"></div> <h2 class="a-size-medium a-spacing-none a-color-base a-text-bold"> OEKO-TEX 标准 100 </h2> </div> </div> <hr aria-hidden="true" class="a-divider-normal"/> <div class="a-section"> <span class="a-size-base a-color-base"> <p>STANDARD 100 by OEKO-TEX 要求纺织品的每个组件（包括所有线、纽扣和饰边）均需针对 1,000 多种可能对人类健康有害的有害受管制和不受管制化学物质进行测试。评估过程是全球标准化的、独立进行的，并且根据新的科学信息或监管要求每年至少更新一次。认证重点：#ProductSafety 和#ChemicalsUsed。</p><p><span class="a-declarative" data-action="CPF-OpenExternalLink" data-cpf-openexternallink="{}"><a href="https://www.oeko-tex.com/en/our-standards/standard-100-by-oeko-tex">了解有关此认证的更多信息</a></span></p> </span> </div> <hr aria-hidden="true" class="a-divider-normal"/> <h3 class="a-size-base a-spacing-none a-color-base a-text-bold"> 认证编号 </h3> <div class="a-section a-spacing-small"> <span class="a-size-base a-color-base"> SH025 185229 </span> </div> </div>
-</div> </div> </div> </div> </div> </div> <footer class="cpf-dpx-sticky-footer">
-<a class="a-link-normal aok-inline-block" href="/climatepledgefriendly"> <span class="a-declarative" data-action="CPF-ATF-LandingPageLink" data-cpf-atf-landingpagelink="{}"> <h3 class="a-spacing-none"> <img alt="Climate Pledge Friendly" class="a-lazy-loaded" data-src="https://m.media-amazon.com/images/I/21AGu0JFvKL.svg" height="24px" src="https://images-na.ssl-images-amazon.com/images/G/01/x-locale/common/grey-pixel.gif" width="186px"/><noscript><img alt="Climate Pledge Friendly" height="24px" src="https://m.media-amazon.com/images/I/21AGu0JFvKL.svg" width="186px"/></noscript> </h3> <div class="a-section a-spacing-none"> <span class="a-size-base a-color-base aok-inline-block a-text-normal">发现更多具有可持续性功能的产品。 </span><span class="a-size-base">了解更多</span> </div> </span> </a> </footer>
-</div> </div> </div>
+
+
 <div class="celwidget" data-csa-c-asin="B07YS5DX7Y" data-csa-c-content-id="zeitgeistBadge" data-csa-c-is-in-initial-active-row="false" data-csa-c-slot-id="zeitgeistBadge_feature_div" data-csa-c-type="widget" data-feature-name="zeitgeistBadge" id="zeitgeistBadge_feature_div">
 </div>
 <div class="celwidget" data-csa-c-asin="B07YS5DX7Y" data-csa-c-content-id="socialProofingBadge" data-csa-c-is-in-initial-active-row="false" data-csa-c-slot-id="socialProofingBadge_feature_div" data-csa-c-type="widget" data-feature-name="socialProofingBadge" id="socialProofingBadge_feature_div">
@@ -2125,13 +2166,13 @@ P.when('mix:@amzn/mix.client-runtime', 'mix:buffet-high-priority-disclaimers-car
 </script> </div>
 <div class="celwidget" data-csa-c-asin="B07YS5DX7Y" data-csa-c-content-id="freeShippingPriceBadging" data-csa-c-is-in-initial-active-row="false" data-csa-c-slot-id="freeShippingPriceBadging_feature_div" data-csa-c-type="widget" data-feature-name="freeShippingPriceBadging" id="freeShippingPriceBadging_feature_div">
 <span class="a-size-base">
-得到 <b>快速、免费送货</b> 和 
+<b>快速、免费送货、免费退货</b> 
 </span> </div>
 <div class="celwidget" data-csa-c-asin="B07YS5DX7Y" data-csa-c-content-id="freeReturns" data-csa-c-is-in-initial-active-row="false" data-csa-c-slot-id="freeReturns_feature_div" data-csa-c-type="widget" data-feature-name="freeReturns" id="freeReturns_feature_div">
 <span class="a-hidden" id="creturns-return-policy-linebreak"></span> <span class="a-block" id="creturns-return-policy-content"> <span class="a-inline-block" id="creturns-return-policy-message"> <span class="a-declarative" data-a-popover='{"max-width":"280","name":"cReturnsPolicyPopover","activate":"onclick","position":"triggerBottom","popoverLabel":"Return this item for free"}' data-action="a-popover"> <span aria-labelledby="creturns-policy-anchor-text" cel_widget_id="free-returns-policy-anchorText-pc" class="celwidget" id="free-returns-policy-celWidget">
-<a class="a-popover-trigger a-declarative a-inline-block" href="javascript:void(0)" id="creturns-policy-anchor-text" role="button"> 免费退货 <i class="a-icon a-icon-popover"></i></a> </span>
+</span>
 </span> <div class="a-popover-preload" id="a-popover-cReturnsPolicyPopover"> <div cel_widget_id="free-returns-policy-popover-pc" class="celwidget" id="free-returns-policy-popover-celWidget" role="dialog">
-<h5 id="creturns-policy-header">免费退货</h5> <p class="a-spacing-none a-spacing-top-small" id="creturns-policy-main-content">我们提供简单、方便的退货服务，并提供至少一种免费退货选项：无运费。所有退货必须符合我们的退货政策。</p> <a class="a-link-normal" href="/freereturns" id="creturns-policy-url-text-pc"> 了解有关免费退货的更多信息。 </a> <div aria-labelledby="creturns-policy-expandable-content-header" class="a-row a-expander-container a-expander-inline-container" data-a-expander-name="creturnsHowToReturnExpander"> <a aria-expanded="false" class="a-expander-header a-declarative a-expander-inline-header a-link-expander" data-a-expander-toggle='{"allowLinkDefault":true, "expand_prompt":"", "collapse_prompt":""}' data-action="a-expander-toggle" href="javascript:void(0)" id="creturns-policy-expandable-content-header" role="button"><i class="a-icon a-icon-expand"></i><span class="a-expander-prompt">如何退货？</span></a> <div class="a-expander-content a-expander-inline-content a-expander-inner" data-expanded="false" id="creturnsHowToReturnExpanderContent" style="display:none"> <ol class="a-ordered-list a-vertical" role="list"> <li role="listitem"><span class="a-list-item">转到您的订单并开始退货</span></li> <li role="listitem"><span class="a-list-item">选择您首选的免费送货选项</span></li> <li role="listitem"><span class="a-list-item">下车并离开！</span></li> </ol> </div> </div> </div> </div> </span> </span> </div>
+</div>
 <div class="celwidget" data-csa-c-asin="B07YS5DX7Y" data-csa-c-content-id="almTaxExclusivePrice" data-csa-c-is-in-initial-active-row="false" data-csa-c-slot-id="almTaxExclusivePrice_feature_div" data-csa-c-type="widget" data-feature-name="almTaxExclusivePrice" id="almTaxExclusivePrice_feature_div">
 </div>
 <div class="celwidget" data-csa-c-asin="B07YS5DX7Y" data-csa-c-content-id="oneTimePaymentPrice" data-csa-c-is-in-initial-active-row="false" data-csa-c-slot-id="oneTimePaymentPrice_feature_div" data-csa-c-type="widget" data-feature-name="oneTimePaymentPrice" id="oneTimePaymentPrice_feature_div">
@@ -2800,7 +2841,7 @@ P.when('mix:@amzn/mix.client-runtime', 'mix:buffet-high-priority-disclaimers-car
         logTechTermAssistMetric(nexusSchemaId, {});
     }
 </script>
-<div class="a-section a-spacing-small a-spacing-top-small"> <table class="a-normal a-spacing-micro"> <tr class="a-spacing-small po-brand"> <td class="a-span3"> <span class="a-size-base a-text-bold">品牌</span> </td> <td class="a-span9"> <span class="a-size-base po-break-word">降温</span> </td> </tr> <tr class="a-spacing-small po-special_feature"> <td class="a-span3"> <span class="a-size-base a-text-bold">特别报道</span> </td> <td class="a-span9"> <span class="a-size-base po-break-word">柔软的</span> </td> </tr> <tr class="a-spacing-small po-color"> <td class="a-span3"> <span class="a-size-base a-text-bold">颜色</span> </td> <td class="a-span9"> <span class="a-size-base po-break-word">白色的</span> </td> </tr> <tr class="a-spacing-small po-size"> <td class="a-span3"> <span class="a-size-base a-text-bold">尺寸</span> </td> <td class="a-span9"> <span class="a-size-base po-break-word">插入</span> </td> </tr> <tr class="a-spacing-small po-fill_material"> <td class="a-span3"> <span class="a-size-base a-text-bold">填充材料</span> </td> <td class="a-span9"> <span class="a-size-base po-break-word">聚酯纤维</span> </td> </tr> </table> </div> </div>
+
 <div class="celwidget" data-csa-c-asin="B07YS5DX7Y" data-csa-c-content-id="featurebullets" data-csa-c-is-in-initial-active-row="false" data-csa-c-slot-id="featurebullets_feature_div" data-csa-c-type="widget" data-feature-name="featurebullets" id="featurebullets_feature_div">
 <div class="a-section a-spacing-medium a-spacing-top-small" id="feature-bullets"> <hr/>
 <h1 class="a-size-base-plus a-text-bold"> 关于此商品 </h1> <ul class="a-unordered-list a-vertical a-spacing-mini"> <li class="a-spacing-mini"><span class="a-list-item"> DOWNCOOL 超优质全身枕芯非常透气且柔软，采用 100% 聚酯纤维覆盖 - 耐用且避免起球  </span></li> <li class="a-spacing-mini"><span class="a-list-item"> 大而柔软的床枕垫 - 保持其形状和中等硬度的支撑。非常适合日常使用，其材料和结构可带来持久的舒适感  </span></li> <li class="a-spacing-mini"><span class="a-list-item"> 适合任何人 - 代替多个笨重的枕头，缓解身体多个部位的压力 - 整夜睡眠平稳、舒适，醒来时精力充沛、神清气爽  </span></li> <li class="a-spacing-mini"><span class="a-list-item"> 侧睡枕芯尺寸为 20 英寸 x 54 英寸 - 强烈建议将 2 个枕芯放入一个箱子中会非常坚固。保养说明：- 冷水机洗，不可漂白，必要时低温滚筒烘干，深色衣物单独洗涤  </span></li> <li class="a-spacing-mini"><span class="a-list-item"> 我们为您提供这款蓬松的枕头（不带枕套）并可退款。如果您决定不喜欢我们柔软的支撑枕头，请给我们发送消息，您将收到全额退款，不问任何问题  </span></li> </ul> <!-- Loading EDP related metadata -->
@@ -3093,9 +3134,7 @@ return data;
 <div class="a-section askBTFLazyLoad" data-url="/ask/askBrowseAjaxLoad/asin/B07YS5DX7Y">
 <hr aria-hidden="true" class="a-divider-normal"/>
 <div class="a-section cdQuestionAnswerBucket">
-<h2 class="a-color-base askWidgetHeader">
-            寻找具体信息？
-        </h2>
+
 <div class="a-spinner-wrapper aok-hidden askBtfLazyLoadSpinner"><span class="a-spinner a-spinner-medium"></span></div>
 </div>
 </div>
@@ -3103,1434 +3142,7 @@ return data;
 </div>
 </div>
 </div>
-<div class="celwidget pd_rd_w-8883Z pd_rd_r-M962RW3CTVW6WX4KG139 pd_rd_wg-1mcLp" data-csa-c-asin="" data-csa-c-content-id="productDetailsHomeAndGarden_Updated" data-csa-c-is-in-initial-active-row="false" data-csa-c-slot-id="productDetails_feature_div" data-csa-c-type="widget" data-feature-name="productDetailsHomeAndGarden_Updated" id="productDetails_feature_div">
-<a id="productDetails" name="productDetails"></a>
-<hr aria-hidden="true" class="a-divider-normal"/> <div style="overflow:hidden;">
-<div class="a-section" id="prodDetails"> <h2>
-                                产品信息 </h2>
-<div class="a-row a-spacing-top-base"> <div class="a-column a-span6"> <div class="a-row a-spacing-base"> <div class="a-section table-padding"> <table class="a-keyvalue prodDetTable" id="productDetails_detailBullets_sections1" role="presentation"> <tr> <th class="a-color-secondary a-size-base prodDetSectionEntry"> 品牌 </th> <td class="a-size-base prodDetAttrValue"> 降温 </td> </tr> <tr> <th class="a-color-secondary a-size-base prodDetSectionEntry"> 特别报道 </th> <td class="a-size-base prodDetAttrValue"> 柔软的 </td> </tr> <tr> <th class="a-color-secondary a-size-base prodDetSectionEntry"> 颜色 </th> <td class="a-size-base prodDetAttrValue"> 白色的 </td> </tr> <tr> <th class="a-color-secondary a-size-base prodDetSectionEntry"> 尺寸 </th> <td class="a-size-base prodDetAttrValue"> 插入 </td> </tr> <tr> <th class="a-color-secondary a-size-base prodDetSectionEntry"> 填充材料 </th> <td class="a-size-base prodDetAttrValue"> 聚酯纤维 </td> </tr> <tr> <th class="a-color-secondary a-size-base prodDetSectionEntry"> 形状 </th> <td class="a-size-base prodDetAttrValue"> 矩形的 </td> </tr> <tr> <th class="a-color-secondary a-size-base prodDetSectionEntry"> 年龄范围（描述） </th> <td class="a-size-base prodDetAttrValue"> 所有年龄段 </td> </tr> <tr> <th class="a-color-secondary a-size-base prodDetSectionEntry"> 产品推荐用途 </th> <td class="a-size-base prodDetAttrValue"> 室内的 </td> </tr> <tr> <th class="a-color-secondary a-size-base prodDetSectionEntry"> 用于 </th> <td class="a-size-base prodDetAttrValue"> 全身 </td> </tr> <tr> <th class="a-color-secondary a-size-base prodDetSectionEntry"> 材料 </th> <td class="a-size-base prodDetAttrValue"> 聚酯纤维 </td> </tr> <tr> <th class="a-color-secondary a-size-base prodDetSectionEntry"> 项目 硬度 说明 </th> <td class="a-size-base prodDetAttrValue"> 柔软的 </td> </tr> <tr> <th class="a-color-secondary a-size-base prodDetSectionEntry"> 产品保养说明 </th> <td class="a-size-base prodDetAttrValue"> 机洗 </td> </tr> <tr> <th class="a-color-secondary a-size-base prodDetSectionEntry"> 件数 </th> <td class="a-size-base prodDetAttrValue"> 2 </td> </tr> <tr> <th class="a-color-secondary a-size-base prodDetSectionEntry"> 图案 </th> <td class="a-size-base prodDetAttrValue"> 坚硬的 </td> </tr> <tr> <th class="a-color-secondary a-size-base prodDetSectionEntry"> 物品重量 </th> <td class="a-size-base prodDetAttrValue"> 3.09磅 </td> </tr> <tr> <th class="a-color-secondary a-size-base prodDetSectionEntry"> 材质特性 </th> <td class="a-size-base prodDetAttrValue"> 透气的 </td> </tr> <tr> <th class="a-color-secondary a-size-base prodDetSectionEntry"> 种类 </th> <td class="a-size-base prodDetAttrValue"> 身体枕、床枕 </td> </tr> <tr> <th class="a-color-secondary a-size-base prodDetSectionEntry"> 面料类型 </th> <td class="a-size-base prodDetAttrValue"> 棉布 </td> </tr> <tr> <th class="a-color-secondary a-size-base prodDetSectionEntry"> 型号名称 </th> <td class="a-size-base prodDetAttrValue"> 身体枕头 </td> </tr> <tr> <th class="a-color-secondary a-size-base prodDetSectionEntry"> 统一产品代码 </th> <td class="a-size-base prodDetAttrValue"> 680577427815 </td> </tr> <tr> <th class="a-color-secondary a-size-base prodDetSectionEntry"> 制造商 </th> <td class="a-size-base prodDetAttrValue"> 降温 </td> </tr> <tr> <th class="a-color-secondary a-size-base prodDetSectionEntry"> 产品尺寸 </th> <td class="a-size-base prodDetAttrValue"> 54 英寸长 x 20 英寸宽 </td> </tr> <tr> <th class="a-color-secondary a-size-base prodDetSectionEntry"> 单位数量 </th> <td class="a-size-base prodDetAttrValue"> 1 件 </td> </tr> <tr> <th class="a-color-secondary a-size-base prodDetSectionEntry"> 物品重量 </th> <td class="a-size-base prodDetAttrValue"> 3.09磅 </td> </tr> <tr> <th class="a-color-secondary a-size-base prodDetSectionEntry"> 亚信 </th> <td class="a-size-base prodDetAttrValue"> B07YS5DX7Y </td> </tr> <tr> <th class="a-color-secondary a-size-base prodDetSectionEntry"> 原产地 </th> <td class="a-size-base prodDetAttrValue"> 中国 </td> </tr> <tr> <th class="a-color-secondary a-size-base prodDetSectionEntry"> 产品型号 </th> <td class="a-size-base prodDetAttrValue"> 身体枕头 </td> </tr> <tr> <th class="a-color-secondary a-size-base prodDetSectionEntry">客户评价</th> <td class="a-size-base"> <div data-asin="B07YS5DX7Y" data-ref="dpx_acr_pop_" id="averageCustomerReviews">
-<span class="a-declarative" data-acrstarslink-click-metrics="{}" data-action="acrStarsLink-click-metrics"> <span class="reviewCountTextLinkedHistogram noUnderline" id="acrPopover" title="4.4 out of 5 stars">
-<span class="a-declarative" data-a-popover='{"max-width":"700","closeButton":"true","position":"triggerBottom","popoverLabel":"Customer Reviews Ratings Summary","url":"/gp/customer-reviews/widgets/average-customer-review/popover/ref=dpx_acr_pop_?contextId=dpx&amp;asin=B07YS5DX7Y"}' data-action="a-popover"> <a class="a-popover-trigger a-declarative" href="javascript:void(0)" role="button"> <span class="a-size-base a-color-base"> 4.4 </span> <i class="a-icon a-icon-star a-star-4-5 cm-cr-review-stars-spacing-big"><span class="a-icon-alt">4.4 颗星，最多 5 颗星</span></i> <i class="a-icon a-icon-popover"></i></a> </span> <span class="a-letter-space"></span> </span>
-</span> <span class="a-letter-space"></span> <span class="a-declarative" data-acrlink-click-metrics="{}" data-action="acrLink-click-metrics"> <a class="a-link-normal" href="#customerReviews" id="acrCustomerReviewLink"> <span class="a-size-base" id="acrCustomerReviewText">10,849 条评价</span> </a> </span> <script type="text/javascript">
-                    
-                    var dpAcrHasRegisteredArcLinkClickAction;
-                    P.when('A', 'ready').execute(function(A) {
-                        if (dpAcrHasRegisteredArcLinkClickAction !== true) {
-                            dpAcrHasRegisteredArcLinkClickAction = true;
-                            A.declarative(
-                                'acrLink-click-metrics', 'click',
-                                { "allowLinkDefault": true },
-                                function (event) {
-                                    if (window.ue) {
-                                        ue.count("acrLinkClickCount", (ue.count("acrLinkClickCount") || 0) + 1);
-                                    }
-                                }
-                            );
-                        }
-                    });
-                </script>
-<script type="text/javascript">
-            P.when('A', 'cf').execute(function(A) {
-                A.declarative('acrStarsLink-click-metrics', 'click', { "allowLinkDefault" : true },  function(event){
-                    if(window.ue) {
-                        ue.count("acrStarsLinkWithPopoverClickCount", (ue.count("acrStarsLinkWithPopoverClickCount") || 0) + 1);
-                    }
-                });
-            });
-        </script>
-</div>
-<br/> 4.4 颗星，最多 5 颗星 </td> </tr> <tr> <th class="a-color-secondary a-size-base prodDetSectionEntry"> 畅销书排名 </th> <td> <span> <span>#545 在 家居和厨房 (<a href="/gp/bestsellers/home-garden/ref=pd_zg_ts_home-garden">查看家居与厨房 100 强</a>）</span> <br/> <span>排名第 1 的 <a href="/gp/bestsellers/home-garden/3731991/ref=pd_zg_hrsr_home-garden">身体枕头</a></span> <br/> </span> </td> </tr> <tr> <th class="a-color-secondary a-size-base prodDetSectionEntry"> 首次可用日期 </th> <td class="a-size-base prodDetAttrValue"> 2019 年 10 月 6 日 </td> </tr> </table> </div> </div> </div> <div class="a-column a-span6 a-span-last"> <div class="a-row a-spacing-base"> <h1 class="a-size-medium a-spacing-small secHeader"> 保修与支持 </h1> <div class="a-section table-padding"> <strong>产品保修：</strong> 有关本产品的保修信息，请 <a href="/gp/feature.html/ref=dp_warranty_request_3P?docId=1002406021" target="_blank">点击这里</a> </div> </div> <div class="a-row"> <div class="a-section"> <h1 class="a-size-medium a-spacing-small secHeader"> 反馈 </h1> <div class="a-section table-padding"> <table class="a-keyvalue prodDetTable" id="productDetails_feedback_sections" role="presentation"> <div class="a-row"> </div> <div class="a-row"> <input id="aapiCsrfToken" name="aapiCsrfToken" type="hidden" value="1@g6v7Inifr6lMIN7/IlxZVfU0uH/i3MUMt5Xm8DWHGw2qAAAAAQAAAABnbT8XcmF3AAAAABVX8CwXqz42z+J7i/ABqA==@NLD_6LX7UT"/> <input id="isStateRequired" name="isStateRequired" type="hidden" value="true"/> <input id="isStoreRequired" name="isStoreRequired" type="hidden" value="true"/> <input id="aapiEndpoint" name="aapiEndpoint" type="hidden" value="https://data.amazon.com"/> <input id="modalHeader" name="modalHeader" type="hidden" value="Tell Us About a Lower Price"/> <input id="productCategory" name="productCategory" type="hidden" value="gl_home"/> <input id="productImageUrl" name="productImageUrl" type="hidden" value="https://m.media-amazon.com/images/I/41H2YjRU2SL._SS75_.jpg"/> <input id="priceSymbol" name="priceSymbol" type="hidden" value="$"/> <input id="priceValue" name="priceValue" type="hidden" value="23.99"/> <input id="productTitle" name="productTitle" type="hidden" value="DOWNCOOL Large Body Pillow Insert- Breathable Full Body Pillow for Side Sleeper - Soft Long Bed Pillow for Adults - 20 x 54 inch"/> <input id="currencyOfPreference" name="currencyOfPreference" type="hidden" value="USD"/> <input id="absoluteUrlPrefix" name="absoluteUrlPrefix" type="hidden" value="https://www.amazon.com"/> <input id="customerId" name="customerId" type="hidden"/> <input id="isCustomerLoggedIn" name="isCustomerLoggedIn" type="hidden" value="false"/> <input id="isCurrentGlOnlineOnly" name="isCurrentGlOnlineOnly" type="hidden" value="false"/> <input id="asin" name="asin" type="hidden" value="B07YS5DX7Y"/> <input id="marketplaceId" name="marketplaceId" type="hidden" value="ATVPDKIKX0DER"/> <input id="countryCode" name="countryCode" type="hidden" value="US"/> <input id="lowerPriceInfo" name="lowerPriceInfo" type="hidden" value="Found a lower price? Let us know. Although we can't match every price reported, we'll use your feedback to ensure that our prices remain competitive."/> <input id="lowerPriceWhere" name="lowerPriceWhere" type="hidden" value="Where did you see a lower price?"/> <input id="labelPermalink" name="labelPermalink" type="hidden" value="Share"/> <input id="labelOnline" name="labelOnline" type="hidden" value="Website (Online)"/> <input id="labelOffline" name="labelOffline" type="hidden" value="Store (Offline)"/> <input id="lowerPriceSignIn" name="lowerPriceSignIn" type="hidden" value='Please &lt;a href="${sign-in-url}"&gt;sign in&lt;/a&gt; to provide feedback.'/> <input id="labelStoreName" name="labelStoreName" type="hidden" value="Store name"/> <input id="addressCity" name="addressCity" type="hidden" value="City"/> <input id="addressState" name="addressState" type="hidden" value="State"/> <input id="selectProvince" name="selectProvince" type="hidden" value="Please select province"/> <input id="labelDateOfPrice" name="labelDateOfPrice" type="hidden" value="Date of the price"/> <input id="labelUrl" name="labelUrl" type="hidden" value="URL"/> <input id="labelPrice" name="labelPrice" type="hidden" value="Price"/> <input id="labelShipping" name="labelShipping" type="hidden" value="Shipping cost"/> <input id="submitFeedback" name="submitFeedback" type="hidden" value="Submit Feedback"/> <input id="errorNoType" name="errorNoType" type="hidden" value="Please select where the product was sold."/> <input id="errorBadPrice" name="errorBadPrice" type="hidden" value="Please only use numbers in the Price field."/> <input id="errorBadPriceShipping" name="errorBadPriceShipping" type="hidden" value="Please only use numbers in the Price and Shipping fields."/> <input id="errorInvalidUrl" name="errorInvalidUrl" type="hidden" value="Please enter a valid URL."/> <input id="errorSubmission" name="errorSubmission" type="hidden" value="There was an error sending your feedback. Please try again."/> <input id="errorEmptyFields" name="errorEmptyFields" type="hidden" value="Please fill in all the fields."/> <input id="errorMissingCity" name="errorMissingCity" type="hidden" value="Please specify the city"/> <input id="thankFeedback" name="thankFeedback" type="hidden" value="Thank you for your feedback."/> <input id="errorEmptyUrl" name="errorEmptyUrl" type="hidden" value="Enter url"/> <input id="offlineStoresList" name="offlineStoresList" type="hidden" value="[&quot;47th Street Photo&quot;,&quot;6th Ave&quot;,&quot;Accessory Genie&quot;,&quot;Ace Digital Club&quot;,&quot;Ace Hardware&quot;,&quot;Action Village&quot;,&quot;Adorama Camera&quot;,&quot;Albertsons&quot;,&quot;All Spare Tools&quot;,&quot;Athlete 101&quot;,&quot;Autobarn&quot;,&quot;AutoZone&quot;,&quot;Baby Universe&quot;,&quot;Backcountry&quot;,&quot;Barnes &amp; Noble&quot;,&quot;Barrons&quot;,&quot;Beach Audio&quot;,&quot;Bealls Florida&quot;,&quot;Bed Bath &amp; Beyond&quot;,&quot;Best Buy&quot;,&quot;Builder Depot&quot;,&quot;Campmor&quot;,&quot;CDW&quot;,&quot;Chelsea&quot;,&quot;Circuit City&quot;,&quot;Comp USA&quot;,&quot;Computer Geeks&quot;,&quot;Cooler Books&quot;,&quot;Costco&quot;,&quot;Crutchfield&quot;,&quot;CVS&quot;,&quot;Dell&quot;,&quot;Dick's Sporting Goods&quot;,&quot;Dillard's&quot;,&quot;Dishes Decor&amp;More&quot;,&quot;Dynadirect&quot;,&quot;EBGames&quot;,&quot;eek Technology&quot;,&quot;Electro Galaxy&quot;,&quot;Emotronics&quot;,&quot;eToys&quot;,&quot;Etronics&quot;,&quot;Everything Fitness&quot;,&quot;Factory Direct&quot;,&quot;Famous Brand Watches&quot;,&quot;Fine Brand Watches&quot;,&quot;Fitbuy&quot;,&quot;Folica&quot;,&quot;Foot Locker&quot;,&quot;Fred Meyer&quot;,&quot;Fry's Electronics&quot;,&quot;Full Compass Systems&quot;,&quot;Future Shop&quot;,&quot;GameStop&quot;,&quot;Giardinelli&quot;,&quot;Grizzly&quot;,&quot;Guitar Center&quot;,&quot;Heart Rate Monitors&quot;,&quot;HEB&quot;,&quot;HMV&quot;,&quot;Home &amp; Beyond&quot;,&quot;Home Depot&quot;,&quot;JC Whitney&quot;,&quot;J&amp;R&quot;,&quot;J&amp;R Music and Computer World&quot;,&quot;Juicy Kitchen&quot;,&quot;Karate Depot&quot;,&quot;Kmart&quot;,&quot;Kohls&quot;,&quot;Let's Talk&quot;,&quot;Lowe's&quot;,&quot;Macy's&quot;,&quot;Menards&quot;,&quot;Mercantila&quot;,&quot;Metro Kitchen&quot;,&quot;Mountain Gear&quot;,&quot;Musician's Friend&quot;,&quot;My Time Piece&quot;,&quot;NAPA&quot;,&quot;Nordstrom&quot;,&quot;Office Depot&quot;,&quot;Office Max&quot;,&quot;One Call&quot;,&quot;Parts America&quot;,&quot;Polar Discount&quot;,&quot;QFC&quot;,&quot;Randalls&quot;,&quot;REI&quot;,&quot;Ritz Camera&quot;,&quot;Rocky Point&quot;,&quot;Ross Dress For Less&quot;,&quot;Safeway&quot;,&quot;Sam's Club&quot;,&quot;Sears&quot;,&quot;Sharper Image&quot;,&quot;Shopper's Choice&quot;,&quot;Smart Bargains&quot;,&quot;Sports Authority&quot;,&quot;Sports R Us&quot;,&quot;Staples&quot;,&quot;Summit Racing Equipment&quot;,&quot;Swing Some Where&quot;,&quot;Target&quot;,&quot;Tech Depot&quot;,&quot;The Electronic Company&quot;,&quot;The Gadget Source&quot;,&quot;The Vitamin Shoppe&quot;,&quot;Tiger Direct&quot;,&quot;Tom Thumb&quot;,&quot;Tool Barn&quot;,&quot;Tool King&quot;,&quot;Tool Town&quot;,&quot;TOP Foods&quot;,&quot;Toys R Us&quot;,&quot;Tyler Tool&quot;,&quot;Uncle Joe&quot;,&quot;Vanns&quot;,&quot;Walgreens&quot;,&quot;Walmart&quot;,&quot;Watch Savings&quot;,&quot;Watch Zone&quot;,&quot;Weather Buffs&quot;,&quot;Whole Foods&quot;,&quot;Wholesale AV&quot;,&quot;Wine Enthusiast&quot;,&quot;Wirefly&quot;,&quot;Xcessory&quot;]"/> <input id="statesList" name="statesList" type="hidden" value='[{"value":"AK","name":"AK"},{"value":"AL","name":"AL"},{"value":"AR","name":"AR"},{"value":"AZ","name":"AZ"},{"value":"CA","name":"CA"},{"value":"CO","name":"CO"},{"value":"CT","name":"CT"},{"value":"DC","name":"DC"},{"value":"DE","name":"DE"},{"value":"FL","name":"FL"},{"value":"GA","name":"GA"},{"value":"HI","name":"HI"},{"value":"IA","name":"IA"},{"value":"ID","name":"ID"},{"value":"IL","name":"IL"},{"value":"IN","name":"IN"},{"value":"KS","name":"KS"},{"value":"KY","name":"KY"},{"value":"LA","name":"LA"},{"value":"MA","name":"MA"},{"value":"MD","name":"MD"},{"value":"ME","name":"ME"},{"value":"MI","name":"MI"},{"value":"MN","name":"MN"},{"value":"MO","name":"MO"},{"value":"MS","name":"MS"},{"value":"MT","name":"MT"},{"value":"NC","name":"NC"},{"value":"ND","name":"ND"},{"value":"NE","name":"NE"},{"value":"NH","name":"NH"},{"value":"NJ","name":"NJ"},{"value":"NM","name":"NM"},{"value":"NV","name":"NV"},{"value":"NY","name":"NY"},{"value":"OH","name":"OH"},{"value":"OK","name":"OK"},{"value":"OR","name":"OR"},{"value":"PA","name":"PA"},{"value":"RI","name":"RI"},{"value":"SC","name":"SC"},{"value":"SD","name":"SD"},{"value":"TN","name":"TN"},{"value":"TX","name":"TX"},{"value":"UT","name":"UT"},{"value":"VA","name":"VA"},{"value":"VT","name":"VT"},{"value":"WA","name":"WA"},{"value":"WI","name":"WI"},{"value":"WV","name":"WV"},{"value":"WY","name":"WY"}]'/> <style>
-        .grid-container {
-            display: block;
-            flex-direction: column;
-        }
 
-        .grid-row {
-            align-items: center;
-            margin-bottom: 10px;
-            margin-left: 20px;
-        }
-
-        .grid-label {
-            min-width: 50px;
-            padding-right: 10px;
-        }
-
-        .widgetAlerts {
-            display: none;
-        }
-
-        .grid-input {
-            flex: 1;
-            width: 100%
-        }
-
-        .asterisk {
-            color: #EB0000;
-        }
-
-        .visually-hidden {
-            position: absolute;
-            width: 1px;
-            height: 1px;
-            margin: -1px;
-            padding: 0;
-            overflow: hidden;
-            clip: rect(0, 0, 0, 0);
-            border: 0;
-        }
-        .priceavailability{
-            padding: 0 28px;
-        }
-        @media (min-width: 420px) and (max-width: 550px){
-            .container{
-                display: block;
-            }
-            .grid-input{
-                font-size: 85%;
-
-            }
-            .priceavailability{
-                padding: 0 28px;
-            }
-            .a-dropdown-container .a-button-dropdown .a-button-text{
-                font-size: 79%;
-            }
-
-
-
-        }
-        @media (min-width: 320px) and (max-width: 419px) {
-            .priceavailability{
-                padding: 0 0px;
-            }
-            .container{
-                display: block;
-            }
-
-            .grid-input{
-                font-size: 80%;
-            }
-            input#offlineCity.grid-input{
-                font-size: 62%;
-            }
-            span#stateValue{
-                .grid-input
-                {
-                    font-size: 77%;
-                }
-
-            }
-            .a-dropdown-container .a-button-dropdown .a-button-text{
-                font-size: 65%;
-            }
-
-
-
-        }
-
-    </style>
-<div>
-<div class="detailPageWidgetBlock" id="pricingFeedbackDiv">
-<span class="a-declarative" data-action="pricingFeedback-modal-button" data-pricingfeedback-modal-button="{}"> 你是否想要  <b>
-<a class="a-popover-trigger a-declarative" href="javascript:void(0)" role="button"> 告诉我们更低的价格吗？
-                    <i class="a-icon a-icon-popover"></i></a> </b>
-</span> </div>
-<div class="a-popover-preload" id="a-popover-pricingFeedback-modal-content"> <div class="contentContainer" id="pricingFeedback_contentContainer" style="overflow: auto;">
-<div id="feedbackForm">
-<div id="pricingFeedback_titleBar">
-<div class="container" style="display: flex;">
-<div style="width: 30%;">
-<img alt="" border="0" height="75" src="https://m.media-amazon.com/images/I/41H2YjRU2SL._SS75_.jpg" tabindex="0" width="75"/>
-</div>
-<div style="flex-grow: 1;">
-<p tabindex="0">DOWNCOOL 大号身体枕芯 - 侧卧透气全身枕头 - 成人柔软长床枕头 - 20 x 54 英寸</p>
-<p id="permalink">
-<b>分享：
-                                    </b>
-</p>
-</div>
-</div>
-</div>
-<div id="pricingFeedback_content"></div>
-<hr/>
-<p tabindex="0">找到更低的价格？让我们知道。尽管我们无法匹配报告的每个价格，但我们将利用您的反馈来确保我们的价格保持竞争力。</p>
-<h2 tabindex="0">您在哪里看到更低的价格？</h2>
-<p id="note1" style="display: none" tabindex="0">带星号的字段 <span aria-hidden="true" class="asterisk">*</span> 是必需的</p>
-<div class="priceavailability">
-<fieldset aria-labelledby="PriceAvailabilitySection" role="radiogroup">
-<legend class="visually-hidden">价格可供选择</legend>
-<fieldset aria-labelledby="OnlinePriceAvailabilitySection" role="group">
-<legend>
-<div id="onlineRadioContainer" style="display: flex">
-<input id="pricingFeedback_onlineRadio" name="retailerType" type="radio" value="online"/>
-<label for="pricingFeedback_onlineRadio">网站（在线）</label>
-</div>
-</legend>
-<div class="grid-container" id="pricingFeedback_onlineInput">
-<div class="grid-row">
-<label class="grid-label" for="onlineUrl" id="onlineUrlLabel">网址 <span class="asterisk">*</span>:</label>
-<div class="a-fixed-left-grid-col a-col-right grid-input">
-<input aria-required="true" class="grid-input" id="onlineUrl" maxlength="500" name="onlineUrl" placeholder="Enter URL where you found the price lower" size="32" type="text"/>
-<div class="a-box a-alert-inline a-alert-inline-error auth-inlined-error-message a-spacing-top-mini widgetAlerts" id="onlineUrl-missing-alert" role="alert">
-<div class="a-box-inner a-alert-container">
-<i class="a-icon a-icon-alert"></i>
-<span class="a-alert-content" id="urlAlert"></span>
-</div>
-</div>
-</div>
-</div>
-<div class="grid-row">
-<label class="grid-label" for="onlinePriceRaw" id="onlinePriceRawLabel">价格
-                                        ($)
-                                        <span class="asterisk">*</span>:
-                                    </label>
-<div class="a-fixed-left-grid-col a-col-right grid-input">
-<input aria-required="true" class="grid-input" id="onlinePriceRaw" maxlength="10" name="onlinePriceRaw" placeholder="Enter the price of the product" size="20" type="number"/>
-<div class="a-box a-alert-inline a-alert-inline-error auth-inlined-error-message a-spacing-top-mini widgetAlerts" id="onlinePrice-missing-alert" role="alert">
-<div class="a-box-inner a-alert-container">
-<i class="a-icon a-icon-alert"></i>
-<span class="a-alert-content" id="priceAlertOnline"></span>
-</div>
-</div>
-</div>
-</div>
-<div class="grid-row">
-<label class="grid-label" for="onlineShippingRaw" id="onlineShippingRawLabel">运费
-                                        （$）：
-                                    </label>
-<div class="a-fixed-left-grid-col a-col-right grid-input">
-<input aria-required="false" class="grid-input" id="onlineShippingRaw" maxlength="10" name="onlineShippingRaw" placeholder="Enter the shipping price, If any" size="20" type="number"/>
-<div class="a-box a-alert-inline a-alert-inline-error auth-inlined-error-message a-spacing-top-mini widgetAlerts" id="onlineShippingPrice-missing-alert" role="alert">
-<div class="a-box-inner a-alert-container">
-<i class="a-icon a-icon-alert"></i>
-<span class="a-alert-content" id="priceShippingAlertOnline">
-</span>
-</div>
-</div>
-</div>
-</div>
-<div aria-labelledby="onlineCalendarLabel" class="grid-row" role="group">
-<label class="grid-label" for="onlineCalendar" id="onlineCalendarLabel"> 价格日期
-                                        （月/日/年）：</label>
-<div class="a-fixed-left-grid-col a-col-right grid-input">
-<div>
-<div id="onlineCalendar">
-<div class="monthSection" style="flex: 1; float: left; display: inline-block;">
-<span aria-expanded="false" aria-haspopup="listbox" class="a-dropdown-container" role="combobox" title="month">
-<select aria-hidden="false" aria-label="Select Month" autocomplete="off" class="month-select a-native-dropdown a-native-dropdown" data-a-native-class="a-native-dropdown" id="onlineMonth" name="onlineMonth">
-<option class="a-prompt" id="onlineMonthOptionDefault" value=""></option>
-<option value="1">01</option>
-<option value="2">02</option>
-<option value="3">03</option>
-<option value="4">04</option>
-<option value="5">05</option>
-<option value="6">06</option>
-<option value="7">07</option>
-<option value="8">08</option>
-<option value="9">09</option>
-<option value="10">10</option>
-<option value="11">11</option>
-<option value="12">12</option>
-</select>
-<span aria-hidden="true" class="a-button a-button-dropdown a-button-small a-button-width-normal">
-<span class="a-button-inner">
-<span aria-hidden="false" class="a-button-text a-declarative" data-action="a-dropdown-button" role="button">
-<span class="a-dropdown-prompt" id="onlineMonthPrompt"></span>
-</span>
-<i class="a-icon a-icon-dropdown"></i>
-</span>
-</span>
-</span>
-</div>
-<div class="firstDelimiter" style="flex: 1; float: left; display: inline-block;">
-                                                    /
-                                                </div>
-<div class="daySection" style="flex: 1; float: left; display: inline-block;">
-<div>
-<span aria-expanded="false" aria-haspopup="listbox" class="a-dropdown-container" role="combobox" title="day">
-<select aria-hidden="false" aria-label="Select Day" autocomplete="off" class="day-select a-native-dropdown a-native-dropdown" data-a-native-class="a-native-dropdown" id="onlineDay" name="onlineDay">
-<option class="a-prompt" id="onlineDateOptionDefault" value=""></option>
-<option value="1">01</option>
-<option value="2">02</option>
-<option value="3">03</option>
-<option value="4">04</option>
-<option value="5">05</option>
-<option value="6">06</option>
-<option value="7">07</option>
-<option value="8">08</option>
-<option value="9">09</option>
-<option value="10">10</option>
-<option value="11">11</option>
-<option value="12">12</option>
-<option value="13">13</option>
-<option value="14">14</option>
-<option value="15">15</option>
-<option value="16">16</option>
-<option value="17">17</option>
-<option value="18">18</option>
-<option value="19">19</option>
-<option value="20">20</option>
-<option value="21">21</option>
-<option value="22">22</option>
-<option value="23">23</option>
-<option value="24">24</option>
-<option value="25">25</option>
-<option value="26">26</option>
-<option value="27">27</option>
-<option value="28">28</option>
-<option value="29">29</option>
-<option value="30">30</option>
-<option value="31">31</option>
-</select>
-<span aria-hidden="true" class="a-button a-button-dropdown a-button-small a-button-width-normal">
-<span class="a-button-inner">
-<span aria-hidden="false" class="a-button-text a-declarative" data-action="a-dropdown-button" role="button">
-<span class="a-dropdown-prompt" id="onlineDatePrompt"></span>
-</span>
-<i class="a-icon a-icon-dropdown"></i>
-</span>
-</span>
-</span>
-</div>
-</div>
-<div class="secondDelimiter" style="flex: 1; float: left; display: inline-block;">
-                                                    /
-                                                </div>
-<div class="yearSection" style="flex: 1; float: left; display: inline-block;">
-<div>
-<span aria-expanded="false" aria-haspopup="listbox" class="a-dropdown-container" role="combobox" title="year">
-<select aria-hidden="false" aria-label="Select Year" autocomplete="off" class="a-native-dropdown a-native-dropdown" data-a-native-class="a-native-dropdown" id="onlineYear" name="onlineYear">
-<option id="onlineYearOptionDefault" selected="selected" value="">
-</option>
-</select>
-<span aria-hidden="true" class="a-button a-button-dropdown a-button-small a-button-width-normal">
-<span class="a-button-inner">
-<span aria-hidden="false" class="a-button-text a-declarative" data-action="a-dropdown-button" role="button">
-<span class="a-dropdown-prompt" id="onlineYearPrompt"></span>
-</span>
-<i class="a-icon a-icon-dropdown"></i>
-</span>
-</span>
-</span>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</fieldset>
-<fieldset aria-labelledby="OfflinePriceAvailabilitySection" role="group">
-<legend>
-<div id="offlineRadioContainer" style="display: flex;margin-top: 10px">
-<input id="pricingFeedback_offlineRadio" name="retailerType" type="radio" value="offline"/>
-<label for="pricingFeedback_offlineRadio">商店（线下）</label>
-</div>
-</legend>
-<div class="grid-container" id="pricingFeedback_offlineInput">
-<div class="grid-row">
-<label class="grid-label" for="offlineStoreName" id="storeLabel">
-                                            店铺名称 <span class="asterisk">*</span>:
-                                    </label>
-<div class="a-button-inner a-dropdown-container grid-input" id="storeValue" style="font-size: 11px">
-<select aria-required="true" autocomplete="off" class="a-native-dropdown a-button-span10 a-native-dropdown" data-a-native-class="a-native-dropdown" id="offlineStoreName" name="offlineStoreName">
-<option class="a-prompt" id="storeDefaultOption">
-                                                输入您找到该产品的商店名称
-                                            </option>
-</select>
-<span aria-hidden="true" class="a-button a-button-dropdown a-button-span10" id="offlineStoreNameMain">
-<span class="a-button-inner">
-<span aria-hidden="true" class="a-button-text a-declarative" data-action="a-dropdown-button" role="button">
-<span class="a-dropdown-prompt" id="storeDefaultPrompt">
-                        输入您找到该产品的商店名称
-                    </span>
-</span>
-<i class="a-icon a-icon-dropdown"></i>
-</span>
-</span>
-</div>
-<div class="a-box a-alert-inline a-alert-inline-error auth-inlined-error-message a-spacing-top-mini widgetAlerts" id="offlineStoreName-missing-alert" role="alert">
-<div class="a-box-inner a-alert-container">
-<i class="a-icon a-icon-alert"></i>
-<span class="a-alert-content" id="storeAlert"></span>
-</div>
-</div>
-</div>
-<div class="grid-row">
-<label class="grid-label" for="offlineCity" id="offlineCityLabel">
-                                            城市 <span class="asterisk">*</span>:</label>
-<input aria-required="true" class="grid-input" id="offlineCity" maxlength="100" name="offlineCity" placeholder="Enter the city where you found this product" size="32" type="text"/>
-<div class="a-box a-alert-inline a-alert-inline-error auth-inlined-error-message a-spacing-top-mini widgetAlerts" id="offlineCity-missing-alert" role="alert">
-<div class="a-box-inner a-alert-container">
-<i class="a-icon a-icon-alert"></i>
-<span class="a-alert-content" id="cityAlert">
-</span>
-</div>
-</div>
-</div>
-<div class="grid-row">
-<label class="grid-label" for="offlineState" id="stateLabel">
-                                            状态：
-                                    </label>
-<span class="a-button-inner a-dropdown-container grid-input" id="stateValue" style="font-size: 11px">
-<select aria-required="false" autocomplete="off" class="a-native-dropdown a-button-span10 a-native-dropdown" data-a-native-class="a-native-dropdown" id="offlineState" name="offlineState">
-<option class="a-prompt" id="stateDefaultOption">
-                                                                    请选择省份 </option>
-</select>
-<span aria-hidden="true" class="a-button a-button-dropdown a-button-span10" id="offlineStateMain">
-<span class="a-button-inner">
-<span aria-hidden="true" class="a-button-text a-declarative" data-action="a-dropdown-button" role="button">
-<span class="a-dropdown-prompt" id="stateDefaultPrompt">请选择省份 </span>
-</span>
-<i class="a-icon a-icon-dropdown"></i>
-</span>
-</span>
-</span>
-</div>
-<div class="grid-row">
-<label class="grid-label" for="offlinePriceRaw" id="offlinePriceRawLabel">价格
-                                        ($)
-                                        <span class="asterisk">*</span>:
-                                    </label>
-<div class="a-fixed-left-grid-col a-col-right grid-input">
-<input aria-required="true" class="grid-input" id="offlinePriceRaw" maxlength="10" name="offlinePriceRaw" placeholder="Enter the price of the product" size="20" type="number"/>
-<div class="a-box a-alert-inline a-alert-inline-error auth-inlined-error-message a-spacing-top-mini widgetAlerts" id="offlinePriceRaw-missing-alert" role="alert">
-<div class="a-box-inner a-alert-container">
-<i class="a-icon a-icon-alert"></i>
-<span class="a-alert-content" id="priceAlertOffline">
-</span>
-</div>
-</div>
-</div>
-</div>
-<div aria-labelledby="offlineCalendarLabel" class="grid-row" role="group">
-<label class="grid-label" for="offlineCalendar" id="offlineCalendarLabel">价格日期
-                                        （月/日/年）：</label>
-<div class="a-fixed-left-grid-col a-col-right grid-input">
-<div>
-<div id="offlineCalendar">
-<div class="monthSection" style="flex: 1; float: left; display: inline-block;">
-<span aria-expanded="false" aria-haspopup="listbox" class="a-dropdown-container" role="combobox" title="month">
-<select aria-hidden="false" aria-label="Select Month" autocomplete="off" class="month-select a-native-dropdown a-native-dropdown" data-a-native-class="a-native-dropdown" id="offlineMonth" name="offlineMonth">
-<option class="a-prompt" id="offlineMonthOptionDefault" value=""></option>
-<option value="1">01</option>
-<option value="2">02</option>
-<option value="3">03</option>
-<option value="4">04</option>
-<option value="5">05</option>
-<option value="6">06</option>
-<option value="7">07</option>
-<option value="8">08</option>
-<option value="9">09</option>
-<option value="10">10</option>
-<option value="11">11</option>
-<option value="12">12</option>
-</select>
-<span aria-hidden="true" class="a-button a-button-dropdown a-button-small a-button-width-normal">
-<span class="a-button-inner">
-<span aria-hidden="true" class="a-button-text a-declarative" data-action="a-dropdown-button" role="button">
-<span class="a-dropdown-prompt" id="offlineMonthPrompt"></span>
-</span>
-<i class="a-icon a-icon-dropdown"></i>
-</span>
-</span>
-</span>
-</div>
-<div class="firstDelimiter" style="flex: 1; float: left; display: inline-block;">
-                                                    /
-                                                </div>
-<div class="daySection" style="flex: 1; float: left; display: inline-block;">
-<div>
-<span aria-expanded="false" aria-haspopup="listbox" class="a-dropdown-container" role="combobox" title="day">
-<select aria-hidden="false" aria-label="Select day" autocomplete="off" class="day-select a-native-dropdown a-native-dropdown" data-a-native-class="a-native-dropdown" id="offlineDay" name="offlineDay">
-<option class="a-prompt" id="offlineDateOptionDefault" value=""></option>
-<option value="1">01</option>
-<option value="2">02</option>
-<option value="3">03</option>
-<option value="4">04</option>
-<option value="5">05</option>
-<option value="6">06</option>
-<option value="7">07</option>
-<option value="8">08</option>
-<option value="9">09</option>
-<option value="10">10</option>
-<option value="11">11</option>
-<option value="12">12</option>
-<option value="13">13</option>
-<option value="14">14</option>
-<option value="15">15</option>
-<option value="16">16</option>
-<option value="17">17</option>
-<option value="18">18</option>
-<option value="19">19</option>
-<option value="20">20</option>
-<option value="21">21</option>
-<option value="22">22</option>
-<option value="23">23</option>
-<option value="24">24</option>
-<option value="25">25</option>
-<option value="26">26</option>
-<option value="27">27</option>
-<option value="28">28</option>
-<option value="29">29</option>
-<option value="30">30</option>
-<option value="31">31</option>
-</select>
-<span aria-hidden="true" class="a-button a-button-dropdown a-button-small a-button-width-normal">
-<span class="a-button-inner">
-<span aria-hidden="false" class="a-button-text a-declarative" data-action="a-dropdown-button" role="button">
-<span class="a-dropdown-prompt" id="offlineDatePrompt"></span>
-</span>
-<i class="a-icon a-icon-dropdown"></i>
-</span>
-</span>
-</span>
-</div>
-</div>
-<div class="secondDelimiter" style="flex: 1; float: left; display: inline-block;">
-                                                    /
-                                                </div>
-<div class="yearSection" style="flex: 1; float: left; display: inline-block;">
-<div>
-<span aria-expanded="false" aria-haspopup="listbox" class="a-dropdown-container" role="combobox" title="year">
-<select aria-hidden="false" aria-label="Select year" autocomplete="off" class="a-native-dropdown a-native-dropdown" data-a-native-class="a-native-dropdown" id="offlineYear" name="offlineYear">
-<option id="offlineYearOptionDefault" selected="selected" value="">
-</option>
-</select>
-<span aria-hidden="true" class="a-button a-button-dropdown a-button-small a-button-width-normal">
-<span class="a-button-inner">
-<span aria-hidden="true" class="a-button-text a-declarative" data-action="a-dropdown-button" role="button">
-<span class="a-dropdown-prompt" id="offlineYearPrompt"></span>
-</span>
-<i class="a-icon a-icon-dropdown"></i>
-</span>
-</span>
-</span>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</fieldset>
-</fieldset>
-<div id="feedbackFormFinalState">
-<div id="pricingFeedback_error"></div>
-<div id="pricingFeedback_submit" style="padding: 0 15px 15px !important;margin-top: 15px">
-<div id="loading" style="float: left;"></div>
-<div style="float:left;">
-<span class="a-button a-button-primary" id="pfw_submit">
-<span class="a-button-inner">
-<input aria-labelledby="pfw_submit-announce" class="a-button-input" name="pfw_submit" title="PFWSubmit" type="submit" value="submit"/>
-<span aria-hidden="true" class="a-button-text" id="pfw_submit-announce">提交反馈</span>
-</span>
-</span>
-</div>
-</div>
-<div id="pricingFeedback_thank">
-</div>
-</div>
-</div>
-</div>
-<div class="a-popover-content" id="signUpForm">
-                        请 <a href="${sign-in-url}">登入</a> 提供反馈。 </div>
-</div>
-</div> </div>
-<script type="text/javascript">
-    P.when("A", "a-modal", "ready").execute(function (A, modal) {
-        var $ = A.$;
-
-        var instance;
-        var title = $("#modalHeader").val();
-        function getModalWidth() {
-            if (window.matchMedia("(max-width: 420px)").matches) {
-                return "320px"; // Width for very small screens
-            } else if (window.matchMedia("(max-width: 550px)").matches) {
-                return "420px"; // Width for small screens
-            } else {
-                return "550px"; // Default width
-            }
-        }
-
-        A.declarative("pricingFeedback-modal-button", "click", function (event) {
-            if (!instance) {
-                var options = {
-                    name: "pricingFeedback-modal-content",
-                    dataStrategy: "preload",
-                };
-                instance = modal.create(event.$target, options);
-            }
-            instance.update({
-                header: title,
-                width: getModalWidth()
-            }).lock().show();
-        });
-        $(window).resize(function() {
-            if (instance) {
-                instance.update({
-                    width: getModalWidth()
-                });
-            }
-        });
-    });
-
-
-    P.when('A', 'ready').execute(function (A) {
-        var $ = A.$;
-
-        var csrf = $("#aapiCsrfToken").val();
-        var productPrice = $("#priceValue").val();
-        var hostname = $("#absoluteUrlPrefix").val();
-        var customerId = $("#customerId").val();
-        var isCustomerRecognized = ($("#isCustomerLoggedIn").val() === 'true');
-        var isCurrentGlOnlineOnly = ($("#isCurrentGlOnlineOnly").val() === 'true');
-        var asin = $("#asin").val();
-        var marketplaceId = $("#marketplaceId").val();
-        var country = $("#countryCode").val();
-        var offlineStoresList = $("#offlineStoresList").val();
-        var statesList = $("#statesList").val();
-
-        var errorMessages = {
-            errorNoRetailerType: $("#errorNoType").val(),
-            errorBadPrice: $("#errorBadPrice").val(),
-            errorBadPriceShipping: $("#errorBadPriceShipping").val(),
-            errorInvalidUrl: $("#errorInvalidUrl").val(),
-            errorSubmission: $("#errorSubmission").val(),
-            errorEmptyFields: $("#errorEmptyFields").val(),
-            errorMissingCity: $("#errorMissingCity").val(),
-            errorEmptyUrl:$("#errorEmptyUrl").val(),
-            thankFeedback: $("#thankFeedback").val()
-        };
-
-        var feedbackFormContent = document.querySelector('#feedbackForm');
-        var signUpContainer = document.querySelector('#signUpForm');
-        var feedbackFormFinalStateContainer = document.querySelector('#feedbackFormFinalState');
-
-        var states = JSON.parse(statesList);
-        var offlineStores = JSON.parse(offlineStoresList);
-
-        var offlineStoresEnabled = !isCurrentGlOnlineOnly;
-        var currentDate = getCurrentDay();
-        var currentMonth = getCurrentMonth();
-        var currentYear = getCurrentYear();
-
-        if (isCustomerRecognized) {
-            feedbackFormContent.style['display'] = 'block';
-            signUpContainer.style['display'] = 'none';
-
-            var enableOnlineStoreRadio = document.querySelector('#pricingFeedback_onlineRadio');
-            var enableOfflineStoreRadio = document.querySelector('#pricingFeedback_offlineRadio');
-            var onlineStoreInputForm = document.querySelector('#pricingFeedback_onlineInput');
-            var offlineStoreInputForm = document.querySelector('#pricingFeedback_offlineInput');
-            var offlineStateSelect = document.querySelector('#offlineState');
-            var offlineStoreSelect = document.querySelector('#offlineStoreName');
-            var submitButton = document.querySelector('#pricingFeedback_submit');
-            var onlineUrl = document.querySelector('#onlineUrl');
-            var onlinePriceRaw = document.querySelector('#onlinePriceRaw');
-            var onlineShippingRaw = document.querySelector('#onlineShippingRaw');
-            var onlineDay = document.querySelector('#onlineDay');
-            var onlineMonth = document.querySelector('#onlineMonth');
-            var onlineYear = document.querySelector('#onlineYear');
-            var onlineCalendar = document.querySelector('#onlineCalendar');
-            var note1 = document.querySelector('#note1');
-
-            var offlineRadioContainer = document.querySelector('#offlineRadioContainer');
-            var offlineStoreName = document.querySelector('#offlineStoreName');
-            var offlineCity = document.querySelector('#offlineCity');
-            var offlineState = document.querySelector('#offlineState');
-            var offlinePriceRaw = document.querySelector('#offlinePriceRaw');
-            var offlineDay = document.querySelector('#offlineDay');
-            var offlineMonth = document.querySelector('#offlineMonth');
-            var offlineYear = document.querySelector('#offlineYear');
-            var offlineCalendar = document.querySelector('#offlineCalendar');
-
-            var thankYouDiv = document.querySelector('#pricingFeedback_thank');
-            var errorDiv = document.querySelector('#pricingFeedback_error');
-            var loadingGifDiv = document.querySelector('#loading');
-            var offlineStateMain = document.querySelector('#offlineStateMain');
-            note1 = document.querySelector('#note1');
-            setCalenderOrderBasedOnCountry(country);
-
-            setInitialStates(
-                onlineMonth,
-                currentMonth,
-                offlineMonth,
-                onlineDay,
-                currentDate,
-                offlineDay,
-                onlineYear,
-                currentYear,
-                offlineYear,
-                onlineStoreInputForm,
-                offlineStoreInputForm,
-                enableOfflineStoreRadio,
-                enableOnlineStoreRadio,
-                onlineCalendar,
-                offlineCalendar,
-                offlineStateMain,
-                offlineState,
-                note1
-            );
-
-            createPermalinkContainer(asin, hostname);
-
-            for (let state of states) {
-                var option = document.createElement('option');
-                option.setAttribute('value', state['value']);
-                option.innerText = state['name'];
-                offlineStateSelect.appendChild(option);
-            }
-
-            offlineStores.forEach(function(store) {
-                var option = document.createElement('option');
-                option.value = store;
-                option.textContent = store;
-                offlineStoreSelect.appendChild(option);
-            });
-
-            function setCSSForFeedbackForm() {
-                const labels = document.querySelectorAll('.grid-label');
-                let maxWidth = 0;
-
-                labels.forEach(label => {
-                    maxWidth = Math.max(maxWidth, label.clientWidth);
-                });
-
-                labels.forEach(label => {
-                    label.style.minWidth = maxWidth + 'px';
-                });
-            }
-
-            $("#pricingFeedback_onlineRadio").click(function () {
-                onlineStoreInputForm.style['display'] = 'block';
-                offlineStoreInputForm.style['display'] = 'none';
-                note1.style['display'] = 'block';
-                setCSSForFeedbackForm();
-            });
-
-            function handleInput(element, alert) {
-                if (element.hasClass('a-form-error')) {
-                    alert.style['display'] = 'none';
-                    element.removeClass('a-form-error').addClass('a-form-normal');
-                    element.removeAttr("aria-invalid");
-                    element.removeAttr("aria-describedby");
-                }
-            }
-
-            $('#onlineUrl').change(function () {
-                var urlAlert = document.querySelector('#onlineUrl-missing-alert');
-                handleInput($(this), urlAlert);
-            });
-
-            $('#onlinePriceRaw').change(function () {
-                var priceAlertOnline = document.querySelector('#onlinePrice-missing-alert');
-                handleInput($(this), priceAlertOnline);
-            });
-            $('#onlineShippingRaw').change(function () {
-                var priceShippingAlertOnline = document.querySelector('#onlineShippingPrice-missing-alert');
-                handleInput($(this), priceShippingAlertOnline);
-            });
-            $('#offlineCity').change(function () {
-                var cityAlert = document.querySelector('#offlineCity-missing-alert');
-                handleInput($(this), cityAlert);
-            });
-
-            $('#offlineStoreName').change(function () {
-                var storeAlert = document.querySelector('#offlineStoreName-missing-alert');
-                handleInput($(this), storeAlert);
-            });
-
-            $('#offlinePriceRaw').change(function () {
-                var priceAlertOffline = document.querySelector('#offlinePriceRaw-missing-alert');
-                handleInput($(this), priceAlertOffline);
-            });
-
-            $("#pricingFeedback_offlineRadio").click(function () {
-                onlineStoreInputForm.style['display'] = 'none';
-                offlineStoreInputForm.style['display'] = 'block';
-                note1.style['display'] = 'block';
-                setCSSForFeedbackForm();
-            });
-
-            if (!offlineStoresEnabled) {
-                offlineRadioContainer.style['display'] = 'none';
-                offlineStoreInputForm.style['display'] = 'none';
-            }
-
-            $("#pfw_submit").click(function () {
-                var feedbackSubmitted = submitFeedback(
-                    customerId,
-                    marketplaceId,
-                    asin,
-                    productPrice,
-                    onlineStoreInputForm,
-                    offlineStoreInputForm,
-                    onlineUrl.value,
-                    onlinePriceRaw.value,
-                    onlineShippingRaw.value,
-                    onlineDay.value,
-                    onlineMonth.value,
-                    offlineStoreName.value,
-                    offlineCity.value,
-                    offlineState.value,
-                    offlinePriceRaw.value,
-                    offlineDay.value,
-                    offlineMonth.value,
-                    thankYouDiv,
-                    errorDiv,
-                    submitButton,
-                    loadingGifDiv,
-                    errorMessages
-                );
-                if (feedbackSubmitted !== null && !feedbackSubmitted) {
-                    errorDiv.innerHTML = getErrorDiv(errorMessages.errorSubmission);
-                }
-            });
-
-            A.on("a:popover:beforeHide:pricingFeedback-modal-content", function (data) {
-                resetModalToInitialState(currentMonth, currentDate, currentYear);
-            });
-
-        } else {
-            feedbackFormContent.style['display'] = 'none';
-            signUpContainer.style['display'] = 'block';
-
-            var authPortalLink = getAuthenticationPageURL(asin, hostname);
-            $("#signUpForm").one("click", function () {
-                window.location = encodeURI(authPortalLink);
-            });
-        }
-
-        function setCalenderOrderBasedOnCountry(country) {
-            var monthSections = document.getElementsByClassName('monthSection');
-            var daySections = document.getElementsByClassName('daySection');
-            var yearSections = document.getElementsByClassName('yearSection');
-
-            var firstDelimiters = document.getElementsByClassName('firstDelimiter');
-            var secondDelimiters = document.getElementsByClassName('secondDelimiter');
-
-            if (country === 'US') {
-                for (let i = 0; i < 2; i++) {
-                    (monthSections[i]).style['order'] = '0';
-                    (firstDelimiters[i]).style['order'] = '1';
-                    (daySections[i]).style['order'] = '2';
-                    (secondDelimiters[i]).style['order'] = '3';
-                    (yearSections[i]).style['order'] = '4';
-                }
-            } else if (country === 'JP') {
-                for (let i = 0; i < 2; i++) {
-                    (yearSections[i]).style['order'] = '-1';
-                    (secondDelimiters[i]).style['order'] = '0';
-                    (monthSections[i]).style['order'] = '1';
-                    (firstDelimiters[i]).style['order'] = '2';
-                    (daySections[i]).style['order'] = '3';
-                }
-            } else {
-                for (let i = 0; i < 2; i++) {
-                    (daySections[i]).style['order'] = '-1';
-                    (firstDelimiters[i]).style['order'] = '0';
-                    (monthSections[i]).style['order'] = '1';
-                    (secondDelimiters[i]).style['order'] = '2';
-                    (yearSections[i]).style['order'] = '3';
-                }
-            }
-        }
-
-        function createPermalinkContainer(asin, hostname) {
-            var permalinkHref = getPermalink(hostname, asin);
-            var permalinkContainer = document.querySelector('#permalink');
-            var permalink = document.createElement('a');
-            permalink.setAttribute('href', permalinkHref);
-            permalink.innerText = permalinkHref;
-            permalinkContainer.append(permalink);
-        }
-
-        function getPermalink(server, asin) {
-            return server + '/dp/' + asin;
-        }
-
-        function triggerPricingFeedback(
-            customerId,
-            marketplaceId,
-            asin,
-            price,
-            retailerType,
-            retailerUrl,
-            retailerName,
-            retailerCity,
-            retailerState,
-            retailerPrice,
-            retailerShipping,
-            sampleDate
-        ) {
-            var dataCart = {
-                ourPrice: parseInt(price),
-                retailer: {
-                    type: retailerType,
-                    name: retailerName,
-                    city: retailerCity,
-                    state: retailerState,
-                    price: parseInt(retailerPrice),
-                    shippingCost: parseInt(retailerShipping),
-                    url: retailerUrl
-                },
-                date: sampleDate + "T00:00:00.102Z"
-            };
-            return new Promise((resolve, reject) => {
-                A.$.ajax($("#aapiEndpoint").val() + "/api/marketplaces/" + marketplaceId + "/products/" + asin + "/feedback/pricing",
-                    {
-                        type: 'POST',
-                        headers: {
-                            'Accept-Language': 'en-US',
-                            'Accept': 'application/vnd.com.amazon.api+json; type="product.feedback.pricing/v1"',
-                            'x-amzn-encrypted-slate-token': document.querySelector('meta[name="encrypted-slate-token"]')?.content,
-                            'Content-Type': 'application/vnd.com.amazon.api+json; type="product.feedback.pricing.request/v1"',
-                            'x-api-csrf-token': csrf
-                        },
-                        data: JSON.stringify(dataCart),
-                        xhrFields: {
-                            withCredentials: true
-                        },
-
-                        success: function (responseContent) {
-                            $("#pricingFeedback_thankcontent").innerText = "Success! " + responseContent.toString();
-                            resolve();
-                        },
-
-                        error: function (err) {
-                            $("#pricingFeedback_thankcontent").innerText = "Error! " + err.toString();
-                            reject();
-                        }
-                    })
-            })
-        }
-
-        function getAuthenticationPageURL(asin, hostname) {
-            return hostname + '/ap/signin?_encoding=UTF8&openid.assoc_handle=usflex&openid.claimed_id=http://specs.openid.net/auth/2.0/identifier_select&openid.identity=http://specs.openid.net/auth/2.0/identifier_select&openid.mode=checkid_setup&openid.ns=http://specs.openid.net/auth/2.0&openid.ns.pape=http://specs.openid.net/extensions/pape/1.0&openid.pape.max_auth_age=0&openid.return_to=https://www.amazon.com/dp//';
-        }
-
-        function getCurrentDay() {
-            var date = new Date();
-            return date.getDate().toString();
-        }
-
-        function getCurrentMonth() {
-            var date = new Date();
-            return (date.getMonth() + 1).toString();
-        }
-
-        function getCurrentYear() {
-            var date = new Date();
-            return date.getFullYear().toString();
-        }
-
-        function resetAlerts() {
-            const elements = [
-                { id: "#onlineUrl", alertId: "#onlineUrl-missing-alert" },
-                { id: "#onlinePriceRaw", alertId: "#onlinePrice-missing-alert" },
-                { id: "#onlineShippingRaw", alertId: "#onlineShippingPrice-missing-alert" },
-                { id: "#offlineStoreName", alertId: "#offlineStoreName-missing-alert" },
-                { id: "#offlineCity", alertId: "#offlineCity-missing-alert" },
-                { id: "#offlinePriceRaw", alertId: "#offlinePriceRaw-missing-alert" }
-            ];
-
-            for (const { id, alertId } of elements) {
-                const element = document.querySelector(id);
-                const alertElement = document.querySelector(alertId);
-
-                if (element && alertElement) {
-                    element.classList.remove('a-form-error', 'a-form-normal');
-                    alertElement.style.display = 'none';
-                }
-            }
-        }
-
-        function setInitialStates(onlineMonth, currentMonth, offlineMonth, onlineDay, currentDate, offlineDay,
-                                  onlineYear, currentYear, offlineYear, onlineStoreInputForm, offlineStoreInputForm, enableOfflineStoreRadio,
-                                  enableOnlineStoreRadio, onlineCalendar, offlineCalendar, offlineStateMain, offlineState, note1) {
-            onlineMonth.defaultValue = currentMonth;
-            offlineMonth.defaultValue = currentMonth;
-            onlineDay.defaultValue = currentDate;
-            offlineDay.defaultValue = currentDate;
-            onlineYear.defaultValue = currentYear;
-            offlineYear.defaultValue = currentYear;
-
-            var isStateRequired = document.querySelector('#isStateRequired');
-
-            var stateLabel = document.querySelector('#stateLabel')
-            var stateValue = document.querySelector('#stateValue')
-            var isStoreRequired = document.querySelector('#isStoreRequired');
-
-            var storeLabel = document.querySelector('#storeLabel')
-            var storeValue = document.querySelector('#storeValue')
-
-            if (isStateRequired.value === 'false') {
-                stateLabel.style['display'] = 'none';
-                stateValue.style['display'] = 'none';
-            }
-            if (isStoreRequired.value === 'false') {
-                storeLabel.style['display'] = 'none';
-                storeValue.style['display'] = 'none';
-            }
-
-            note1.style['display'] = 'none';
-
-            resetAlerts();
-
-            var onlineMonthOption = document.querySelector('#onlineMonthOptionDefault');
-            onlineMonthOption.innerText = currentMonth;
-
-            var onlineMonthPrompt = document.querySelector('#onlineMonthPrompt');
-            onlineMonthPrompt.innerText = currentMonth;
-
-            var offlineMonthOption = document.querySelector('#offlineMonthOptionDefault');
-            offlineMonthOption.innerText = currentMonth;
-
-            var offlineMonthPrompt = document.querySelector('#offlineMonthPrompt');
-            offlineMonthPrompt.innerText = currentMonth;
-
-            var onlineDateOption = document.querySelector('#onlineDateOptionDefault');
-            onlineDateOption.innerText = currentDate;
-
-            var onlineDayPrompt = document.querySelector('#onlineDatePrompt');
-            onlineDayPrompt.innerText = currentDate;
-
-            var offlineDateOption = document.querySelector('#offlineDateOptionDefault');
-            offlineDateOption.innerText = currentDate;
-
-            var offlineDayPrompt = document.querySelector('#offlineDatePrompt');
-            offlineDayPrompt.innerText = currentDate;
-
-            var onlineYearOption = document.querySelector('#onlineYearOptionDefault');
-            onlineYearOption.setAttribute('href', currentYear);
-            onlineYearOption.innerText = currentYear;
-
-            var onlineYearPrompt = document.querySelector('#onlineYearPrompt');
-            onlineYearPrompt.innerText = currentYear;
-
-            var offlineYearOption = document.querySelector('#offlineYearOptionDefault');
-            offlineYearOption.setAttribute('href', currentYear);
-            offlineYearOption.innerText = currentYear;
-
-            var offlineYearPrompt = document.querySelector('#offlineYearPrompt');
-            offlineYearPrompt.innerText = currentYear;
-
-            if (onlineMonth.children && offlineMonth.children && onlineDay.children && offlineDay.children) {
-                onlineMonth.children[currentMonth].setAttribute('selected', currentMonth);
-                offlineMonth.children[currentMonth].setAttribute('selected', currentMonth);
-                onlineDay.children[currentDate].setAttribute('selected', currentDate);
-                offlineDay.children[currentDate].setAttribute('selected', currentDate);
-            }
-
-            onlineStoreInputForm.style['display'] = 'none';
-            offlineStoreInputForm.style['display'] = 'none';
-
-            enableOfflineStoreRadio.checked = false;
-            enableOnlineStoreRadio.checked = false;
-
-            if (onlineCalendar.style && offlineCalendar.style) {
-                onlineCalendar.style['display'] = 'block';
-                offlineCalendar.style['display'] = 'block';
-            }
-        }
-
-        function submitFeedback(
-            customerId,
-            marketplaceId,
-            asin,
-            price,
-            onlineStoreInputForm,
-            offlineStoreInputForm,
-            onlineUrl,
-            onlinePriceRaw,
-            onlineShippingRaw,
-            onlineDay,
-            onlineMonth,
-            offlineStoreName,
-            offlineCity,
-            offlineState,
-            offlinePriceRaw,
-            offlineDay,
-            offlineMonth,
-            thankYouDiv,
-            errorDiv,
-            submitButton,
-            loadingGifDiv,
-            errorMessages
-        ) {
-            errorDiv.innerHTML = '';
-
-            let cleanRetailerType,
-                cleanRetailerUrl,
-                cleanRetailerName,
-                cleanRetailerCity,
-                cleanRetailerState,
-                cleanRetailerPrice,
-                cleanRetailerShipping,
-                cleanSampleDate;
-            var currentYear = getCurrentYear();
-            if (onlineStoreInputForm.style['display'] === 'block') {
-                var onlineValidity = validateOnlineInputs(onlineUrl, onlinePriceRaw, onlineShippingRaw, errorMessages);
-                if (onlineValidity.valid) {
-                    cleanRetailerType = 'ONLINE';
-                    cleanRetailerUrl = truncate(trim(onlineUrl), 300);
-                    cleanRetailerPrice = trim(onlinePriceRaw);
-                    cleanRetailerShipping = trim(onlineShippingRaw);
-                    if (!cleanRetailerShipping) {
-                        cleanRetailerShipping = '0';
-                    }
-                    cleanSampleDate = formatDate(
-                        currentYear,
-                        onlineDay ? onlineDay : getCurrentDay(),
-                        onlineMonth ? onlineMonth : getCurrentMonth()
-                    );
-                } else {
-                    if (onlineValidity.error) {
-                        errorDiv.innerHTML = getErrorDiv(onlineValidity.error);
-                    }
-                    return null;
-                }
-            } else if (offlineStoreInputForm.style['display'] === 'block') {
-                var offlineValidity = validateOfflineInputs(
-                    offlineStoreName,
-                    offlineCity,
-                    offlineState,
-                    offlinePriceRaw,
-                    errorMessages,
-                    marketplaceId
-                );
-                if (offlineValidity.valid) {
-                    cleanRetailerType = 'OFFLINE';
-                    cleanRetailerName = truncate(trim(offlineStoreName), 100);
-                    cleanRetailerCity = truncate(trim(offlineCity), 100);
-                    cleanRetailerState = truncate(trim(offlineState), 100);
-                    cleanRetailerPrice = trim(offlinePriceRaw);
-                    cleanRetailerShipping = '0';
-                    cleanSampleDate = formatDate(
-                        currentYear,
-                        offlineDay ? offlineDay : getCurrentDay(),
-                        offlineMonth ? offlineMonth : getCurrentMonth()
-                    );
-                } else {
-                    if (offlineValidity.error) {
-                        errorDiv.innerHTML = getErrorDiv(offlineValidity.error);
-                    }
-                    return null;
-                }
-            } else {
-                errorDiv.innerHTML = getErrorDiv(errorMessages.errorNoRetailerType);
-                return null;
-            }
-
-            loadingGifDiv.innerHTML = getLoadingGifDiv();
-
-            if (price) price = parseFloat(price);
-            return triggerPricingFeedback(
-                customerId,
-                marketplaceId,
-                asin,
-                price,
-                cleanRetailerType,
-                cleanRetailerUrl,
-                cleanRetailerName,
-                cleanRetailerCity,
-                cleanRetailerState,
-                parseFloat(cleanRetailerPrice),
-                parseFloat(cleanRetailerShipping),
-                cleanSampleDate
-            )
-                .then(response => {
-                    errorDiv.innerHTML = '';
-                    thankYouDiv.innerHTML = getThankYouDiv(errorMessages.thankFeedback);
-
-                    submitButton.style.display = 'none';
-                    return response;
-                })
-                .catch(err => {
-                    errorDiv.innerHTML = getErrorDiv(errorMessages.errorSubmission);
-                    return null;
-                });
-        }
-
-        function showError(element, elementAlert) {
-            elementAlert.style['display'] = 'block';
-            element.classList.add('a-form-error');
-        }
-
-        function isUrlPresentAndValid(url) {
-            const onlineUrlElement = document.querySelector('#onlineUrl');
-            const onlineUrlAlertDiv = document.querySelector('#onlineUrl-missing-alert');
-            const urlAlert = document.querySelector('#urlAlert');
-
-            if (isEmptyValue(url)) {
-                showError(onlineUrlElement, onlineUrlAlertDiv);
-                $('#onlineUrl').attr("aria-invalid", "true");
-                $('#onlineUrl').attr("aria-describedby", "onlineUrl-missing-alert");
-                urlAlert.innerHTML = "Enter url";$('#onlineUrl').attr("aria-invalid", "true");
-
-                return false;
-            }
-            if (!isValidUrl(url)) {
-                showError(onlineUrlElement, onlineUrlAlertDiv);
-                $('#onlineUrl').attr("aria-invalid", "true");
-                $('#onlineUrl').attr("aria-describedby", "onlineUrl-missing-alert");
-                urlAlert.innerHTML = "Please enter a valid URL.";
-                return false;
-            }
-
-            return true;
-        }
-
-        function isOnlinePriceThere(price) {
-            const onlinePriceElement = document.querySelector('#onlinePriceRaw');
-            const onlinePriceElementAlert = document.querySelector('#onlinePrice-missing-alert');
-            const priceAlertOnline = document.querySelector('#priceAlertOnline');
-            if (isEmptyValue(price) || !isNumericPrice(price)) {
-                $('#onlinePriceRaw').attr("aria-invalid", "true");
-                showError(onlinePriceElement, onlinePriceElementAlert);
-                $('#onlinePriceRaw').attr("aria-describedby", "onlinePrice-missing-alert");
-                priceAlertOnline.innerHTML="Please only use numbers in the Price field.";
-                return false;
-            }
-            return true;
-        }
-
-        function isOnlineShippingPriceValid(shippingPrice) {
-            const onlineShippingPriceElement = document.querySelector('#onlineShippingRaw');
-            const onlineShippingPriceElementAlert = document.querySelector('#onlineShippingPrice-missing-alert');
-            const priceShippingAlertOnline=document.querySelector('#priceShippingAlertOnline');
-            if (!isEmptyValue(shippingPrice) && !isNumericPrice(shippingPrice)) {
-                $('#onlineShippingRaw').attr("aria-invalid", "true");
-                showError(onlineShippingPriceElement, onlineShippingPriceElementAlert);
-                $('#onlineShippingRaw').attr("aria-describedby", "onlineShippingPrice-missing-alert");
-                priceShippingAlertOnline.innerHTML = "Please only use numbers in the Price and Shipping fields.";
-                return false;
-            }
-
-            return true;
-        }
-
-        function validateOnlineInputs(url, onlinePrice, onlineShipping, errorMessages) {
-            const isValidUrl = isUrlPresentAndValid(url);
-            const isPriceValid = isOnlinePriceThere(onlinePrice);
-            const isShippingValid = isOnlineShippingPriceValid(onlineShipping);
-
-            if (!isValidUrl || !isPriceValid || !isShippingValid) {
-                return { valid: false };
-            }
-
-            return { valid: true };
-        }
-
-        function isOfflineStoreNameValid(offlineStoreName) {
-            const offlineStoreElement = document.querySelector('#offlineStoreName');
-            const offlineStoreElementAlert = document.querySelector('#offlineStoreName-missing-alert');
-            const storeAlert=document.querySelector('#storeAlert');
-            if (isEmptyValue(offlineStoreName)) {
-                $('#offlineStoreName').attr("aria-invalid", "true");
-                $('#offlineStoreName').attr("aria-describedby", "offlineStoreName-missing-alert");
-                showError(offlineStoreElement, offlineStoreElementAlert);
-                storeAlert.innerHTML="Please select where the product was sold.";
-                return false;
-            }
-
-            return true;
-        }
-
-        function isOfflineCityNameValid(offlineCity) {
-            const offlineCityElement = document.querySelector('#offlineCity');
-            const offlineCityElementAlert = document.querySelector('#offlineCity-missing-alert');
-            const cityAlert=document.querySelector('#cityAlert');
-            if (isEmptyValue(offlineCity)) {
-                $('#offlineCity').attr("aria-invalid", "true");
-                $('#offlineCity').attr("aria-describedby", "offlineCity-missing-alert");
-                showError(offlineCityElement, offlineCityElementAlert);
-                cityAlert.innerHTML="Please specify the city"
-
-                return false;
-            }
-
-            return true;
-        }
-
-        function isOfflinePriceValid(offlinePrice) {
-            const offlinePriceElement = document.querySelector('#offlinePriceRaw');
-            const offlinePriceElementAlert = document.querySelector('#offlinePriceRaw-missing-alert');
-            const priceAlertOffline = document.querySelector('#priceAlertOffline');
-
-            if (isEmptyValue(offlinePrice) || !isNumericPrice(offlinePrice)) {
-                $('#offlinePriceRaw').attr("aria-invalid", "true");
-                $('#offlinePriceRaw').attr("aria-describedby", "offlinePriceRaw-missing-alert");
-                showError(offlinePriceElement, offlinePriceElementAlert);
-                priceAlertOffline.innerHTML="Please only use numbers in the Price field.";
-                return false;
-            }
-            return true;
-        }
-
-        function validateOfflineInputs(offlineStoreName, offlineCity, offlineState, offlinePrice, errorMessages, marketPlaceId) {
-
-            const isStoreNameValid = isOfflineStoreNameValid(offlineStoreName);
-            const isOfflineCityValid = isOfflineCityNameValid(offlineCity);
-            const isPriceValid = isOfflinePriceValid(offlinePrice);
-            if (!isStoreNameValid || !isOfflineCityValid || !isPriceValid) {
-                return { valid: false };
-            }
-
-            return { valid: true };
-        }
-
-        function getErrorDiv(errorMsg) {
-            return (
-                '<div class="a-box a-alert a-alert-error a-spacing-mini" aria-live="assertive" role="alert">\n' +
-                '              <div class="a-box-inner a-alert-container"><i class="a-icon a-icon-alert"></i><div class="a-alert-content">' +
-                errorMsg +
-                '</div></div>\n' +
-                '          </div>'
-            );
-        }
-
-        function getThankYouDiv(thankMsg) {
-            return (
-                '<div class="a-box a-alert a-alert-success a-spacing-mini">' +
-                '<div class="a-box-inner a-alert-container"><i class="a-icon a-icon-alert"></i><div class="a-alert-content">' +
-                thankMsg +
-                '</div></div></div>\n' +
-                '<p></p><hr/><p></p>'
-            );
-        }
-
-        function getLoadingGifDiv() {
-            return '<img src="https://images-na.ssl-images-amazon.com/images/G/01/x-locale/communities/tags/snake._CB485935600_.gif" class="loadingSymbolImage" width="16" height="16" border="0"/>';
-        }
-
-        function isValidUrl(url) {
-            if (!url) {
-                return false;
-            }
-            var encodedUrl = encodeURI(url);
-            return encodedUrl.match(
-                /^(https?:\/\/)?(([a-z0-9-]|%[A-F0-9]{2})+\.)+(([a-z]|%[A-F0-9]{2})([a-z0-9]|%[A-F0-9]{2})*)(:[0-9]+)?(\/[a-z0-9;:,~!+#@&=%\/$\.?_-]+)?$/
-            );
-        }
-
-        function isNumericPrice(price) {
-            if (!price) {
-                return false;
-            }
-            return price.match(/^([0-9]+\.?[0-9]*)$|^([0-9]*\.[0-9]+)$/);
-        }
-
-        function isEmptyValue(input) {
-            return !input || input.length === 0 || input.match(/^\s*$/);
-        }
-
-        function truncate(input, length) {
-            if (!input) {
-                return '';
-            } else {
-                return input.substr(0, length);
-            }
-        }
-
-        function formatDate(year, date, month) {
-            return year + '-' + month + '-' + date;
-        }
-
-        function trim(input) {
-            if (!input) {
-                return '';
-            } else {
-                return input.trim();
-            }
-        }
-
-        function resetModalToInitialState(currentMonth, currentDate, currentYear) {
-            var enableOnlineStoreRadio = document.querySelector('#pricingFeedback_onlineRadio');
-            var enableOfflineStoreRadio = document.querySelector('#pricingFeedback_offlineRadio');
-            var onlineStoreInputForm = document.querySelector('#pricingFeedback_onlineInput');
-            var offlineStoreInputForm = document.querySelector('#pricingFeedback_offlineInput');
-            var onlineUrl = document.querySelector('#onlineUrl');
-            var onlinePriceRaw = document.querySelector('#onlinePriceRaw');
-            var onlineShippingRaw = document.querySelector('#onlineShippingRaw');
-            var onlineDay = document.querySelector('#onlineDay');
-            var onlineMonth = document.querySelector('#onlineMonth');
-            var onlineYear = document.querySelector('#onlineYear');
-            var onlineCalendar = document.querySelector('#onlineCalendar');
-            var note1 = document.querySelector('#note1');
-
-            var offlineStoreName = document.querySelector('#offlineStoreName');
-            var offlineCity = document.querySelector('#offlineCity');
-            var offlineState = document.querySelector('#offlineState');
-            var offlinePriceRaw = document.querySelector('#offlinePriceRaw');
-            var offlineDay = document.querySelector('#offlineDay');
-            var offlineMonth = document.querySelector('#offlineMonth');
-            var offlineYear = document.querySelector('#offlineYear');
-            var offlineCalendar = document.querySelector('#offlineCalendar');
-
-            var thankYouDiv = document.querySelector('#pricingFeedback_thank');
-            var errorDiv = document.querySelector('#pricingFeedback_error');
-            var submitButton = document.querySelector('#pricingFeedback_submit');
-            var loadingGifDiv = document.querySelector('#loading');
-
-            var stateDefaultOption = document.querySelector('#stateDefaultOption');
-            var stateDefaultPrompt = document.querySelector('#stateDefaultPrompt');
-            var offlineStateMain = document.querySelector('#offlineStateMain');
-            var storeDefaultOption = document.querySelector('#storeDefaultOption');
-            var storeDefaultPrompt = document.querySelector('#storeDefaultPrompt');
-            if (thankYouDiv) {
-                thankYouDiv.innerHTML = '';
-            }
-            if (errorDiv) {
-                errorDiv.innerHTML = '';
-            }
-            if (loadingGifDiv) {
-                loadingGifDiv.innerHTML = '';
-            }
-            if (submitButton) {
-                submitButton.style.display = 'block';
-            }
-            onlineUrl.value = '';
-            onlinePriceRaw.value = '';
-            onlineShippingRaw.value = '';
-            offlineStoreName.value = '';
-            offlineCity.value = '';
-            offlineState.value = '';
-            offlinePriceRaw.value = '';
-
-            stateDefaultOption.innerHTML = $("#selectProvince").val();
-            stateDefaultPrompt.innerHTML = $("#selectProvince").val();
-
-            storeDefaultOption.innerHTML = "Enter the store name where you found this product";
-            storeDefaultPrompt.innerHTML = "Enter the store name where you found this product";
-
-            setInitialStates(
-                onlineMonth,
-                currentMonth,
-                offlineMonth,
-                onlineDay,
-                currentDate,
-                offlineDay,
-                onlineYear,
-                currentYear,
-                offlineYear,
-                onlineStoreInputForm,
-                offlineStoreInputForm,
-                enableOfflineStoreRadio,
-                enableOnlineStoreRadio,
-                onlineCalendar,
-                offlineCalendar,
-                offlineStateMain,
-                offlineState,
-                note1
-            );
-        }
-
-    });
-</script> </div> </table> </div> </div> </div> </div> </div> </div> </div>
-</div>
 <div class="celwidget pd_rd_w-oYqMK pd_rd_r-M962RW3CTVW6WX4KG139 pd_rd_wg-1mcLp" data-csa-c-asin="" data-csa-c-content-id="renewedProgramDescriptionBtf_HIT" data-csa-c-is-in-initial-active-row="false" data-csa-c-slot-id="renewedProgramDescriptionBtf_feature_div" data-csa-c-type="widget" data-feature-name="renewedProgramDescriptionBtf_HIT" id="renewedProgramDescriptionBtf_feature_div">
 </div>
 <div class="celwidget pd_rd_w-yLTin pd_rd_r-M962RW3CTVW6WX4KG139 pd_rd_wg-1mcLp" data-csa-c-asin="" data-csa-c-content-id="productDescription-3" data-csa-c-is-in-initial-active-row="false" data-csa-c-slot-id="productDescription_feature_div" data-csa-c-type="widget" data-feature-name="productDescription-3" id="productDescription_feature_div">
@@ -4653,29 +3265,16 @@ P.when('mix:@amzn/mix.client-runtime', 'mix:posts-dp-same-brand-desktop-card__-F
 <div class="celwidget" data-csa-c-asin="" data-csa-c-content-id="brandInsights" data-csa-c-is-in-initial-active-row="false" data-csa-c-slot-id="brandInsights_feature_div_4" data-csa-c-type="widget" data-feature-name="brandInsights" id="brandInsights_feature_div_4">
 </div>
 <div class="celwidget" data-csa-c-asin="" data-csa-c-content-id="customer-reviews" data-csa-c-is-in-initial-active-row="false" data-csa-c-slot-id="customer-reviews_feature_div" data-csa-c-type="widget" data-feature-name="customer-reviews" id="customer-reviews_feature_div">
-<div cel_widget_id="customer-reviews_csm_instrumentation_wrapper" class="celwidget"><div aria-label="Top reviews" id="customerReviews" tabindex="0">
-<hr aria-hidden="true" class="a-spacing-large a-divider-normal"/><span class="cr-widget-PageState">
-<span data-state='{"asin":"B07YS5DX7Y","deviceType":"desktop","contextId":"","reviewCommentsAjaxUrl":"","reviewCommentSubmissionAjaxUrl":"","approvedAuthorAjaxUrl":"","reviewsAjaxUrl":"/hz/reviews-render/ajax/medley-filtered-reviews/get/","medleyReviewsAjaxUrl":"/hz/reviews-render/ajax/medley-reviews/get/","reviewerType":"","formatType":"","filterByKeyword":"","filterByLanguage":"","filterByStar":"","filterByHeight":"","filterByWeight":"","filterByAge":"","showLanguageFilter":false,"showHeightFilter":false,"showAgeFilter":false,"showStarFilter":false,"showMediaFilter":false,"showReviewerFilter":false,"languageOfPreference":"en_US","isCardTreatmentEnabled":false,"lazyWidgetLoaderBufferPixels":"1000","lazyWidgetLoaderDelayBeforeTriggering":"5000","lazyWidgetLoaderUrl":"/hz/reviews-render/ajax/lazy-widgets/stream","lazyWidgetCsrfToken":"hP%2BKinRSHmt6fNKkBmrPcv5gkibsypbl18%2FIyyoDlIyfAAAAAGdtPxgAAAAB","lazyWidgetDomainWhitelist":["amazon.com","amazon.ca","amazon.com.mx","amazon.com.br","amazon.cl","amazon.com.co","amazon.co.uk","amazon.de","amazon.it","amazon.sa","amazon.com.tr","amazon.es","amazon.fr","amazon.in","amazon.ae","amazon.nl","amazon.se","amazon.pl","amazon.eg","amazon.co.za","amazon.com.be","amazon.com.ng","amazon.ie","amazon.co.jp","amazon.com.au","amazon.sg","amazon.cn"],"signinUrl":"https://www.amazon.com/ap/signin?openid.return_to\u003dhttps%3A%2F%2Fwww.amazon.com%2FDOWNCOOL-Insert-Breathable-Sleeper-Without%2Fproduct-reviews%2FB07YS5DX7Y%3Fie%3DUTF8\u0026openid.identity\u003dhttp%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select\u0026openid.assoc_handle\u003dusflex\u0026openid.mode\u003dcheckid_setup\u0026marketPlaceId\u003dATVPDKIKX0DER\u0026language\u003den\u0026openid.claimed_id\u003dhttp%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select\u0026openid.ns\u003dhttp%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0","reftagTriggerUrl":"/hz/reviews-render/ajax/reftag-trigger","mobileImageGalleryUrl":"","productInfoUrl":"","disableScroll":false,"onLoadShowHideElements":"#cm-cr-dp-reviews-loading-wrapper,.cr-reviews-loading","marketplaceId":"ATVPDKIKX0DER","locale":"en_US"}' id="cr-state-object"></span>
-</span>
+<div cel_widget_id="customer-reviews_csm_instrumentation_wrapper" class="celwidget">
+  <div aria-label="Top reviews" id="customerReviews" tabindex="0">
+
 <script data-a-state='{"key":"cr-weblab-state"}' type="a-state">{}</script>
 <link href="https://images-na.ssl-images-amazon.com/images/I/01STrEog8JL._RC|018qj6SXL2L.css,013dXnu2anL.css,41V7rn1NJUL.css,01cdXa5nSoL.css_.css?AUIClients/DesktopMedleyFilteringMetaAsset#386124-T1.810333-T1" rel="stylesheet"/>
 <script>
   (window.AmazonUIPageJS ? AmazonUIPageJS : P).load.js('https://images-na.ssl-images-amazon.com/images/I/41BZs6fC7AL._RC|01JMhqKAiVL.js,211jvDbpcpL.js,41LqPngzFCL.js,31fvG7zbzrL.js,01VSu9SK-XL.js,41l6Ts6x3oL.js_.js?AUIClients/DesktopMedleyFilteringMetaAsset#386124-T1.666973-T1');
 </script>
-<div class="a-fixed-left-grid a-spacing-extra-large" data-hook="reviews-medley-widget" id="reviewsMedley"><div class="a-fixed-left-grid-inner" style="padding-left:300px"><div class="a-fixed-left-grid-col a-col-left" style="width:300px;margin-left:-300px;float:left;"><span class="cr-widget-TitleRatingsHistogram">
-<div cel_widget_id="cr-ratings-histogram_customer-reviews-detail_0" class="celwidget c-f" data-csa-c-content-id="DsUnknown" data-csa-c-painter="cr-ratings-histogram-cards" data-csa-c-slot-id="DsUnknown-1" data-csa-c-type="widget" data-csa-op-log-render=""><script>if(window.mix_csa){window.mix_csa('[cel_widget_id="cr-ratings-histogram_customer-reviews-detail_0"]', '#CardInstancei2RxCkB-9AW0ydTZ9t_YAg')('mark', 'bb')}</script>
-<script>if(window.uet){window.uet('bb','cr-ratings-histogram_customer-reviews-detail_0',{wb: 1})}</script>
-<style>._cr-ratings-histogram_style_ratings-histogram-mobile__3JRFf{padding-left:6px;padding-right:6px}._cr-ratings-histogram_style_histogram__-J2UR{-webkit-box-orient:vertical;-webkit-box-direction:normal;display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-direction:column;flex-direction:column;gap:14px}._cr-ratings-histogram_style_histogram-row-container__Vh7Di{-webkit-box-orient:horizontal;-webkit-box-direction:normal;display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-direction:row;flex-direction:row;gap:12px}._cr-ratings-histogram_style_histogram-row-container__Vh7Di>div:nth-last-of-type(2){-webkit-box-flex:1;-ms-flex-positive:1;flex-grow:1}._cr-ratings-histogram_style_histogram-column-space__RKUAd{-webkit-box-orient:vertical;-webkit-box-direction:normal;display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-direction:column;flex-direction:column;height:0;visibility:hidden}._cr-ratings-histogram_style_customer-reviews-title__3Uofp{display:inline-block;padding:0}._cr-ratings-histogram_style_star-rating-explanation-icon-desktop__P8OPV{margin-left:8px;margin-top:5px}._cr-ratings-histogram_style_star-rating-explanation-icon-mobile__zQs4d{margin-left:8px;margin-top:2px}._cr-ratings-histogram_style_star-rating-explanation-mobile__2Tz23{display:inline-block}</style>
-<!--CardsClient--><div class="_cr-ratings-histogram_style_star-rating__s2nPF" data-acp-params="tok=6BPx3FMH8EdYST995HobLcS4FZWaGgD-VdUewnjYiVU;ts=1735212824474;rid=M962RW3CTVW6WX4KG139;d1=010;d2=0" data-acp-path="/acp/cr-ratings-histogram/cr-ratings-histogram-4d305de8-733f-4d53-817f-06cb4d3fc7ce-1734530949761/" data-acp-stamp="1735212824484" data-acp-tracking="{}" data-card-metrics-id="cr-ratings-histogram_customer-reviews-detail_0" id="CardInstancei2RxCkB-9AW0ydTZ9t_YAg"><div class="_cr-ratings-histogram_style_ratings-histogram-desktop__2txK-"><div class="_cr-ratings-histogram_style_ratings-histogram-card-data__dudeB" data-arp-link-ref-tag="cm_cr_dp_d_top" data-asin="B07YS5DX7Y" data-cel-widget-name="cm_cr_dp_d_rating_histogram" data-is-cn-marketplace="false" data-is-lynx-message-marketplace="false" data-is-mobile="false" data-ref-tag="acr_dp_hist" data-reviews-ratings-help-page-url="/gp/help/customer/display.html/ref=cm_cr_dp_d_omni_lm_btn?nodeId=G8UYX7LALQC8V9KA" data-should-open-help-page-in-new-tab="true" data-star-rating-size="Medium" data-star-type="Review" data-update-reviews-ratings-explanation="true"><div class="a-section celwidget" id="cm_cr_dp_d_rating_histogram"><div class="a-row"><h2>客户评价</h2></div><div class="a-fixed-left-grid AverageCustomerReviews a-spacing-small"><div class="a-fixed-left-grid-inner" style="padding-left:105px"><div class="a-fixed-left-grid-col a-col-left" style="width:105px;margin-left:-105px;float:left"><i class="a-icon a-icon-star-medium a-star-medium-4-5" data-hook="average-star-rating"><span class="a-icon-alt">4.4 颗星，最多 5 颗星</span></i></div><div class="a-fixed-left-grid-col aok-align-center a-col-right" style="padding-left:0%;float:left"><div class="a-row"><span aria-hidden="true" class="a-size-base a-nowrap"><span aria-hidden="true" class="a-size-medium a-color-base" data-hook="rating-out-of-text">4.4 分（满分 5 分）</span></span></div></div></div></div><div class="a-row a-spacing-medium averageStarRatingNumerical"><span class="a-size-base a-color-secondary" data-hook="total-review-count">10,849 全球收视率</span></div><div class="a-fixed-left-grid a-spacing-none"><div class="a-fixed-left-grid-inner" style="padding-left:280px"><div class="a-fixed-left-grid-col a-col-left" style="width:280px;margin-left:-280px;float:left"><ul class="a-unordered-list a-nostyle a-vertical _cr-ratings-histogram_style_histogram__-J2UR" id="histogramTable"><li class="a-align-center a-spacing-none"><span class="a-list-item"><a aria-label="69 percent of reviews have 5 stars" class="a-size-base a-link-normal _cr-ratings-histogram_style_histogram-row-container__Vh7Di" href="/product-reviews/B07YS5DX7Y/ref=acr_dp_hist_5?ie=UTF8&amp;filterByStar=five_star&amp;reviewerType=all_reviews#reviews-filter-bar"><div class="a-section a-spacing-none a-text-left aok-nowrap"><span aria-hidden="true" class="_cr-ratings-histogram_style_histogram-column-space__RKUAd">5星</span><span aria-hidden="true" class="_cr-ratings-histogram_style_histogram-column-space__RKUAd">4星</span><span aria-hidden="true" class="_cr-ratings-histogram_style_histogram-column-space__RKUAd">3星</span><span aria-hidden="true" class="_cr-ratings-histogram_style_histogram-column-space__RKUAd">2星</span><span aria-hidden="true" class="_cr-ratings-histogram_style_histogram-column-space__RKUAd">1 星</span>5星</div><div class="a-section a-spacing-none"><div aria-valuenow="69" class="a-meter" role="progressbar"><div class="a-meter-bar" style="width:69%"></div></div></div><div class="a-section a-spacing-none a-text-right aok-nowrap"><span aria-hidden="true" class="_cr-ratings-histogram_style_histogram-column-space__RKUAd">69%</span><span aria-hidden="true" class="_cr-ratings-histogram_style_histogram-column-space__RKUAd">14%</span><span aria-hidden="true" class="_cr-ratings-histogram_style_histogram-column-space__RKUAd">8%</span><span aria-hidden="true" class="_cr-ratings-histogram_style_histogram-column-space__RKUAd">3%</span><span aria-hidden="true" class="_cr-ratings-histogram_style_histogram-column-space__RKUAd">6%</span>69%</div></a></span></li><li class="a-align-center a-spacing-none"><span class="a-list-item"><a aria-label="14 percent of reviews have 4 stars" class="a-size-base a-link-normal _cr-ratings-histogram_style_histogram-row-container__Vh7Di" href="/product-reviews/B07YS5DX7Y/ref=acr_dp_hist_4?ie=UTF8&amp;filterByStar=four_star&amp;reviewerType=all_reviews#reviews-filter-bar"><div class="a-section a-spacing-none a-text-left aok-nowrap"><span aria-hidden="true" class="_cr-ratings-histogram_style_histogram-column-space__RKUAd">5星</span><span aria-hidden="true" class="_cr-ratings-histogram_style_histogram-column-space__RKUAd">4星</span><span aria-hidden="true" class="_cr-ratings-histogram_style_histogram-column-space__RKUAd">3星</span><span aria-hidden="true" class="_cr-ratings-histogram_style_histogram-column-space__RKUAd">2星</span><span aria-hidden="true" class="_cr-ratings-histogram_style_histogram-column-space__RKUAd">1 星</span>4星</div><div class="a-section a-spacing-none"><div aria-valuenow="14" class="a-meter" role="progressbar"><div class="a-meter-bar" style="width:14%"></div></div></div><div class="a-section a-spacing-none a-text-right aok-nowrap"><span aria-hidden="true" class="_cr-ratings-histogram_style_histogram-column-space__RKUAd">69%</span><span aria-hidden="true" class="_cr-ratings-histogram_style_histogram-column-space__RKUAd">14%</span><span aria-hidden="true" class="_cr-ratings-histogram_style_histogram-column-space__RKUAd">8%</span><span aria-hidden="true" class="_cr-ratings-histogram_style_histogram-column-space__RKUAd">3%</span><span aria-hidden="true" class="_cr-ratings-histogram_style_histogram-column-space__RKUAd">6%</span>14%</div></a></span></li><li class="a-align-center a-spacing-none"><span class="a-list-item"><a aria-label="8 percent of reviews have 3 stars" class="a-size-base a-link-normal _cr-ratings-histogram_style_histogram-row-container__Vh7Di" href="/product-reviews/B07YS5DX7Y/ref=acr_dp_hist_3?ie=UTF8&amp;filterByStar=three_star&amp;reviewerType=all_reviews#reviews-filter-bar"><div class="a-section a-spacing-none a-text-left aok-nowrap"><span aria-hidden="true" class="_cr-ratings-histogram_style_histogram-column-space__RKUAd">5星</span><span aria-hidden="true" class="_cr-ratings-histogram_style_histogram-column-space__RKUAd">4星</span><span aria-hidden="true" class="_cr-ratings-histogram_style_histogram-column-space__RKUAd">3星</span><span aria-hidden="true" class="_cr-ratings-histogram_style_histogram-column-space__RKUAd">2星</span><span aria-hidden="true" class="_cr-ratings-histogram_style_histogram-column-space__RKUAd">1 星</span>3星</div><div class="a-section a-spacing-none"><div aria-valuenow="8" class="a-meter" role="progressbar"><div class="a-meter-bar" style="width:8%"></div></div></div><div class="a-section a-spacing-none a-text-right aok-nowrap"><span aria-hidden="true" class="_cr-ratings-histogram_style_histogram-column-space__RKUAd">69%</span><span aria-hidden="true" class="_cr-ratings-histogram_style_histogram-column-space__RKUAd">14%</span><span aria-hidden="true" class="_cr-ratings-histogram_style_histogram-column-space__RKUAd">8%</span><span aria-hidden="true" class="_cr-ratings-histogram_style_histogram-column-space__RKUAd">3%</span><span aria-hidden="true" class="_cr-ratings-histogram_style_histogram-column-space__RKUAd">6%</span>8%</div></a></span></li><li class="a-align-center a-spacing-none"><span class="a-list-item"><a aria-label="3 percent of reviews have 2 stars" class="a-size-base a-link-normal _cr-ratings-histogram_style_histogram-row-container__Vh7Di" href="/product-reviews/B07YS5DX7Y/ref=acr_dp_hist_2?ie=UTF8&amp;filterByStar=two_star&amp;reviewerType=all_reviews#reviews-filter-bar"><div class="a-section a-spacing-none a-text-left aok-nowrap"><span aria-hidden="true" class="_cr-ratings-histogram_style_histogram-column-space__RKUAd">5星</span><span aria-hidden="true" class="_cr-ratings-histogram_style_histogram-column-space__RKUAd">4星</span><span aria-hidden="true" class="_cr-ratings-histogram_style_histogram-column-space__RKUAd">3星</span><span aria-hidden="true" class="_cr-ratings-histogram_style_histogram-column-space__RKUAd">2星</span><span aria-hidden="true" class="_cr-ratings-histogram_style_histogram-column-space__RKUAd">1 星</span>2星</div><div class="a-section a-spacing-none"><div aria-valuenow="3" class="a-meter" role="progressbar"><div class="a-meter-bar" style="width:3%"></div></div></div><div class="a-section a-spacing-none a-text-right aok-nowrap"><span aria-hidden="true" class="_cr-ratings-histogram_style_histogram-column-space__RKUAd">69%</span><span aria-hidden="true" class="_cr-ratings-histogram_style_histogram-column-space__RKUAd">14%</span><span aria-hidden="true" class="_cr-ratings-histogram_style_histogram-column-space__RKUAd">8%</span><span aria-hidden="true" class="_cr-ratings-histogram_style_histogram-column-space__RKUAd">3%</span><span aria-hidden="true" class="_cr-ratings-histogram_style_histogram-column-space__RKUAd">6%</span>3%</div></a></span></li><li class="a-align-center a-spacing-none"><span class="a-list-item"><a aria-label="6 percent of reviews have 1 stars" class="a-size-base a-link-normal _cr-ratings-histogram_style_histogram-row-container__Vh7Di" href="/product-reviews/B07YS5DX7Y/ref=acr_dp_hist_1?ie=UTF8&amp;filterByStar=one_star&amp;reviewerType=all_reviews#reviews-filter-bar"><div class="a-section a-spacing-none a-text-left aok-nowrap"><span aria-hidden="true" class="_cr-ratings-histogram_style_histogram-column-space__RKUAd">5星</span><span aria-hidden="true" class="_cr-ratings-histogram_style_histogram-column-space__RKUAd">4星</span><span aria-hidden="true" class="_cr-ratings-histogram_style_histogram-column-space__RKUAd">3星</span><span aria-hidden="true" class="_cr-ratings-histogram_style_histogram-column-space__RKUAd">2星</span><span aria-hidden="true" class="_cr-ratings-histogram_style_histogram-column-space__RKUAd">1 星</span>1 星</div><div class="a-section a-spacing-none"><div aria-valuenow="6" class="a-meter" role="progressbar"><div class="a-meter-bar" style="width:6%"></div></div></div><div class="a-section a-spacing-none a-text-right aok-nowrap"><span aria-hidden="true" class="_cr-ratings-histogram_style_histogram-column-space__RKUAd">69%</span><span aria-hidden="true" class="_cr-ratings-histogram_style_histogram-column-space__RKUAd">14%</span><span aria-hidden="true" class="_cr-ratings-histogram_style_histogram-column-space__RKUAd">8%</span><span aria-hidden="true" class="_cr-ratings-histogram_style_histogram-column-space__RKUAd">3%</span><span aria-hidden="true" class="_cr-ratings-histogram_style_histogram-column-space__RKUAd">6%</span>6%</div></a></span></li></ul></div></div></div><div class="a-fixed-left-grid a-spacing-none"><div class="a-fixed-left-grid-inner" style="padding-left:300px"><div class="a-fixed-left-grid-col a-col-left" style="width:300px;margin-left:-300px;float:left"><div class="a-row a-expander-container a-spacing-top-medium a-expander-inline-container"><a aria-expanded="false" class="a-expander-header a-declarative a-expander-inline-header a-link-expander" data-a-expander-toggle='{"allowLinkDefault":true, "expand_prompt":"", "collapse_prompt":""}' data-action="a-expander-toggle" data-csa-c-func-deps="aui-da-a-expander-toggle" data-csa-c-type="widget" data-csa-interaction-events="click" data-hook="cr-ratings-explanation-expand" href="javascript:void(0)" role="button"><i class="a-icon a-icon-expand"></i><span class="a-expander-prompt">客户评论和评级如何运作</span></a><div class="a-expander-content a-expander-inline-content a-expander-inner" data-expanded="false" style="display:none"><p class="a-spacing-top-small">客户评论（包括产品星级评定）可帮助客户了解有关产品的更多信息，并确定该产品是否适合他们。</p></div></div></div></div></div></div></div></div></div><script>if(window.mix_csa){window.mix_csa('[cel_widget_id="cr-ratings-histogram_customer-reviews-detail_0"]', '#CardInstancei2RxCkB-9AW0ydTZ9t_YAg')('mark', 'be')}</script>
-<script>if(window.uet){window.uet('be','cr-ratings-histogram_customer-reviews-detail_0',{wb: 1})}</script>
-<script>if(window.mixTimeout){window.mixTimeout('cr-ratings-histogram', 'CardInstancei2RxCkB-9AW0ydTZ9t_YAg', 90000)};
-P.when('mix:@amzn/mix.client-runtime', 'mix:cr-ratings-histogram__AiLYd_Jo').execute(function (runtime, cardModule) {runtime.registerCardFactory('CardInstancei2RxCkB-9AW0ydTZ9t_YAg', cardModule).then(function(){if(window.mix_csa){window.mix_csa('[cel_widget_id="cr-ratings-histogram_customer-reviews-detail_0"]', '#CardInstancei2RxCkB-9AW0ydTZ9t_YAg')('mark', 'functional')}if(window.uex){window.uex('ld','cr-ratings-histogram_customer-reviews-detail_0',{wb: 1})}});});
-</script>
-<script>P.load.js('https://images-na.ssl-images-amazon.com/images/I/11iMNgfhiwL.js?xcp');
-</script>
-</div></span>
-<hr aria-hidden="true" class="a-spacing-large a-spacing-top-large a-divider-normal"/><span class="cr-lazy-widget cr-age-recommendation" data-widget-name="cr-age-recommendation">
-</span><div class="a-section cr-solicitation celwidget" data-hook="cr-solicitation" id="cm_cr_dp_d_write_review"><h3 class="a-spacing-micro" data-hook="solicitation-title">评论该产品</h3><div class="a-row a-spacing-medium" data-hook="share-your-thoughts-text" id="dp-summary-share-your-thoughts">与其他客户分享您的想法</div><div class="a-row"><span class="a-button a-button-base writeReviewButton cm-cr-button-wide"><span class="a-button-inner"><a class="a-button-text" data-hook="write-review-button" href="/review/create-review/ref=cm_cr_dp_d_wr_but_top?ie=UTF8&amp;channel=glance-detail&amp;asin=B07YS5DX7Y">撰写客户评论</a></span></span></div></div><hr aria-hidden="true" class="a-spacing-extra-large a-spacing-top-extra-large a-divider-normal"/></div><div class="a-fixed-left-grid-col a-col-right" style="padding-left:2.5%;float:left;"><div class="a-row cm_cr_grid_center_container"><div class="a-fixed-right-grid-col cm_cr_grid_center_left" style="float:left;"></div><div class="a-fixed-right-grid-col cm_cr_grid_center_right" style="float:left;"><div cel_widget_id="cr-product-insights_customer-reviews-product-insights_0" class="celwidget c-f" data-csa-c-content-id="DsUnknown" data-csa-c-painter="cr-product-insights-cards" data-csa-c-slot-id="DsUnknown-1" data-csa-c-type="widget" data-csa-op-log-render=""><script>if(window.mix_csa){window.mix_csa('[cel_widget_id="cr-product-insights_customer-reviews-product-insights_0"]', '#CardInstanceLkVOBZsJFD591eh5ISiuBg')('mark', 'bb')}</script>
+<div class="a-fixed-left-grid a-spacing-extra-large" data-hook="reviews-medley-widget" id="reviewsMedley">
+ <hr aria-hidden="true" class="a-spacing-extra-large a-spacing-top-extra-large a-divider-normal"/></div><div class="a-fixed-left-grid-col a-col-right" style="padding-left:2.5%;float:left;"><div class="a-row cm_cr_grid_center_container"><div class="a-fixed-right-grid-col cm_cr_grid_center_left" style="float:left;"></div><div class="a-fixed-right-grid-col cm_cr_grid_center_right" style="float:left;"><div cel_widget_id="cr-product-insights_customer-reviews-product-insights_0" class="celwidget c-f" data-csa-c-content-id="DsUnknown" data-csa-c-painter="cr-product-insights-cards" data-csa-c-slot-id="DsUnknown-1" data-csa-c-type="widget" data-csa-op-log-render=""><script>if(window.mix_csa){window.mix_csa('[cel_widget_id="cr-product-insights_customer-reviews-product-insights_0"]', '#CardInstanceLkVOBZsJFD591eh5ISiuBg')('mark', 'bb')}</script>
 <script>if(window.uet){window.uet('bb','cr-product-insights_customer-reviews-product-insights_0',{wb: 1})}</script>
 <style>._Y3Itc_content-container-padding_66Xh7{margin-bottom:0;padding-left:6px}._Y3Itc_is-desktop-view_29OYH ._Y3Itc_content-container-padding_66Xh7{margin-bottom:0;padding-left:0}._Y3Itc_is-desktop-view_29OYH ._Y3Itc_content-container-vertical-padding_38N5b{padding-bottom:20px;padding-top:4px}._Y3Itc_sentiment-section_3Z0bO,._Y3Itc_is-desktop-view_29OYH ._Y3Itc_insight-bottom-sheet-redesign_1NP0A,._Y3Itc_is-desktop-view_29OYH ._Y3Itc_insight-bottom-sheet_3SFlx{padding:0}._Y3Itc_sentiment-header_3nrex{font-size:18px;font-weight:700;line-height:22px;margin-bottom:8px;padding:0}._Y3Itc_is-desktop-view_29OYH ._Y3Itc_sentiment-header_3nrex{line-height:24px}._Y3Itc_sentiment-aspects_2mp4b{display:-webkit-box;display:-ms-flexbox;display:flex;margin:0;padding:0;scrollbar-width:none}._Y3Itc_sentiment-aspects_2mp4b::-webkit-scrollbar,._Y3Itc_insight-bottom-sheet-content_3cnVT,._Y3Itc_is-mobile-view_2p4SJ ._Y3Itc_insight-bottom-sheet-button-group_1gQMy::-webkit-scrollbar,._Y3Itc_is-desktop-view_29OYH ._Y3Itc_insight-bottom-sheet-button-group_1gQMy::-webkit-scrollbar{display:none}._Y3Itc_is-desktop-view_29OYH ._Y3Itc_sentiment-aspects_2mp4b{display:-webkit-box;display:-ms-flexbox;display:flex;padding-bottom:0}._Y3Itc_aspect-button-group_-biHO ._Y3Itc_aspect-symbol-list_24amT{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;margin:0;row-gap:8px}._Y3Itc_is-mobile-view_2p4SJ ._Y3Itc_insight-bottom-sheet-button-group_1gQMy ._Y3Itc_aspect-list_cBugj{margin-bottom:3px;margin-top:3px;white-space:nowrap}._Y3Itc_is-mobile-view_2p4SJ ._Y3Itc_insight-bottom-sheet-button-group_1gQMy ._Y3Itc_aspect-link_TtdmS:after,._Y3Itc_aspect-link_TtdmS:not(:last-child):after{border-left:1px solid #bbbfbf;bottom:0;content:" ";position:absolute;right:-8px;top:0}._Y3Itc_is-mobile-view_2p4SJ ._Y3Itc_insight-bottom-sheet-button-group_1gQMy ._Y3Itc_aspect-link_TtdmS:last-child:after{content:"";display:none}._Y3Itc_is-mobile-view_2p4SJ ._Y3Itc_insight-bottom-sheet-button-group_1gQMy ._Y3Itc_aspect-symbol-list_24amT{display:-webkit-box;display:-ms-flexbox;display:flex;white-space:nowrap}._Y3Itc_aspect-link_TtdmS svg{margin-right:4px}._Y3Itc_aspect-link-symbol_23T9N{-webkit-box-align:center;-ms-flex-align:center;-webkit-box-pack:center;-ms-flex-pack:center;align-items:center;display:-webkit-box;display:-ms-flexbox;display:flex;justify-content:center}._Y3Itc_aspect-link_TtdmS{margin-right:16px;position:relative}._Y3Itc_aspect-link_TtdmS._Y3Itc_selected_2-xMA{font-weight:700!important}._Y3Itc_aspect-button-group_-biHO{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;font-size:15px;margin:0;padding:0}._Y3Itc_subtitle-aspect-button_2o27X{color:#565959;font-size:13px;font-weight:400;margin-top:0;padding:0;text-transform:none}._Y3Itc_insight-bottom-sheet_3SFlx{padding-bottom:20px;padding-left:20px;padding-right:20px}._Y3Itc_insight-bottom-sheet_3SFlx h1{font-size:18px;font-weight:700;line-height:22px;padding-bottom:4px;text-transform:capitalize}._Y3Itc_insight-bottom-sheet-subtitle_28v47{color:#565959;font-size:13px}._Y3Itc_insight-bottom-sheet_3SFlx hr{border-color:#e7e7e7;margin-bottom:12px}._Y3Itc_is-desktop-view_29OYH hr{border-color:#e7e7e7}._Y3Itc_ending-line_1I1OL{border:none;margin-bottom:1.2rem!important}._Y3Itc_is-desktop-view_29OYH ._Y3Itc_insight-bottom-sheet_3SFlx hr{border-color:#e7e7e7;margin-bottom:8px}._Y3Itc_insight-bottom-sheet_3SFlx hr:last-of-type{display:none;margin-bottom:0}._Y3Itc_insight-bottom-sheet-button-group_1gQMy{display:-webkit-box;display:-ms-flexbox;display:flex;margin-bottom:0!important;margin-left:-20px;margin-right:-20px;padding:1.6rem 0}._Y3Itc_is-mobile-view_2p4SJ ._Y3Itc_insight-bottom-sheet-button-group_1gQMy{-ms-overflow-style:none;overflow-x:scroll;overflow-y:hidden;scrollbar-width:none;white-space:nowrap}._Y3Itc_is-desktop-view_29OYH ._Y3Itc_insight-bottom-sheet-button-group_1gQMy{-ms-flex-wrap:wrap;flex-wrap:wrap;margin:0}._Y3Itc_is-mobile-view_2p4SJ ._Y3Itc_insight-bottom-sheet-button-group_1gQMy>a:first-of-type{margin-left:20px}._Y3Itc_snippet_2SpLd{-webkit-box-orient:horizontal;-webkit-box-direction:normal;color:#0f1111;display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-direction:row;flex-direction:row;-ms-flex-wrap:wrap;flex-wrap:wrap;font-weight:400;height:auto;margin-bottom:12px}._Y3Itc_is-desktop-view_29OYH ._Y3Itc_snippet_2SpLd{color:#0f1111;margin-bottom:8px}._Y3Itc_snippet_2SpLd p b{color:#0f1111;font-size:15px;font-weight:700;line-height:20px}._Y3Itc_is-desktop-view_29OYH ._Y3Itc_snippet_2SpLd p b{color:#0f1111;font-size:14px;font-weight:700;line-height:20px}._Y3Itc_snippet_2SpLd p{font-size:15px;line-height:20px}._Y3Itc_is-desktop-view_29OYH ._Y3Itc_snippet_2SpLd p{font-size:14px;line-height:20px}._Y3Itc_fragment_tnwGQ{margin-right:3px}._Y3Itc_snippet_2SpLd div:first-child,._Y3Itc_snippet_2SpLd div:nth-last-child(2){margin-right:0}._Y3Itc_snippet-see-more_3qykv{white-space:nowrap}._Y3Itc_stat-text-box_8ba_x{-webkit-box-flex:1;-webkit-box-orient:vertical;-ms-flex:1;flex:1;-ms-flex-direction:column;flex-direction:column;text-align:left}._Y3Itc_stat-text-box-row_1_DtP,._Y3Itc_stat-text-box_8ba_x{-webkit-box-direction:normal;display:-webkit-box;display:-ms-flexbox;display:flex}._Y3Itc_stat-text-box-row_1_DtP{-webkit-box-orient:horizontal;-webkit-box-pack:justify;-ms-flex-pack:justify;-ms-flex-direction:row;flex-direction:row;justify-content:space-between}._Y3Itc_stat-text-box-title_26C4y{color:#0f1111;font-size:24px;font-weight:400;line-height:31px}._Y3Itc_stat-text-box-subtitle_1wPSa{color:#0f1111;font-size:13px;font-weight:400;line-height:18px;text-transform:capitalize}._Y3Itc_stat-customer-mentions-box_Su4zw{-webkit-box-flex:1.5;-ms-flex:1.5;flex:1.5}._Y3Itc_is-desktop-view_29OYH ._Y3Itc_stat-text-box-label-row_3uYIE{-webkit-box-pack:start;-ms-flex-pack:start;-webkit-box-orient:vertical;-webkit-box-direction:normal;display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-direction:column;flex-direction:column;font-size:14px;gap:4px;justify-content:flex-start}._Y3Itc_is-desktop-view_29OYH ._Y3Itc_stat-number_1J1Vr{font-size:24px;line-height:32px}._Y3Itc_is-desktop-view_29OYH ._Y3Itc_stat-info-box_1akN2{-webkit-box-align:center;-ms-flex-align:center;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-webkit-box-pack:start;-ms-flex-pack:start;align-items:center;display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-direction:row;flex-direction:row;gap:12px;justify-content:flex-start}._Y3Itc_close-button_qtNz0{position:absolute;right:16px;top:16px}._Y3Itc_close-button_qtNz0:hover{cursor:pointer}._Y3Itc_text-positive_QRaJ2{color:#067d62}._Y3Itc_text-negative_zjq0Y{color:#c45500}._Y3Itc_aspect-summary-link_1Ls1M{text-decoration-line:underline!important}._Y3Itc_aspect-summary-label_19a1a h1{text-transform:none}._Y3Itc_aspect-summary-label_19a1a hr{display:block!important}._Y3Itc_product-insights-divider_3lxIJ{left:calc(-50vw + 50%);margin-bottom:0;position:relative;width:100vw}</style>
 <!--CardsClient--><script>if(window.mix_csa){window.mix_csa('[cel_widget_id="cr-product-insights_customer-reviews-product-insights_0"]', '#CardInstanceLkVOBZsJFD591eh5ISiuBg')('mark', 'be')}</script>
@@ -4746,40 +3345,7 @@ P.when('mix:@amzn/mix.client-runtime', 'mix:cr-product-insights__lwyR29Gq').exec
 </div><div class="review-with-images-section" data-hook="review-image-tile-gallery">
 <div alt="Customer image" class="cr-customer-image-thumbnail"></div>
 </div>
-<div cel_widget_id="cr-media-carousel_customer-reviews-detail-media_0" class="celwidget c-f" data-csa-c-content-id="DsUnknown" data-csa-c-painter="cr-media-carousel-cards" data-csa-c-slot-id="DsUnknown-1" data-csa-c-type="widget" data-csa-op-log-render=""><script>if(window.mix_csa){window.mix_csa('[cel_widget_id="cr-media-carousel_customer-reviews-detail-media_0"]', '#CardInstanceges8F6qbolXsZtUZyp8b-w')('mark', 'bb')}</script>
-<script>if(window.uet){window.uet('bb','cr-media-carousel_customer-reviews-detail-media_0',{wb: 1})}</script>
-<style>._Y3Itb_media-popover-container-modal_cQfN1,._Y3Itb_modal-content-container_XXRsT{-webkit-box-orient:vertical;-webkit-box-direction:normal;background:#fff;display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-direction:column;flex-direction:column;min-width:100%;position:relative}._Y3Itb_media-popover-container-overlay_2_I3v{background-color:#000;height:100%;position:relative;scroll-snap-align:center;scroll-snap-stop:always;width:100vw}._Y3Itb_media-popover-content-wrapper_lGodM,._Y3Itb_media-popover-image-view-container_vTrQA{height:100%;position:absolute;width:100%}._Y3Itb_media-popover-background-wrapper_3t8nc{height:100%;position:absolute;width:100%;z-index:0}._Y3Itb_page-indicator-container_2SX5U{-webkit-box-align:center;-ms-flex-align:center;-webkit-box-pack:center;-ms-flex-pack:center;align-items:center;display:-webkit-box;display:-ms-flexbox;display:flex;justify-content:center;padding:4%;width:100%}@media (orientation:landscape){._Y3Itb_page-indicator-container_2SX5U{padding:2%}}._Y3Itb_media-popover-overlay_1Q981{height:calc(100% - 8vw - 4px);position:absolute;top:calc(8vw + 4px);width:100%;z-index:1}@media (orientation:landscape){._Y3Itb_media-popover-overlay_1Q981{height:calc(100% - 4vw - 4px);top:calc(4vw + 4px)}}._Y3Itb_media-popover-overlay-fade-in_bZzwP{-webkit-animation:_Y3Itb_fadeIn_2VPVS .5s ease-in forwards;animation:_Y3Itb_fadeIn_2VPVS .5s ease-in forwards;opacity:0}._Y3Itb_media-popover-overlay-fade-out_1eneO{-webkit-animation:_Y3Itb_fadeOut_3ceR6 .5s ease-in forwards;animation:_Y3Itb_fadeOut_3ceR6 .5s ease-in forwards;opacity:1}@-webkit-keyframes _Y3Itb_fadeIn_2VPVS{0%{opacity:0}to{display:block;opacity:1}}@keyframes _Y3Itb_fadeIn_2VPVS{0%{opacity:0}to{display:block;opacity:1}}@-webkit-keyframes _Y3Itb_fadeOut_3ceR6{0%{opacity:1}to{display:none;opacity:0}}@keyframes _Y3Itb_fadeOut_3ceR6{0%{opacity:1}to{display:none;opacity:0}}
-._Y3Itb_cr-media-popover-overlay-container_32qUq,._Y3Itb_cr-text-content-container_MGYRu{-webkit-box-orient:vertical;-webkit-box-direction:normal;display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-direction:column;flex-direction:column;height:100%;width:100%}._Y3Itb_cr-text-content-container_MGYRu{padding-left:4%;padding-right:4%;padding-top:5.16vh}._Y3Itb_cr-action-buttons-container_28a_m{-webkit-box-orient:vertical;-webkit-box-direction:normal;-webkit-box-align:end;-ms-flex-align:end;align-items:flex-end;bottom:4%;display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-direction:column;flex-direction:column;padding-right:4%;position:absolute;width:100%}._Y3Itb_cr-profile_MVcmp .a-profile-descriptor,._Y3Itb_cr-profile_MVcmp .a-profile-name,._Y3Itb_centered-text_2Fs_h{color:#fff}._Y3Itb_top-controls-bar_ySwso{-webkit-box-orient:horizontal;-webkit-box-direction:normal;-webkit-box-pack:end;-ms-flex-pack:end;background:-webkit-linear-gradient(top,rgba(0,0,0,.4),transparent);background:linear-gradient(180deg,rgba(0,0,0,.4),transparent);display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-direction:row;flex-direction:row;gap:20px;height:5%;justify-content:flex-end;position:absolute;top:0;width:100%;z-index:2}._Y3Itb_popover-close-button_1WxGa{height:100%;padding-right:4%}._Y3Itb_report-button_34w6i{height:100%;width:10%}._Y3Itb_overlay-content-container_1ubFP{background:-webkit-linear-gradient(top,#000,transparent);background:linear-gradient(180deg,#000,transparent);background-repeat:no-repeat;background-size:100% 40%;height:100%;width:100%}._Y3Itb_rating-and-profile-badges-container_2fc8M{display:-webkit-box;display:-ms-flexbox;display:flex;gap:4px}._Y3Itb_profile-badges-container_3ruql{-webkit-box-align:end;-ms-flex-align:end;align-items:flex-end;color:#fff;color:var(--text-colors-inverse,#fff);display:-webkit-box;display:-ms-flexbox;display:flex;font-family:Amazon Ember;font-size:13px;font-style:normal;font-weight:400;line-height:18px;margin-top:.4rem}._Y3Itb_report-button-icon_3jOT9,._Y3Itb_report-button-icon_2eher{-ms-flex-item-align:center;align-self:center;height:24px;width:24px}
-._Y3Itb_media-popover-page-indicator_36NFP{-webkit-box-orient:horizontal;-webkit-box-direction:normal;background-color:#000;display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-direction:row;flex-direction:row;gap:8px}._Y3Itb_media-popover-page-indicator-element_3kXJQ{background-color:#c8cccc;width:100%}._Y3Itb_highlighted_1QxVg{background-color:#008296}._Y3Itb_media-popover-image-view-container_vTrQA:not(:first-child),._Y3Itb_media-popover-modal-media-list-view-container_2ZyCE ._Y3Itb_media-popover-image-view-container_vTrQA,div[data-variant=like-done],div[data-variant=report-done],._Y3Itb_cr-icon-button-hidden_3IAJl,._Y3Itb_media-popover-container_2BBbs::-webkit-scrollbar{display:none}._Y3Itb_media-popover-image-view_1FAQo{height:100%;-o-object-fit:contain;object-fit:contain;width:100%}._Y3Itb_media-popover-media-list-view-container_TA9AY{height:calc(100% - 8vw - 4px);position:relative;width:100%}@media (orientation:landscape){._Y3Itb_media-popover-media-list-view-container_TA9AY{height:calc(100% - 4vw - 4px)}}._Y3Itb_media-popover-modal-media-list-view-container_2ZyCE ._Y3Itb_media-popover-image-view-active_2lj7U,._Y3Itb_media-popover-container-desktop_31iCw,._Y3Itb_media-popover-list-container_3mcnh,._Y3Itb_cm_cr_image_popoversection_3iYPp,._Y3Itb_cm_cr_video_popoversection_2v7yY,._Y3Itb_media-popover-gallery-container_2P0rw{display:-webkit-box;display:-ms-flexbox;display:flex}._Y3Itb_media-popover-modal-media-list-view-container_2ZyCE{height:100%;position:relative;width:100%}
-._Y3Itb_close-button_d-gQZ{-webkit-box-pack:center;-ms-flex-pack:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;display:-webkit-box;display:-ms-flexbox;display:flex;justify-content:center;scale:1.3}
-._Y3Itb_cr-icon-button-container_3w0Xo{-webkit-box-pack:center;-ms-flex-pack:center;display:-webkit-box;display:-ms-flexbox;display:flex;justify-content:center}._Y3Itb_cr-icon-button_2otw8{background:none;border:none;height:100%;padding:0;width:100%}
-._Y3Itb_cr-vote-report-buttons-container_1YjZZ{-webkit-box-orient:vertical;-webkit-box-direction:normal;display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-direction:column;flex-direction:column;gap:1rem}._Y3Itb_cr-icon-button_3JwAJ{-webkit-box-pack:center;-ms-flex-pack:center;background:-webkit-linear-gradient(bottom,rgba(15,17,17,.8),rgba(15,17,17,.8)),-webkit-linear-gradient(bottom,#565959,#565959);background:linear-gradient(0deg,rgba(15,17,17,.8),rgba(15,17,17,.8)),linear-gradient(0deg,#565959,#565959);border:1px solid #565959;border-radius:50%;height:48px;justify-content:center;scale:1.1;width:48px}._Y3Itb_cr-modal-icon-button_2YYkN{-webkit-box-pack:center;-ms-flex-pack:center;background:rgba(15,17,17,.8);border:1px solid #565959;border-radius:50%;height:48px;justify-content:center;width:48px}._Y3Itb_cr-modal-icon-button_2YYkN:hover,._Y3Itb_media-gallery-item-video_1k9yY:hover,._Y3Itb_media-gallery-item_3LROo:hover,._Y3Itb_cr-icon_1Y5Ec:hover,._Y3Itb_media-popover-thumbnail-image-view_3-Y40:hover{cursor:pointer}._Y3Itb_button-icon_Nl0hh{-ms-flex-item-align:center;align-self:center;height:50%;width:50%}
-._Y3Itb_cr-text_28H9k{font-weight:400}._Y3Itb_cr-title_3bWqW{font-weight:700;margin-top:.4vh}._Y3Itb_cr-popover-overlay-text-container_NfghQ{-webkit-box-orient:vertical;-webkit-box-direction:normal;-webkit-box-align:start;-ms-flex-align:start;align-items:start;display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-direction:column;flex-direction:column;height:65%;word-break:break-word}._Y3Itb_truncated_j_-Jw{-webkit-line-clamp:2;-webkit-box-orient:vertical;display:-webkit-box;overflow:hidden}._Y3Itb_expanded_2wQ4c{overflow:scroll}._Y3Itb_cr-text_28H9k,._Y3Itb_cr-title_3bWqW{color:#fff;font-size:13px;font-style:normal;line-height:18px}._Y3Itb_cr-text-expand-button_2BWKW,._Y3Itb_cr-text-hide-button_2qNi2{background:none;border:none;color:#fff;cursor:pointer;display:none;padding:0}._Y3Itb_button-text_1LlmZ{color:#fff;font-weight:700}._Y3Itb_popover-overlay-gradient_114MI{background:#0f1111;background:var(--gray-palette-100-onyx-0-f-1111,#0f1111);opacity:.75}
-._Y3Itb_variable-width_1BDWv ._Y3Itb_cr-image-carousel_2W1Qw .a-carousel-header-row,._Y3Itb_variable-width_1BDWv ._Y3Itb_cr-video-carousel_1H_ui .a-carousel-header-row{margin:0 1.4rem 9px}._Y3Itb_variable-width_1BDWv ._Y3Itb_cr-image-carousel_2W1Qw .a-carousel-row,._Y3Itb_variable-width_1BDWv ._Y3Itb_cr-video-carousel_1H_ui .a-carousel-row{margin-bottom:1.6rem}._Y3Itb_variable-width_1BDWv ._Y3Itb_cr-image-carousel_2W1Qw .a-carousel-col.a-carousel-center,._Y3Itb_variable-width_1BDWv ._Y3Itb_cr-video-carousel_1H_ui .a-carousel-col.a-carousel-center{margin:0}._Y3Itb_variable-width_1BDWv ._Y3Itb_cr-image-carousel_2W1Qw .a-carousel-viewport ol{display:grid;grid-auto-columns:104px;grid-auto-flow:column;grid-auto-rows:100px}._Y3Itb_variable-width_1BDWv ._Y3Itb_cr-video-carousel_1H_ui .a-carousel-viewport ol,._Y3Itb_cr-video-carousel_1H_ui .a-carousel-viewport ol{display:grid;grid-auto-columns:158px;grid-auto-flow:column;grid-auto-rows:250px}._Y3Itb_variable-width_1BDWv ._Y3Itb_cr-image-carousel_2W1Qw .a-carousel-card,._Y3Itb_variable-width_1BDWv ._Y3Itb_cr-video-carousel_1H_ui .a-carousel-card{padding-bottom:6px;padding-right:8px}._Y3Itb_variable-width_1BDWv ._Y3Itb_cr-image-carousel_2W1Qw .a-carousel-card:first-child,._Y3Itb_variable-width_1BDWv ._Y3Itb_cr-video-carousel_1H_ui .a-carousel-card:first-child{padding-left:8px}._Y3Itb_variable-width_1BDWv ._Y3Itb_cr-image-carousel_2W1Qw .a-carousel-card:nth-child(3n-2),._Y3Itb_variable-width_1BDWv ._Y3Itb_cr-image-carousel_2W1Qw .a-carousel-card:nth-child(n),._Y3Itb_variable-width_1BDWv ._Y3Itb_cr-image-carousel_2W1Qw .cr-carousel-nogrid{grid-column:span 2;grid-row:span 2;width:100%}._Y3Itb_cr-image-carousel_2W1Qw .a-carousel-row,._Y3Itb_cr-video-carousel_1H_ui .a-carousel-row{margin-bottom:.75rem}._Y3Itb_cr-image-carousel_2W1Qw .a-carousel-viewport ol{display:grid;grid-auto-columns:160px;grid-auto-flow:column;grid-auto-rows:154px}._Y3Itb_cr-image-carousel_2W1Qw .a-carousel-card,._Y3Itb_cr-video-carousel_1H_ui .a-carousel-card{margin-left:0!important;margin-right:0;min-width:96px;padding-bottom:6px;padding-right:6px;width:100%}._Y3Itb_cr-image-carousel_2W1Qw .a-carousel-col.a-carousel-center,._Y3Itb_cr-video-carousel_1H_ui .a-carousel-col.a-carousel-center{margin:0 41px}._Y3Itb_cr-image-carousel_2W1Qw .a-carousel-button .a-button-inner,._Y3Itb_cr-video-carousel_1H_ui .a-carousel-button .a-button-inner{padding:4px}._Y3Itb_ending-line-mobile_tFi-b{border:none;margin-bottom:1.2rem!important;margin-top:1.2rem!important}
-
-._Y3Itb_media-popover-container_2BBbs{-webkit-overflow-scrolling:touch;-ms-overflow-style:none;background-color:#000;display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:nowrap;flex-wrap:nowrap;min-height:inherit;overflow-x:scroll;-ms-scroll-snap-type:x mandatory;scroll-snap-type:x mandatory;scrollbar-width:none}._Y3Itb_media-popover-container-desktop_31iCw{-webkit-box-orient:vertical;-webkit-box-direction:normal;-webkit-overflow-scrolling:touch;-ms-overflow-style:none;background-color:#fff;-ms-flex-direction:column;flex-direction:column;-ms-flex-wrap:nowrap;flex-wrap:nowrap;height:calc(100vh - 80px);max-height:960px;max-width:min(1440px,100%);min-width:704px;overflow-x:scroll;overflow-y:hidden;-ms-scroll-snap-type:x mandatory;scroll-snap-type:x mandatory;scrollbar-width:none;width:min(1440px,100vw - 80px)}@media (min-width:1440px){._Y3Itb_media-popover-container-desktop_31iCw{height:calc(100vh - 160px)}}._Y3Itb_media-popover-container-desktop_31iCw ._Y3Itb_media-popover-list-container_3mcnh{min-height:0;width:100%}._Y3Itb_cr-report-abuse-preload-content_3UPmH{display:-webkit-inline-box;display:-ms-inline-flexbox;display:inline-flex}
-._Y3Itb_cr-video-thumbnail-overlay_21btg,._Y3Itb_cr-image-thumbnail-overlay_1TAJ4{-webkit-box-orient:vertical;-webkit-box-direction:normal;-webkit-box-pack:end;-ms-flex-pack:end;display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-direction:column;flex-direction:column;height:100%;justify-content:flex-end;width:100%}._Y3Itb_cr-video-meta-data_1odYc,._Y3Itb_cr-image-meta-data_1rh3z{background:-webkit-linear-gradient(bottom,#000,rgba(0,0,0,.659) 40%,rgba(0,0,0,.353) 70%,transparent);background:linear-gradient(0deg,#000,rgba(0,0,0,.659) 40%,rgba(0,0,0,.353) 70%,transparent);background-size:cover;bottom:0;padding:8px;width:100%}._Y3Itb_cr-video-thumbnail-duration_2f9Zo{-webkit-box-orient:horizontal;-webkit-box-direction:normal;-webkit-box-align:center;-ms-flex-align:center;align-items:center;color:#fff;display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-direction:row;flex-direction:row}
-._Y3Itb_toast-bar_1-6hy{-webkit-box-orient:horizontal;-webkit-box-direction:normal;background:rgba(15,17,17,.8);border:1px solid #565959;border-radius:12px;box-shadow:0 2px 5px 0 rgba(15,17,17,.15);display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-direction:row;flex-direction:row;height:60px;padding:10px 12px;width:91%}._Y3Itb_desktop-toast-bar_3buiB{height:-webkit-fit-content;height:-moz-fit-content;height:fit-content}._Y3Itb_toast-bar-container_3tiY9{-webkit-box-pack:center;-ms-flex-pack:center;bottom:3%;display:none;justify-content:center;position:absolute;width:100%;z-index:100}._Y3Itb_desktop-toast-bar-container_g-jD0{margin:0 auto;max-width:480px;min-width:400px;padding-top:1%;position:relative;width:45%}._Y3Itb_toast-bar-button_1yIpW,._Y3Itb_toast-bar-text-container_1u5yP{font-family:Amazon Ember;font-size:15px;font-style:normal;font-weight:400;line-height:20px}._Y3Itb_toast-bar-text-container_1u5yP{-webkit-box-align:center;-ms-flex-align:center;align-items:center;color:#fff;display:-webkit-box;display:-ms-flexbox;display:flex}._Y3Itb_toast-bar-button_1yIpW{-ms-flex-item-align:center;-webkit-box-flex:1;align-self:center;background:none;border:none;color:#3db7cc;color:var(--blue-palette-800-delta,#3db7cc);cursor:pointer;-ms-flex:auto;flex:auto;justify-self:center;text-align:right}
-._Y3Itb_centered-text-overlay_1DpKL{-webkit-box-orient:vertical;-webkit-box-direction:normal;-webkit-box-pack:center;-ms-flex-pack:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;background-color:rgba(0,0,0,.6);display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-direction:column;flex-direction:column;height:100%;justify-content:center;width:100%}
-._Y3Itb_page-indicator-container_30kT2{-webkit-box-align:center;-ms-flex-align:center;-webkit-box-pack:center;-ms-flex-pack:center;align-items:center;background-color:#000;display:-webkit-box;display:-ms-flexbox;display:flex;justify-content:center;padding:4%;width:100%}@media (orientation:landscape){._Y3Itb_page-indicator-container_30kT2{padding:2%}}._Y3Itb_media-popover-close-icon-button_34zAH{-ms-flex-item-align:end;align-self:flex-end;height:5%;padding-right:4%;z-index:10}._Y3Itb_media-popover-skeleton-container_3DI7n{display:none;height:100%;position:absolute}._Y3Itb_media-popover-skeleton-container_3DI7n,._Y3Itb_skeleton-content-container_1jKzz{-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;width:100%}._Y3Itb_skeleton-content-container_1jKzz{background-color:#595959;display:-webkit-box;display:-ms-flexbox;display:flex;height:calc(100% - 8vw - 4px);top:calc(8vw + 4px)}@media (orientation:landscape){._Y3Itb_skeleton-content-container_1jKzz{height:calc(100% - 4vw - 4px);top:calc(4vw + 4px)}}._Y3Itb_skeleton-container-bottom-gradient_2IgZx,._Y3Itb_skeleton-container-top-gradient_2Y6Td{height:22%;position:absolute;width:100%}._Y3Itb_skeleton-container-top-gradient_2Y6Td{background:-webkit-linear-gradient(top,rgba(0,0,0,.8),transparent);background:linear-gradient(180deg,rgba(0,0,0,.8),transparent);top:calc(8vw + 4px)}@media (orientation:landscape){._Y3Itb_skeleton-container-top-gradient_2Y6Td{top:calc(4vw + 4px)}}._Y3Itb_skeleton-container-bottom-gradient_2IgZx{background:-webkit-linear-gradient(top,rgba(15,17,17,0),rgba(15,17,17,.8));background:linear-gradient(180deg,rgba(15,17,17,0),rgba(15,17,17,.8));bottom:0}._Y3Itb_profile-skeleton-container_1nkP-{padding-left:4%;padding-top:1%;z-index:5}
-._Y3Itb_media-popover-report-abuse-confirmation-dialog_7HNIt,._Y3Itb_media-popover-error-dialog_2LoQP{-webkit-box-orient:vertical;-webkit-box-direction:normal;-webkit-box-align:start;-ms-flex-align:start;align-items:flex-start;background-color:rgba(0,0,0,.8);display:none;-ms-flex-direction:column;flex-direction:column;height:100%;position:absolute;width:100%;z-index:100}._Y3Itb_media-popover-report-abuse-confirmation-dialog-content_1irlp{background:#fff;bottom:0;padding:4vw;position:absolute}._Y3Itb_media-popover-report-abuse-confirmation-dialog-header_StEva{color:#000;font-family:Amazon Ember;font-size:15px;font-style:normal;font-weight:700;line-height:30px}._Y3Itb_media-popover-report-abuse-confirmation-dialog-description-container_vtXct{color:#000;font-family:Amazon Ember;font-size:15px;font-style:normal;font-weight:400;line-height:20px;padding-top:1.5vw}._Y3Itb_media-popover-report-abuse-confirmation-dialog-description-content_2NoeI{gap:.2vw;margin-bottom:2vw;margin-left:3.5vw;margin-top:2vw}._Y3Itb_media-popover-report-abuse-confirmation-dialog-button-container_2vYw9,._Y3Itb_media-popover-report-abuse-confirmation-dialog-description-content_2NoeI,._Y3Itb_media-popover-error-dialog-button-container_2dEGH{-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-item-align:stretch;align-self:stretch;display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-direction:column;flex-direction:column}._Y3Itb_media-popover-report-abuse-confirmation-dialog-button_35f75,._Y3Itb_media-popover-error-dialog-button_WC9dB{background:#ffd814;background:var(--yellow-palette-900-add-to-cart-reserved-ffd-814,#ffd814);border:1px solid #fcd200;border:1px solid var(--yellow-palette-800-solar-fcd-200,#fcd200);box-shadow:0 2px 5px 0 hsla(180,5%,84%,.5);margin-top:4.5vw}._Y3Itb_media-popover-report-abuse-confirmation-dialog-cancel-button_2le3D{margin-top:1.9vw}._Y3Itb_media-popover-report-abuse-confirmation-dialog-button_35f75._Y3Itb_modal-button_y9ZUs{margin-top:8px}._Y3Itb_media-popover-error-dialog-content_3kk6z{background:#fff;bottom:0;padding:4vw;position:absolute;width:100%}._Y3Itb_media-popover-error-dialog-header_2gmCK{color:#000;font-family:Amazon Ember;font-size:15px;font-style:normal;font-weight:700;line-height:21px;margin-bottom:2.5vw}._Y3Itb_media-popover-error-dialog-description-container_2_QaG{color:#000;font-family:Amazon Ember;font-size:15px;font-style:normal;font-weight:400;line-height:20px}
-._Y3Itb_media-thumbnail-container_2MRZY{border:none;cursor:pointer;display:-webkit-box;display:-ms-flexbox;display:flex;margin:3px;overflow:hidden;padding:0;position:relative;text-align:left}._Y3Itb_media-thumbnail-image_3qPWk{height:100%;-o-object-fit:cover;object-fit:cover;position:absolute;width:100%;z-index:0}._Y3Itb_media-thumbnail-overlay_1te5m{height:100%;position:absolute;width:100%;z-index:1}._Y3Itb_media-thumbnail-container_2MRZY._Y3Itb_focus-visible_25Tjk,._Y3Itb_media-thumbnail-container_2MRZY:focus-visible{outline:2px solid #06f;outline-offset:1px}
-._Y3Itb_single-review-media-popover-container_1h9X2{-webkit-box-flex:1;-ms-flex-positive:1;display:-webkit-box;display:-ms-flexbox;display:flex;flex-grow:1;min-height:0;width:100%}._Y3Itb_media-popover-header-container_L1gkK{-webkit-box-align:baseline;-ms-flex-align:baseline;align-items:baseline;display:-webkit-box;display:-ms-flexbox;display:flex;padding:16px}._Y3Itb_media-popover-header-container_L1gkK>div,._Y3Itb_media-popover-header-container_3YsaK>div{-webkit-box-flex:1;-ms-flex:1;flex:1}._Y3Itb_media-popover-header-close-icon_3h-L5,._Y3Itb_media-popover-header-close-icon_2Hona{-webkit-box-orient:horizontal;-webkit-box-direction:reverse;display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-direction:row-reverse;flex-direction:row-reverse}._Y3Itb_media-popover-gallery-container-grid_mLjpJ{grid-gap:8px;-webkit-box-pack:space-evenly;-ms-flex-pack:space-evenly;display:grid;justify-content:space-evenly;margin:0 20px 24px 24px;overflow-y:auto;padding-right:4px;position:relative}._Y3Itb_media-popover-gallery-image-grid_icawB{grid-auto-columns:1fr;grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:repeat(auto-fill,224px)}._Y3Itb_media-popover-gallery-video-grid_2alPf{grid-auto-columns:1fr;grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:repeat(auto-fill,349px)}@media only screen and (min-width:960px){._Y3Itb_media-popover-gallery-image-grid_icawB,._Y3Itb_media-popover-gallery-video-grid_2alPf{grid-template-columns:repeat(3,minmax(0,1fr))}}@media only screen and (min-width:1280px){._Y3Itb_media-popover-gallery-image-grid_icawB,._Y3Itb_media-popover-gallery-video-grid_2alPf{grid-template-columns:repeat(4,minmax(0,1fr))}}@media only screen and (min-width:1600px){._Y3Itb_media-popover-gallery-image-grid_icawB,._Y3Itb_media-popover-gallery-video-grid_2alPf{grid-template-columns:repeat(5,minmax(0,1fr))}}@media only screen and (min-width:1800px){._Y3Itb_media-popover-gallery-image-grid_icawB,._Y3Itb_media-popover-gallery-video-grid_2alPf{grid-template-columns:repeat(6,minmax(0,1fr))}}._Y3Itb_media-popover-gallery-container-grid_mLjpJ::-webkit-scrollbar,._Y3Itb_media-popover-review-container_1dLQH::-webkit-scrollbar{width:7px}._Y3Itb_media-popover-gallery-container-grid_mLjpJ::-webkit-scrollbar-thumb,._Y3Itb_media-popover-review-container_1dLQH::-webkit-scrollbar-thumb{background-color:rgba(0,0,0,.5);border-radius:4px;-webkit-box-shadow:0 0 1px hsla(0,0%,100%,.5)}._Y3Itb_media-popover-gallery-container-grid_mLjpJ::-webkit-scrollbar-track,._Y3Itb_media-popover-review-container_1dLQH::-webkit-scrollbar-track{background:none}._Y3Itb_media-gallery-item_3LROo{background:none;border:none;height:224px;padding:0}._Y3Itb_media-gallery-item_3LROo img,._Y3Itb_media-gallery-item-video_1k9yY img{border-radius:8px;height:100%;-o-object-fit:cover;object-fit:cover;width:100%}._Y3Itb_media-gallery-item-video_1k9yY{background:none;border:none;font-size:12px;height:349px;line-height:16px;padding:0;position:relative}._Y3Itb_media-gallery-item-video-overlay-container_RHWdX{-webkit-box-direction:reverse;-ms-flex-direction:column-reverse;flex-direction:column-reverse;left:0;position:absolute;right:0;top:0}._Y3Itb_media-gallery-item-video-overlay-container_RHWdX,._Y3Itb_media-gallery-item-video-overlay_cGzRu{-webkit-box-orient:vertical;border-radius:8px;bottom:0;display:-webkit-box;display:-ms-flexbox;display:flex}._Y3Itb_media-gallery-item-video-overlay_cGzRu{-webkit-box-direction:normal;-webkit-box-pack:end;-ms-flex-pack:end;-webkit-box-align:start;-ms-flex-align:start;align-items:flex-start;background:-webkit-linear-gradient(bottom,#000,rgba(0,0,0,.659) 40%,rgba(0,0,0,.353) 70%,transparent);background:linear-gradient(0deg,#000,rgba(0,0,0,.659) 40%,rgba(0,0,0,.353) 70%,transparent);background-size:cover;color:#fff;-ms-flex-direction:column;flex-direction:column;gap:8px;justify-content:end;padding:8px;width:100%}._Y3Itb_gallery-container_2pBFm{-webkit-box-orient:vertical;-webkit-box-direction:normal;display:none;-ms-flex-direction:column;flex-direction:column;height:100%;min-height:0}._Y3Itb_gallery-spinner_34BcK{display:none;margin-bottom:24px;width:100%}
-._Y3Itb_profile-skeleton_1JfdD{-ms-flex-item-align:start;-webkit-box-orient:horizontal;-webkit-box-direction:normal;align-self:flex-start;display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-direction:row;flex-direction:row;gap:8px}._Y3Itb_profile-avatar-skeleton_3HtaD{background-color:#888c8c;border-radius:50%;height:34px;width:34px}._Y3Itb_text-skeleton_2O_Fw{-ms-flex-item-align:center;align-self:center;background-color:#888c8c;border-radius:3px;height:18px;width:62vw}._Y3Itb_loading_3908t{-webkit-animation:_Y3Itb_loading_3908t 1s infinite alternate;animation:_Y3Itb_loading_3908t 1s infinite alternate}@-webkit-keyframes _Y3Itb_loading_3908t{0%{opacity:1}to{opacity:.5}}@keyframes _Y3Itb_loading_3908t{0%{opacity:1}to{opacity:.5}}
-._Y3Itb_desktop-skeleton-container_738lf{-webkit-box-orient:vertical;-webkit-box-direction:normal;background-color:#fff;display:none;-ms-flex-direction:column;flex-direction:column;height:100%;position:absolute;width:100%}._Y3Itb_desktop-spinner-container_1qNHr{display:none;height:100%;width:100%}
-._Y3Itb_media-popover-header-container_3YsaK{-webkit-box-align:center;-ms-flex-align:center;align-items:center;display:-webkit-box;display:-ms-flexbox;display:flex;padding:16px}._Y3Itb_media-popover-see-all-container_1Lmmi{-webkit-box-align:center;-ms-flex-align:center;align-items:center;background:none;border:none;display:-webkit-box;display:-ms-flexbox;display:flex;padding:none}._Y3Itb_media-popover-see-all-container_1Lmmi:hover{cursor:pointer;text-decoration:underline}._Y3Itb_media-cheveron_1eKfZ{padding-right:8px}._Y3Itb_media-popover-close-button_dqW5F{background:none;border:0;padding:0}._Y3Itb_media-popover-body-container_2uQe-{display:-webkit-box;display:-ms-flexbox;display:flex;height:100%;margin:0 24px 24px;min-height:0}._Y3Itb_media-popover-media-container_3G-kc{-webkit-box-align:center;-ms-flex-align:center;align-items:center;background-color:#f7fafa;display:-webkit-box;display:-ms-flexbox;display:flex;margin-right:24px;position:relative;width:100%}._Y3Itb_media-popover-review-container_1dLQH{display:-webkit-box;display:-ms-flexbox;display:flex;max-width:359px;min-width:359px;overflow-x:hidden;overflow-y:scroll}._Y3Itb_cr-icon_1Y5Ec{-webkit-box-pack:center;-ms-flex-pack:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;background:rgba(15,17,17,.8);border:1px solid #565959;border-radius:50%;display:-webkit-box;display:-ms-flexbox;display:flex;height:48px;justify-content:center;width:48px}._Y3Itb_cr-action-like-buttons-container_CwmS7{-ms-flex-item-align:end;align-self:flex-end;display:-webkit-inline-box;display:-ms-inline-flexbox;display:inline-flex}._Y3Itb_report-button-icon_2eher:hover{color:#1196ab}._Y3Itb_cr-action-buttons-container_3vmwq{-webkit-box-orient:vertical;-webkit-box-direction:normal;bottom:0;display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-direction:column;flex-direction:column;gap:12px;margin:12px;position:absolute;right:0}._Y3Itb_cr-report-abuse-preload-content_ve26F{display:block}._Y3Itb_cr-toast-bar-message-section_16K1H{position:absolute;right:50%;top:0}._Y3Itb_left-icon-container_31i2O{background:none;border:none;left:0;padding:12px;position:absolute;z-index:1}._Y3Itb_right-icon-container_3Qopb{background:none;border:none;padding:12px;position:absolute;right:0;z-index:1}._Y3Itb_cr-report-button_3ZF2D{background:none;border:none;padding:0}
-._Y3Itb_cr-media-popover-sidepanel-container_1EUvC{color:#000}._Y3Itb_cr-media-popover-sidepanel-container_1EUvC,._Y3Itb_cr-media-popover-sidepanel-header-section_3TxI7{-webkit-box-orient:vertical;-webkit-box-direction:normal;display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-direction:column;flex-direction:column;width:100%}._Y3Itb_cr-media-popover-sidepanel-header-section_3TxI7{-webkit-box-flex:1;-ms-flex-positive:1;flex-grow:1;position:relative}._Y3Itb_cr-media-popover-sidepanel-header-section-truncated_DITiq{min-height:calc(100% - 176px)}._Y3Itb_cr-media-popover-sidepanel-container_1EUvC ._Y3Itb_rating-and-profile-badges-container_348ae{-webkit-box-align:end;-ms-flex-align:end;align-items:flex-end;display:-webkit-box;display:-ms-flexbox;display:flex;gap:4px;margin-bottom:8px}._Y3Itb_cr-media-popover-sidepanel-container_1EUvC ._Y3Itb_profile-badges-container_k5lqb{-webkit-box-align:start;-ms-flex-align:start;align-items:flex-start;display:-webkit-box;display:-ms-flexbox;display:flex;margin-top:.4rem}._Y3Itb_cr-media-popover-sidepanel-container_1EUvC ._Y3Itb_rating-block_2mVHa{-ms-flex-negative:0;flex-shrink:0}._Y3Itb_cr-media-popover-sidepanel-overlay_2WkaR{-webkit-box-pack:center;-ms-flex-pack:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;background-color:#fff;display:none;height:100%;justify-content:center;left:0;opacity:.5;position:absolute;top:0;width:100%}
-._Y3Itb_cr-sidepanel-truncated-title_2w0Qj{-webkit-line-clamp:2;-webkit-box-orient:vertical;-ms-flex-negative:0;display:-webkit-box;flex-shrink:0;line-height:20px;margin-bottom:8px;overflow:hidden;text-overflow:ellipsis}._Y3Itb_cr-sidepanel-title_EX93d{margin-bottom:8px}._Y3Itb_cr-sidepanel-text_3MYCz{font-weight:400;-webkit-transition:height .4s cubic-bezier(.4,0,.6,1);transition:height .4s cubic-bezier(.4,0,.6,1);word-break:break-word}._Y3Itb_cr-sidepanel-text_3MYCz._Y3Itb_cr-sidepanel-truncated-text_3nfmo{overflow:hidden}._Y3Itb_cr-sidepanel-text-expansion-section_2guev{cursor:pointer;margin-top:8px}._Y3Itb_cr-sidepanel-expander-icon_1dF4M,._Y3Itb_cr-sidepanel-expander-text_oEWO4{display:inline-block}._Y3Itb_cr-sidepanel-expander-see-less_1Hpji,._Y3Itb_cr-sidepanel-expander-see-more_1sipE{color:#007185;display:none;padding-left:8px;position:relative;text-decoration:none}._Y3Itb_cr-sidepanel-container-gradient_1zm2j{background:-webkit-linear-gradient(hsla(0,0%,100%,0),#fff);background:linear-gradient(hsla(0,0%,100%,0),#fff);bottom:0;height:0;left:0;position:absolute;right:0;-webkit-transition:height .4s cubic-bezier(.4,0,.6,1);transition:height .4s cubic-bezier(.4,0,.6,1)}._Y3Itb_cr-sidepanel-container-gradient-truncated_3zXR9{height:40px}._Y3Itb_cr-sidepanel-text-with-gradient_3T4-j{-webkit-box-orient:vertical;-webkit-box-direction:normal;display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-direction:column;flex-direction:column;min-height:0;position:relative}
-._Y3Itb_translate-buttons_2chch{-webkit-box-orient:vertical;-webkit-box-direction:normal;display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-direction:column;flex-direction:column}
-._Y3Itb_media-popover-thumbnail-image-container_1q_4Q{-webkit-box-orient:horizontal;-webkit-box-direction:normal;display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-direction:row;flex-direction:row;-ms-flex-wrap:wrap;flex-wrap:wrap;gap:8px;list-style-type:none;margin:8px 0 0;max-height:176px;min-width:352px;padding-left:3px;width:100%}._Y3Itb_media-popover-list-item-style_1njtu{list-style:none}._Y3Itb_media-popover-thumbnail-image-container_1q_4Q>button:last-child{padding-bottom:3px}._Y3Itb_media-popover-thumbnail-image-view_3-Y40{background:#e3e6e6;border:1px solid #888c8c;border:1px solid var(--gray-palette-700-flint,#888c8c);border-radius:8px;height:80px;-o-object-fit:cover;object-fit:cover;width:80px}._Y3Itb_media-popover-thumbnail-image-view-active_2W42O>img,._Y3Itb_media-popover-thumbnail-image-view_3-Y40:hover{border:1px solid #007185;border:1px solid var(--blue-palette-400-pacific,#007185);box-shadow:0 0 0 3px #c8f3fa}._Y3Itb_media-popover-thumbnail-image-button_1vtKQ{background:none;border:none;outline:none;padding:0}._Y3Itb_media-popover-thumbnail-image-button_1vtKQ:focus>img{border:1px solid #007185;border:1px solid var(--blue-palette-400-pacific,#007185);box-shadow:0 0 0 3px #c8f3fa;outline:none}</style>
-<!--CardsClient--><div data-acp-params="tok=TKjHHHjfjHhp9XXF02IwUmEpRmg8PnSIRn-5D7m7G6w;ts=1735212824476;rid=M962RW3CTVW6WX4KG139;d1=010;d2=0" data-acp-path="/acp/cr-media-carousel/cr-media-carousel-6b58ae3b-6852-4884-8962-d24bb76bb09c-1735191400179/" data-acp-stamp="1735212824504" data-acp-tracking="{}" data-card-metrics-id="cr-media-carousel_customer-reviews-detail-media_0" data-mobile="false" data-mshop="false" id="CardInstanceges8F6qbolXsZtUZyp8b-w" tabindex="-1"><div data-csa-c-slot-id="cm_cr_image_carousel" data-csa-c-type="widget" id="cm_cr_carousel_images_section" tabindex="-1"><div class="a-begin a-carousel-container a-carousel-static a-carousel-display-stretchyGoodness a-carousel-transition-slide _Y3Itb_cr-image-carousel_2W1Qw" data-a-carousel-options='{"first_item_flush_left":false,"currentGutter":0,"minimum_gutter_width":0,"hide_off_screen":false,"name":"cr-carousel-fixed-width"}' role="group"><input autocomplete="on" class="a-carousel-firstvisibleitem" type="hidden"/><div class="a-row a-spacing-medium _Y3Itb_cr-carousel-heading_1JAfE"><div class="a-column a-span6 a-text-left"><h3 id="cr-media-carousel-heading">带图片评论</h3></div><div class="a-column a-span6 a-text-right a-span-last"><div data-asin="B07YS5DX7Y" data-csa-c-slot-id="cm_cr_dp_see_all_image_carousel_reviews" data-csa-c-type="widget" data-mediatype="IMAGE" data-mix-operations="CRSeeMoreThumbnailOpsClickHandler" data-seemore="true"><a class="a-link-emphasis" href="javascript:void(0)">查看所有照片</a></div></div></div><div class="a-row a-carousel-controls a-carousel-row a-carousel-has-buttons a-carousel-overlay-buttons"><div class="a-carousel-row-inner"><div class="a-carousel-col a-carousel-left"><a class="a-button a-button-image a-carousel-button a-carousel-goto-prevpage" href="#" role="button"><span class="a-button-inner"><i class="a-icon a-icon-previous"><span class="a-icon-alt">上一页</span></i></span></a></div><div class="a-carousel-col a-carousel-center"><div aria-roledescription="" class="a-carousel-viewport" role="group"><ol class="a-carousel"><li class="a-carousel-card"><button class="_Y3Itb_media-thumbnail-container_2MRZY" data-asin="B07YS5DX7Y" data-csa-c-slot-id="cm_cr_image_carousel_R1QCFD37A7ZLNL_61I84nNe63L_0" data-csa-c-type="element" data-extension="jpg" data-iskindleapp="false" data-mediatype="IMAGE" data-mix-operations="CRImageThumbnailOpsClickHandler" data-physicalid="61I84nNe63L" data-rank="0" data-reviewid="R1QCFD37A7ZLNL" data-thumbnailurl="https://m.media-amazon.com/images/I/61I84nNe63L._SY250_.jpg" data-url="https://m.media-amazon.com/images/I/61I84nNe63L.jpg" style="width:100%;height:100%;border-radius:8px"><img alt="Customer Image, click to open customer review" class="_Y3Itb_media-thumbnail-image_3qPWk" src="https://m.media-amazon.com/images/I/61I84nNe63L._SY250_.jpg"/><div class="a-section _Y3Itb_media-thumbnail-overlay_1te5m"></div></button></li><li aria-posinset="1" class="a-carousel-card"><button class="_Y3Itb_media-thumbnail-container_2MRZY" data-asin="B07YS5DX7Y" data-csa-c-slot-id="cm_cr_image_carousel_R4KVV9ANQ7AC5_61EdGXF87xL_1" data-csa-c-type="element" data-extension="jpg" data-iskindleapp="false" data-mediatype="IMAGE" data-mix-operations="CRImageThumbnailOpsClickHandler" data-physicalid="61EdGXF87xL" data-rank="1" data-reviewid="R4KVV9ANQ7AC5" data-thumbnailurl="https://m.media-amazon.com/images/I/61EdGXF87xL._SY250_.jpg" data-url="https://m.media-amazon.com/images/I/61EdGXF87xL.jpg" style="width:100%;height:100%;border-radius:8px"><img alt="Customer Image, click to open customer review" class="_Y3Itb_media-thumbnail-image_3qPWk" src="https://m.media-amazon.com/images/I/61EdGXF87xL._SY250_.jpg"/><div class="a-section _Y3Itb_media-thumbnail-overlay_1te5m"></div></button></li><li aria-posinset="2" class="a-carousel-card"><button class="_Y3Itb_media-thumbnail-container_2MRZY" data-asin="B07YS5DX7Y" data-csa-c-slot-id="cm_cr_image_carousel_R3DFHTAF8BMAST_61QBXYYJMkL_2" data-csa-c-type="element" data-extension="jpg" data-iskindleapp="false" data-mediatype="IMAGE" data-mix-operations="CRImageThumbnailOpsClickHandler" data-physicalid="61QBXYYJMkL" data-rank="2" data-reviewid="R3DFHTAF8BMAST" data-thumbnailurl="https://m.media-amazon.com/images/I/61QBXYYJMkL._SY250_.jpg" data-url="https://m.media-amazon.com/images/I/61QBXYYJMkL.jpg" style="width:100%;height:100%;border-radius:8px"><img alt="Customer Image, click to open customer review" class="_Y3Itb_media-thumbnail-image_3qPWk" src="https://m.media-amazon.com/images/I/61QBXYYJMkL._SY250_.jpg"/><div class="a-section _Y3Itb_media-thumbnail-overlay_1te5m"></div></button></li><li aria-posinset="3" class="a-carousel-card"><button class="_Y3Itb_media-thumbnail-container_2MRZY" data-asin="B07YS5DX7Y" data-csa-c-slot-id="cm_cr_image_carousel_R2YTSWY85LS3JH_615ZE7g5RHL_3" data-csa-c-type="element" data-extension="jpg" data-iskindleapp="false" data-mediatype="IMAGE" data-mix-operations="CRImageThumbnailOpsClickHandler" data-physicalid="615ZE7g5RHL" data-rank="3" data-reviewid="R2YTSWY85LS3JH" data-thumbnailurl="https://m.media-amazon.com/images/I/615ZE7g5RHL._SY250_.jpg" data-url="https://m.media-amazon.com/images/I/615ZE7g5RHL.jpg" style="width:100%;height:100%;border-radius:8px"><img alt="Customer Image, click to open customer review" class="_Y3Itb_media-thumbnail-image_3qPWk" src="https://m.media-amazon.com/images/I/615ZE7g5RHL._SY250_.jpg"/><div class="a-section _Y3Itb_media-thumbnail-overlay_1te5m"></div></button></li><li aria-posinset="4" class="a-carousel-card"><button class="_Y3Itb_media-thumbnail-container_2MRZY" data-asin="B07YS5DX7Y" data-csa-c-slot-id="cm_cr_image_carousel_R1YSBO496NKOSP_61Uaa5ArmcL_4" data-csa-c-type="element" data-extension="jpg" data-iskindleapp="false" data-mediatype="IMAGE" data-mix-operations="CRImageThumbnailOpsClickHandler" data-physicalid="61Uaa5ArmcL" data-rank="4" data-reviewid="R1YSBO496NKOSP" data-thumbnailurl="https://m.media-amazon.com/images/I/61Uaa5ArmcL._SY250_.jpg" data-url="https://m.media-amazon.com/images/I/61Uaa5ArmcL.jpg" style="width:100%;height:100%;border-radius:8px"><img alt="Customer Image, click to open customer review" class="_Y3Itb_media-thumbnail-image_3qPWk" src="https://m.media-amazon.com/images/I/61Uaa5ArmcL._SY250_.jpg"/><div class="a-section _Y3Itb_media-thumbnail-overlay_1te5m"></div></button></li><li aria-posinset="5" class="a-carousel-card"><button class="_Y3Itb_media-thumbnail-container_2MRZY" data-asin="B07YS5DX7Y" data-csa-c-slot-id="cm_cr_image_carousel_R3ONKK9VTJZT66_71nWLrOSSqL_5" data-csa-c-type="element" data-extension="jpg" data-iskindleapp="false" data-mediatype="IMAGE" data-mix-operations="CRImageThumbnailOpsClickHandler" data-physicalid="71nWLrOSSqL" data-rank="5" data-reviewid="R3ONKK9VTJZT66" data-thumbnailurl="https://m.media-amazon.com/images/I/71nWLrOSSqL._SY250_.jpg" data-url="https://m.media-amazon.com/images/I/71nWLrOSSqL.jpg" style="width:100%;height:100%;border-radius:8px"><img alt="Customer Image, click to open customer review" class="_Y3Itb_media-thumbnail-image_3qPWk" src="https://m.media-amazon.com/images/I/71nWLrOSSqL._SY250_.jpg"/><div class="a-section _Y3Itb_media-thumbnail-overlay_1te5m"></div></button></li><li aria-posinset="6" class="a-carousel-card"><button class="_Y3Itb_media-thumbnail-container_2MRZY" data-asin="B07YS5DX7Y" data-csa-c-slot-id="cm_cr_image_carousel_R2BSMDBAP7UU82_61QsxxZbUrL_6" data-csa-c-type="element" data-extension="jpg" data-iskindleapp="false" data-mediatype="IMAGE" data-mix-operations="CRImageThumbnailOpsClickHandler" data-physicalid="61QsxxZbUrL" data-rank="6" data-reviewid="R2BSMDBAP7UU82" data-thumbnailurl="https://m.media-amazon.com/images/I/61QsxxZbUrL._SY250_.jpg" data-url="https://m.media-amazon.com/images/I/61QsxxZbUrL.jpg" style="width:100%;height:100%;border-radius:8px"><img alt="Customer Image, click to open customer review" class="_Y3Itb_media-thumbnail-image_3qPWk" src="https://m.media-amazon.com/images/I/61QsxxZbUrL._SY250_.jpg"/><div class="a-section _Y3Itb_media-thumbnail-overlay_1te5m"></div></button></li><li aria-posinset="7" class="a-carousel-card"><button class="_Y3Itb_media-thumbnail-container_2MRZY" data-asin="B07YS5DX7Y" data-csa-c-slot-id="cm_cr_image_carousel_R1PPYJN5XW5LGQ_71-UXnEcyfL_7" data-csa-c-type="element" data-extension="jpg" data-iskindleapp="false" data-mediatype="IMAGE" data-mix-operations="CRImageThumbnailOpsClickHandler" data-physicalid="71-UXnEcyfL" data-rank="7" data-reviewid="R1PPYJN5XW5LGQ" data-thumbnailurl="https://m.media-amazon.com/images/I/71-UXnEcyfL._SY250_.jpg" data-url="https://m.media-amazon.com/images/I/71-UXnEcyfL.jpg" style="width:100%;height:100%;border-radius:8px"><img alt="Customer Image, click to open customer review" class="_Y3Itb_media-thumbnail-image_3qPWk" src="https://m.media-amazon.com/images/I/71-UXnEcyfL._SY250_.jpg"/><div class="a-section _Y3Itb_media-thumbnail-overlay_1te5m"></div></button></li><li aria-posinset="8" class="a-carousel-card"><button class="_Y3Itb_media-thumbnail-container_2MRZY" data-asin="B07YS5DX7Y" data-csa-c-slot-id="cm_cr_image_carousel_R1PPYJN5XW5LGQ_71f2dXK3hML_8" data-csa-c-type="element" data-extension="jpg" data-iskindleapp="false" data-mediatype="IMAGE" data-mix-operations="CRImageThumbnailOpsClickHandler" data-physicalid="71f2dXK3hML" data-rank="8" data-reviewid="R1PPYJN5XW5LGQ" data-thumbnailurl="https://m.media-amazon.com/images/I/71f2dXK3hML._SY250_.jpg" data-url="https://m.media-amazon.com/images/I/71f2dXK3hML.jpg" style="width:100%;height:100%;border-radius:8px"><img alt="Customer Image, click to open customer review" class="_Y3Itb_media-thumbnail-image_3qPWk" src="https://m.media-amazon.com/images/I/71f2dXK3hML._SY250_.jpg"/><div class="a-section _Y3Itb_media-thumbnail-overlay_1te5m"></div></button></li><li aria-posinset="9" class="a-carousel-card"><button class="_Y3Itb_media-thumbnail-container_2MRZY" data-asin="B07YS5DX7Y" data-csa-c-slot-id="cm_cr_image_carousel_R1RLJ0KSISGUF6_71rSRhCztUL_9" data-csa-c-type="element" data-extension="jpg" data-iskindleapp="false" data-mediatype="IMAGE" data-mix-operations="CRImageThumbnailOpsClickHandler" data-physicalid="71rSRhCztUL" data-rank="9" data-reviewid="R1RLJ0KSISGUF6" data-thumbnailurl="https://m.media-amazon.com/images/I/71rSRhCztUL._SY250_.jpg" data-url="https://m.media-amazon.com/images/I/71rSRhCztUL.jpg" style="width:100%;height:100%;border-radius:8px"><img alt="Customer Image, click to open customer review" class="_Y3Itb_media-thumbnail-image_3qPWk" src="https://m.media-amazon.com/images/I/71rSRhCztUL._SY250_.jpg"/><div class="a-section _Y3Itb_media-thumbnail-overlay_1te5m"></div></button></li><li aria-posinset="10" class="a-carousel-card"><button class="_Y3Itb_media-thumbnail-container_2MRZY" data-asin="B07YS5DX7Y" data-csa-c-slot-id="cm_cr_image_carousel_R3GQH8FW6IBBSU_71lzpF8aihL_10" data-csa-c-type="element" data-extension="jpg" data-iskindleapp="false" data-mediatype="IMAGE" data-mix-operations="CRImageThumbnailOpsClickHandler" data-physicalid="71lzpF8aihL" data-rank="10" data-reviewid="R3GQH8FW6IBBSU" data-thumbnailurl="https://m.media-amazon.com/images/I/71lzpF8aihL._SY250_.jpg" data-url="https://m.media-amazon.com/images/I/71lzpF8aihL.jpg" style="width:100%;height:100%;border-radius:8px"><img alt="Customer Image, click to open customer review" class="_Y3Itb_media-thumbnail-image_3qPWk" src="https://m.media-amazon.com/images/I/71lzpF8aihL._SY250_.jpg"/><div class="a-section _Y3Itb_media-thumbnail-overlay_1te5m"></div></button></li><li aria-posinset="11" class="a-carousel-card"><button class="_Y3Itb_media-thumbnail-container_2MRZY" data-asin="B07YS5DX7Y" data-csa-c-slot-id="cm_cr_image_carousel_R3GQH8FW6IBBSU_71K31YGcxPL_11" data-csa-c-type="element" data-extension="jpg" data-iskindleapp="false" data-mediatype="IMAGE" data-mix-operations="CRImageThumbnailOpsClickHandler" data-physicalid="71K31YGcxPL" data-rank="11" data-reviewid="R3GQH8FW6IBBSU" data-thumbnailurl="https://m.media-amazon.com/images/I/71K31YGcxPL._SY250_.jpg" data-url="https://m.media-amazon.com/images/I/71K31YGcxPL.jpg" style="width:100%;height:100%;border-radius:8px"><img alt="Customer Image, click to open customer review" class="_Y3Itb_media-thumbnail-image_3qPWk" src="https://m.media-amazon.com/images/I/71K31YGcxPL._SY250_.jpg"/><div class="a-section _Y3Itb_media-thumbnail-overlay_1te5m"></div></button></li></ol></div></div><div class="a-carousel-col a-carousel-right"><a class="a-button a-button-image a-carousel-button a-carousel-goto-nextpage" href="#" role="button"><span class="a-button-inner"><i class="a-icon a-icon-next"><span class="a-icon-alt">下一页</span></i></span></a></div></div></div><span class="a-end aok-hidden"></span></div></div><hr aria-hidden="true" class="a-spacing-medium a-spacing-top-base a-divider-normal"/><div class="_Y3Itb_cm_cr_image_popoversection_3iYPp" id="popovers"><div class="a-popover-preload" id="a-popover-cr-media-popover_IMAGE"><div class="a-section _Y3Itb_media-popover-container-desktop_31iCw _Y3Itb_media-popover-container_2BBbs" data-mediatype="IMAGE"><div class="_Y3Itb_desktop-skeleton-container_738lf"><div class="_Y3Itb_desktop-spinner-container_1qNHr"><div class="a-spinner-wrapper"><span class="a-spinner a-spinner-medium"></span></div></div></div><div class="_Y3Itb_media-popover-header-container_3YsaK"><button class="_Y3Itb_media-popover-see-all-container_1Lmmi" data-csa-c-slot-id="cm_cr_image_popover_view_image_gallery" data-csa-c-type="element" data-mediatype="IMAGE" data-mix-operations="showMediaGalleryClickHandler" data-seemore="true"><img class="_Y3Itb_media-cheveron_1eKfZ" height="20" role="presentation" src="https://m.media-amazon.com/images/S/sash//CMYhpeaIeR9vguf.svg" width="20"/><span class="a-size-base-plus a-text-bold">所有照片</span></button></div><div class="_Y3Itb_gallery-container_2pBFm"><div class="_Y3Itb_media-popover-gallery-container-grid_mLjpJ _Y3Itb_media-popover-gallery-image-grid_icawB"></div><div class="_Y3Itb_gallery-spinner_34BcK"><div class="a-spinner-wrapper"><span class="a-spinner a-spinner-medium"></span></div></div></div><div class="_Y3Itb_single-review-media-popover-container_1h9X2"><div class="_Y3Itb_modal-content-container_XXRsT" data-closebuttonaria="Close Button" data-csa-c-slot-id="cm_cr_image_carousel_popover_R1QCFD37A7ZLNL_0" data-csa-c-type="widget" data-modaltitlearia="Review with images" data-reviewbind="SingleReviewMediaBlock"><div class="_Y3Itb_media-popover-body-container_2uQe-"><div class="_Y3Itb_media-popover-media-container_3G-kc" data-mediatype="IMAGE"><button class="_Y3Itb_left-icon-container_31i2O" data-mediatype="IMAGE" data-mix-operations="leftClickHandler"><span class="_Y3Itb_cr-icon_1Y5Ec"><img aria-label="Previous" height="24" role="img" src="https://m.media-amazon.com/images/S/sash//23pID5Mp1WTA-31.svg" width="24"/></span></button><div class="_Y3Itb_media-popover-modal-media-list-view-container_2ZyCE" data-reviewbind="MainMedia"><div class="_Y3Itb_media-popover-image-view-container_vTrQA" data-csa-c-slot-id="cm_cr_image_carousel_popover_R1QCFD37A7ZLNL_0_61I84nNe63L_0" data-csa-c-type="element" data-lazyimagesource="https://m.media-amazon.com/images/I/61I84nNe63L.jpg" data-mediaid="61I84nNe63L"><img alt="So cold!" class="_Y3Itb_media-popover-image-view_1FAQo" src="https://images-na.ssl-images-amazon.com/images/G/01/x-locale/common/transparent-pixel._V192234675_.gif"/></div></div><button class="_Y3Itb_right-icon-container_3Qopb" data-mediatype="IMAGE" data-mix-operations="rightClickHandler"><span class="_Y3Itb_cr-icon_1Y5Ec"><img aria-label="Next" height="24" role="img" src="https://m.media-amazon.com/images/S/sash//7D8iRtQ0DrKAF4O.svg" width="24"/></span></button> <span class="_Y3Itb_cr-action-buttons-container_3vmwq"></span></div><div class="_Y3Itb_media-popover-review-container_1dLQH"><div class="a-section _Y3Itb_cr-media-popover-sidepanel-container_1EUvC"><div class="a-section a-spacing-small _Y3Itb_cr-media-popover-sidepanel-header-section_3TxI7 _Y3Itb_cr-media-popover-sidepanel-header-section-truncated_DITiq"><div data-reviewbind="ProfileBlock"><a class="a-profile" data-a-size="small" href="javascript:void(0)"><div aria-hidden="true" class="a-profile-avatar-wrapper"><div class="a-profile-avatar"><img class="a-lazy-loaded" src="https://images-na.ssl-images-amazon.com/images/G/01/x-locale/common/grey-pixel.gif"/><noscript><img/></noscript></div></div><div class="a-profile-content"></div></a></div><div class="_Y3Itb_rating-and-profile-badges-container_348ae"><i class="a-icon a-icon-star-small a-star-small-4 a-spacing-top-micro _Y3Itb_rating-block_2mVHa" data-reviewbind="Rating"><span class="a-icon-alt">4 颗星（最多 5 颗星）</span></i><div class="aok-hidden" data-multiple-starts-suffix="Stars" data-one-star-suffix="Star" data-reviewbind="RatingAlt"></div><div class="_Y3Itb_profile-badges-container_k5lqb" data-reviewbind="ProfileBadge"></div></div><h5 class="_Y3Itb_cr-sidepanel-title_EX93d _Y3Itb_cr-sidepanel-truncated-title_2w0Qj" data-reviewbind="ReviewTitle" lang="en-US">好冷啊！</h5><div class="_Y3Itb_cr-sidepanel-text-with-gradient_3T4-j" lang="en-US"><div class="_Y3Itb_cr-sidepanel-text_3MYCz _Y3Itb_cr-sidepanel-truncated-text_3nfmo" data-reviewbind="ReviewText">当他们说枕头具有冷却效果时，他们并不是在开玩笑。附带的枕套又软又凉！非常适合那些喜欢被包裹起来但又因为天气太热而不能穿的人。他们应该诚实地单独出售枕套，这样我就可以为我的所有枕头购买它。停靠一颗星星，因为枕头不像我想象的那么蓬松和致密。</div><div class="_Y3Itb_cr-sidepanel-container-gradient_1zm2j _Y3Itb_cr-sidepanel-container-gradient-truncated_3zXR9"></div></div><div class="_Y3Itb_cr-sidepanel-text-expansion-section_2guev"><a aria-expanded="false" class="_Y3Itb_cr-sidepanel-expander-see-more_1sipE" data-mediatype="IMAGE" data-mix-operations="expandTextClickHandler" href="javascript:void(0)" role="button"><span class="_Y3Itb_cr-sidepanel-expander-icon_1dF4M"><i class="a-icon a-icon-expand a-icon-mini" role="presentation"></i></span><span class="_Y3Itb_cr-sidepanel-expander-text_oEWO4"><span>更多的</span></span></a><a aria-expanded="true" class="_Y3Itb_cr-sidepanel-expander-see-less_1Hpji" data-mediatype="IMAGE" data-mix-operations="hideTextClickHandler" href="javascript:void(0)" role="button"><span class="_Y3Itb_cr-sidepanel-expander-icon_1dF4M"><i class="a-icon a-icon-collapse a-icon-mini" role="presentation"></i></span><span class="_Y3Itb_cr-sidepanel-expander-text_oEWO4"><span>隐藏</span></span></a></div><div class="_Y3Itb_cr-media-popover-sidepanel-overlay_2WkaR" data-reviewbind="TranslateSpinner"><div class="a-spinner-wrapper"><span class="a-spinner a-spinner-medium"></span></div></div><ul class="_Y3Itb_media-popover-thumbnail-image-container_1q_4Q" data-imagealttext="Customer Image" data-reviewbind="ImageThumbnailsBlock"><li class="_Y3Itb_media-popover-list-item-style_1njtu"><button aria-pressed="false" class="_Y3Itb_media-popover-thumbnail-image-button_1vtKQ" data-mediaid="61I84nNe63L" data-mix-operations="thumbnailClickHandler" data-thumbidx="0"><img alt="Customer Image" class="_Y3Itb_media-popover-thumbnail-image-view_3-Y40" height="80" src="https://m.media-amazon.com/images/I/61I84nNe63L.jpg" width="80"/></button></li></ul></div></div></div></div><span class="_Y3Itb_cr-toast-bar-message-section_16K1H"><div class="_Y3Itb_toast-bar-container_3tiY9 _Y3Itb_desktop-toast-bar-container_g-jD0" data-toast-bar-name="thankYouMessageToastBarName"><div class="_Y3Itb_toast-bar_1-6hy _Y3Itb_desktop-toast-bar_3buiB"><div class="_Y3Itb_toast-bar-text-container_1u5yP">感谢您的反馈</div><button class="_Y3Itb_toast-bar-button_1yIpW" data-mix-operations="closeToastBarClickHandler" data-toast-bar-name="thankYouMessageToastBarName">关闭</button></div></div></span><span class="_Y3Itb_cr-toast-bar-message-section_16K1H"><div class="_Y3Itb_toast-bar-container_3tiY9 _Y3Itb_desktop-toast-bar-container_g-jD0" data-toast-bar-name="errorMessageToastBarName"><div class="_Y3Itb_toast-bar_1-6hy _Y3Itb_desktop-toast-bar_3buiB"><div class="_Y3Itb_toast-bar-text-container_1u5yP">抱歉，出现错误</div><button class="_Y3Itb_toast-bar-button_1yIpW" data-mix-operations="closeToastBarClickHandler" data-toast-bar-name="errorMessageToastBarName">关闭</button></div></div></span></div></div><div class="_Y3Itb_toast-bar-container_3tiY9 _Y3Itb_desktop-toast-bar-container_g-jD0" data-toast-bar-name="loadPopoverErrorToastBarName"><div class="_Y3Itb_toast-bar_1-6hy _Y3Itb_desktop-toast-bar_3buiB"><div class="_Y3Itb_toast-bar-text-container_1u5yP">抱歉，我们无法加载评论</div><button class="_Y3Itb_toast-bar-button_1yIpW" data-mix-operations="reloadMediaPopover" data-toast-bar-name="loadPopoverErrorToastBarName">再试一次</button></div></div></div></div></div></div><script>if(window.mix_csa){window.mix_csa('[cel_widget_id="cr-media-carousel_customer-reviews-detail-media_0"]', '#CardInstanceges8F6qbolXsZtUZyp8b-w')('mark', 'be')}</script>
-<script>if(window.uet){window.uet('be','cr-media-carousel_customer-reviews-detail-media_0',{wb: 1})}</script>
-<script>if(window.mixTimeout){window.mixTimeout('cr-media-carousel', 'CardInstanceges8F6qbolXsZtUZyp8b-w', 90000)};
-P.when('mix:@amzn/mix.client-runtime', 'mix:cr-media-carousel__r5z29AhZ').execute(function (runtime, cardModule) {runtime.registerCardFactory('CardInstanceges8F6qbolXsZtUZyp8b-w', cardModule).then(function(){if(window.mix_csa){window.mix_csa('[cel_widget_id="cr-media-carousel_customer-reviews-detail-media_0"]', '#CardInstanceges8F6qbolXsZtUZyp8b-w')('mark', 'functional')}if(window.uex){window.uex('ld','cr-media-carousel_customer-reviews-detail-media_0',{wb: 1})}});});
-</script>
-<script>P.load.js('https://images-na.ssl-images-amazon.com/images/I/61o+Zz1ylgL.js?xcp');
-</script>
-</div><script>
+<script>
         P.when('A', 'cr-ranking-image-popover-controller').execute(function(A, imagePopoverController) {
             A.on("a:popover:beforeShow:widget_customer_image_gallery", function(data) {
                 imagePopoverController.loadDataAndInitImageGalleryPopover(data, "B07YS5DX7Y", [], "hGE5szoc%2B4DK0wScVnr1sISUhkcEnSy3GFA4GeD3A%2B3xAAAAAGdtPxgAAAAB");
@@ -4799,7 +3365,7 @@ P.when('mix:@amzn/mix.client-runtime', 'mix:cr-media-carousel__r5z29AhZ').execut
 
 
 
-  来自美国的热门评论
+  用户评论
 </h3></div><div class="a-section a-spacing-small" id="cm-cr-dp-review-header"></div><span class="cr-translate-cta">
 </span>
 <div class="a-row"><div class="a-section a-spacing-extra-large a-spacing-top-medium a-text-center review-load-error aok-hidden"><div class="a-box a-alert a-alert-error cr-error" role="alert"><div class="a-box-inner a-alert-container"><h4 class="a-alert-heading">目前过滤评论时出现问题。请稍后重试。</h4><i class="a-icon a-icon-alert"></i><div class="a-alert-content"></div></div></div></div><div class="a-row a-spacing-medium aok-hidden" id="cm-cr-dp-reviews-loading-wrapper"><div class="a-spinner-wrapper cr-reviews-loading aok-hidden"><span class="a-spinner a-spinner-medium"></span></div></div><div class="a-section a-spacing-large reviews-content filterable-reviews-content celwidget"><ul class="a-unordered-list a-nostyle a-vertical review-views celwidget" data-hook="top-customer-reviews-widget" id="cm-cr-dp-review-list"><style>
@@ -5227,24 +3793,7 @@ A.trigger('notShowVideoCountAjax',obj.notShowVideoCount);
 <div class="celwidget" data-csa-c-asin="" data-csa-c-content-id="registry-sable-update" data-csa-c-is-in-initial-active-row="false" data-csa-c-slot-id="registry-sable-update_feature_div" data-csa-c-type="widget" data-feature-name="registry-sable-update" id="registry-sable-update_feature_div">
 </div>
 <div class="celwidget" data-csa-c-asin="" data-csa-c-content-id="btfSubNavDesktop" data-csa-c-is-in-initial-active-row="false" data-csa-c-slot-id="btfSubNavDesktop_feature_div" data-csa-c-type="widget" data-feature-name="btfSubNavDesktop" id="btfSubNavDesktop_feature_div">
-<div class="a-row a-size-base" id="btf-sub-nav-desktop-wrapper" role="navigation"> <script data-a-state='{"key":"btf-sub-nav-desktop-context"}' type="a-state">{"btf-sub-nav-desktop-similar-tab":["#miraiBTFShopByLook_feature_div","#desktop-dp-btf-shopbylook","#sims-consolidated-3_feature_div","#sims-consolidated-4_feature_div","#sims-consolidated-5_feature_div","#sims-consolidated-6_feature_div"],"btf-sub-nav-desktop-leftAligned":false,"btf-sub-nav-desktop-product-info-tab":["#productDetails_feature_div","#productDetailsNonPets_feature_div","#productDetails-placement-auto_feature_div"],"btf-sub-nav-desktop-about-this-item-tab":["#featurebullets_feature_div","#richProductInformation_feature_div"],"btf-sub-nav-desktop-lateActivation":true,"btf-sub-nav-desktop-customer-reviews-tab":["#customer-reviews_feature_div"],"btf-sub-nav-desktop-questions-tab":["#ask-btf_feature_div"]}</script> <nav class="aok-hidden" id="btf-sub-nav-desktop-tabs">
-<a class="a-link-normal sub-nav-desktop-tab" href="#" id="btfSubNavDesktopTopTab"> <div class="top-tab-content">
-<div>
-<i class="a-icon a-icon-section-collapse a-icon-mini" role="presentation"></i> </div>
-<div>
-<span class="a-size-base">顶部</span> </div>
-</div>
-</a> <a class="a-link-normal sub-nav-desktop-tab" href="#" id="btfSubNavDesktopAboutThisItemTab"> <div class="tab-content">
-<span>关于此商品</span> </div>
-</a> <a class="a-link-normal sub-nav-desktop-tab" href="#" id="btfSubNavDesktopSimilarTab"> <div class="tab-content">
-<span>相似的</span> </div>
-</a> <a class="a-link-normal sub-nav-desktop-tab" href="#" id="btfSubNavDesktopProductInfoTab"> <div class="tab-content">
-<span>产品信息</span> </div>
-</a> <a class="a-link-normal sub-nav-desktop-tab" href="#" id="btfSubNavDesktopQuestionsTab"> <div class="tab-content">
-<span>问题</span> </div>
-</a> <a class="a-link-normal sub-nav-desktop-tab" href="#" id="btfSubNavDesktopCustomerReviewsTab"> <div class="tab-content">
-<span>评论</span> </div>
-</a> </nav>
+<div class="a-row a-size-base" id="btf-sub-nav-desktop-wrapper" role="navigation"> <script data-a-state='{"key":"btf-sub-nav-desktop-context"}' type="a-state">{"btf-sub-nav-desktop-similar-tab":["#miraiBTFShopByLook_feature_div","#desktop-dp-btf-shopbylook","#sims-consolidated-3_feature_div","#sims-consolidated-4_feature_div","#sims-consolidated-5_feature_div","#sims-consolidated-6_feature_div"],"btf-sub-nav-desktop-leftAligned":false,"btf-sub-nav-desktop-product-info-tab":["#productDetails_feature_div","#productDetailsNonPets_feature_div","#productDetails-placement-auto_feature_div"],"btf-sub-nav-desktop-about-this-item-tab":["#featurebullets_feature_div","#richProductInformation_feature_div"],"btf-sub-nav-desktop-lateActivation":true,"btf-sub-nav-desktop-customer-reviews-tab":["#customer-reviews_feature_div"],"btf-sub-nav-desktop-questions-tab":["#ask-btf_feature_div"]}</script> 
 </div> </div>
 <div class="celwidget" data-csa-c-asin="" data-csa-c-content-id="emit-js" data-csa-c-is-in-initial-active-row="false" data-csa-c-slot-id="emit-js_feature_div" data-csa-c-type="widget" data-feature-name="emit-js" id="emit-js_feature_div">
 </div>
